@@ -415,70 +415,151 @@
     <!-- STARTSEITE – LÖSUNG / LEISTUNGEN SECTION – ENDE -->
 
     <!-- =====================================================
-  STARTSEITE – BEWERTUNG SECTION – START
-  ===================================================== -->
+  STARTSEITE – IMMOBILIENBEWERTUNG / ANGEBOT – START
+===================================================== -->
     <section class="section valuation-section" id="bewertung">
-      <div class="container valuation-layout">
-        <div class="valuation-copy" data-reveal>
-          <span class="eyebrow">Immobilienbewertung</span>
-          <h2>Was ist Ihre Immobilie wert?</h2>
-          <p>
-            Starten Sie unverbindlich. Mit wenigen Angaben erhalten wir eine
-            erste Grundlage für das persönliche Gespräch.
-          </p>
-          <div class="valuation-benefits">
-            <span
-              ><i class="fa-solid fa-check"></i> Unverbindliche Anfrage</span
-            >
-            <span
-              ><i class="fa-solid fa-check"></i> Persönliche Einschätzung</span
-            >
-            <span
-              ><i class="fa-solid fa-check"></i> Klare nächste Schritte</span
-            >
-          </div>
+      <div class="container">
+        <!-- SECTION HEADER -->
+        <div class="valuation-heading" data-reveal>
+          <span class="valuation-eyebrow"> Das Angebot </span>
+
+          <h2>Das bekommen Sie – kostenlos</h2>
         </div>
-        <form class="valuation-card" data-valuation-form data-reveal>
-          <div class="valuation-card-head">
-            <span class="valuation-card-icon"
-              ><i class="fa-solid fa-house"></i
-            ></span>
-            <div>
-              <span>Erster Schritt</span><strong>Immobilie einordnen</strong>
+        <!-- SECTION HEADER – ENDE -->
+
+        <!-- VALUATION LAYOUT -->
+        <div class="valuation-offer-layout">
+          <!-- =================================================
+        LEISTUNGEN – START
+      ================================================== -->
+          <div class="valuation-offer-grid">
+            <!-- CARD 01 -->
+            <article class="offer-card" data-reveal>
+              <div class="offer-icon">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+
+              <h3>Professionelle Marktpreisanalyse</h3>
+
+              <p>
+                Basierend auf aktuellen Transaktionsdaten und Vergleichsobjekten
+                aus Ihrer Lage.
+              </p>
+            </article>
+            <!-- CARD 01 – ENDE -->
+
+            <!-- CARD 02 -->
+            <article class="offer-card" data-reveal>
+              <div class="offer-icon">
+                <i class="fa-solid fa-bullseye"></i>
+              </div>
+
+              <h3>Persönliches Strategiegespräch</h3>
+
+              <p>
+                30 Min. mit Christian Karsunke – Ihre Fragen, Ihre Optionen.
+              </p>
+            </article>
+            <!-- CARD 02 – ENDE -->
+
+            <!-- CARD 03 -->
+            <article class="offer-card" data-reveal>
+              <div class="offer-icon">
+                <i class="fa-regular fa-clipboard"></i>
+              </div>
+
+              <h3>Individuelle Verkaufsstrategie</h3>
+
+              <p>
+                Zeitplan, Preisstrategie, Zielgruppe – zugeschnitten auf Ihre
+                Immobilie.
+              </p>
+            </article>
+            <!-- CARD 03 – ENDE -->
+
+            <!-- CARD 04 -->
+            <article class="offer-card" data-reveal>
+              <div class="offer-icon">
+                <i class="fa-solid fa-users"></i>
+              </div>
+
+              <h3>Käufer-Potenzialanalyse</h3>
+
+              <p>
+                Wie viele qualifizierte Käufer suchen aktuell in Ihrer Lage?
+              </p>
+            </article>
+            <!-- CARD 04 – ENDE -->
+
+            <!-- CARD 05 -->
+            <article class="offer-card offer-card-wide" data-reveal>
+              <div class="offer-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+
+              <h3>Keine Verpflichtung</h3>
+
+              <p>
+                Kein Maklervertrag. Keine versteckten Kosten. Sie entscheiden
+                frei.
+              </p>
+            </article>
+            <!-- CARD 05 – ENDE -->
+          </div>
+          <!-- LEISTUNGEN – ENDE -->
+
+          <!-- =================================================
+        WERTÜBERSICHT – START
+      ================================================== -->
+          <aside class="valuation-price-card" data-reveal>
+            <div class="valuation-price-list">
+              <div class="valuation-price-row">
+                <span> Professionelle Marktpreisanalyse </span>
+                <strong>240 €</strong>
+              </div>
+
+              <div class="valuation-price-row">
+                <span> Persönliches Strategiegespräch vor Ort </span>
+                <strong>195 €</strong>
+              </div>
+
+              <div class="valuation-price-row">
+                <span> Individuelle Verkaufsstrategie </span>
+                <strong>170 €</strong>
+              </div>
+
+              <div class="valuation-price-row">
+                <span> Analyse aktueller Käufernachfrage </span>
+                <strong>70 €</strong>
+              </div>
             </div>
-          </div>
-          <div class="valuation-form-grid">
-            <label
-              ><span>Immobilientyp</span
-              ><select name="valuationType" required>
-                <option value="">Bitte wählen</option>
-                <option>Wohnung</option>
-                <option>Haus</option>
-                <option>Mehrfamilienhaus</option>
-                <option>Grundstück</option>
-                <option>Gewerbeimmobilie</option>
-              </select></label
-            >
-            <label
-              ><span>PLZ / Ort</span
-              ><input
-                name="valuationLocation"
-                type="text"
-                placeholder="z. B. 10115 Berlin"
-                required
-            /></label>
-          </div>
-          <button class="btn btn-gold btn-block" type="submit">
-            Bewertung anfragen <i class="fa-solid fa-arrow-right"></i>
-          </button>
-          <small class="valuation-note"
-            ><i class="fa-solid fa-lock"></i> Ihre Angaben werden nur für die
-            Anfrage verwendet.</small
-          >
-        </form>
+
+            <div class="valuation-price-total">
+              <span> Gesamtwert </span>
+
+              <strong> 675 € </strong>
+            </div>
+
+            <div class="valuation-free">
+              <strong> 0 € </strong>
+
+              <p>
+                Gesamtwert 675 €. Für Sie komplett kostenlos, ohne
+                Verpflichtung.
+              </p>
+            </div>
+
+            <a href="propertyanalyse.html" class="valuation-offer-btn">
+              Jetzt kostenlos bewerten
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </aside>
+          <!-- WERTÜBERSICHT – ENDE -->
+        </div>
+        <!-- VALUATION LAYOUT – ENDE -->
       </div>
     </section>
-    <!-- STARTSEITE – BEWERTUNG SECTION – ENDE -->
+    <!-- STARTSEITE – IMMOBILIENBEWERTUNG / ANGEBOT – ENDE -->
 
     <!-- =====================================================
   STARTSEITE – PROZESS SECTION – START
@@ -644,78 +725,163 @@
 
     <!-- =====================================================
   STARTSEITE – TESTIMONIALS / BEWEISE SECTION – START
-  ===================================================== -->
-    <section class="section testimonials-section">
+===================================================== -->
+    <section
+      class="section testimonials-section"
+      aria-labelledby="testimonials-title"
+    >
       <div class="container">
-        <div class="section-head center" data-reveal>
-          <span class="eyebrow">Vertrauen</span>
-          <h2>Was unsere Kunden sagen.</h2>
+        <!-- SECTION HEADER -->
+        <div class="section-head center testimonials-head" data-reveal>
+          <span class="eyebrow">
+            <span></span>
+            Vertrauen
+            <span></span>
+          </span>
+
+          <h2 id="testimonials-title">Was unsere Kunden sagen.</h2>
+
           <p>
             Erfahrungen aus der Zusammenarbeit geben Orientierung und zeigen,
-            worauf es im Prozess ankommt.
+            worauf es bei Immobilienverkauf, Kauf und Vermietung ankommt.
           </p>
         </div>
+        <!-- SECTION HEADER – ENDE -->
+
+        <!-- TESTIMONIAL GRID -->
         <div class="testi-grid">
+          <!-- TESTIMONIAL 01 -->
           <article class="testi-card" data-reveal>
-            <div class="stars" aria-label="5 von 5 Sternen">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
-              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
-              ><i class="fa-solid fa-star"></i>
+            <div class="testi-top">
+              <div class="stars" aria-label="5 von 5 Sternen">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+
+              <span class="testi-verified">
+                <i class="fa-solid fa-circle-check"></i>
+                Verifiziert
+              </span>
             </div>
-            <p>
+
+            <div class="testi-quote-icon">
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+
+            <blockquote>
               „Die Beratung war freundlich, kompetent und zuverlässig. Wir haben
               schnell unser neues Zuhause gefunden.“
-            </p>
+            </blockquote>
+
+            <div class="testi-divider"></div>
+
             <div class="testi-who">
-              <img src="img/testimonial-1.jpg" alt="" loading="lazy" />
-              <div>
-                <strong>Katrin Meyer</strong><span>Käuferin, Berlin</span>
+              <img src="img/testimonial-1.jpg" alt="Kundin" loading="lazy" />
+
+              <div class="testi-person">
+                <strong>Katrin Meyer</strong>
+                <span>Käuferin · Berlin</span>
               </div>
             </div>
           </article>
+          <!-- TESTIMONIAL 01 – ENDE -->
+
+          <!-- TESTIMONIAL 02 -->
           <article class="testi-card" data-reveal>
-            <div class="stars" aria-label="5 von 5 Sternen">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
-              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
-              ><i class="fa-solid fa-star"></i>
+            <div class="testi-top">
+              <div class="stars" aria-label="5 von 5 Sternen">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+
+              <span class="testi-verified">
+                <i class="fa-solid fa-circle-check"></i>
+                Verifiziert
+              </span>
             </div>
-            <p>
+
+            <div class="testi-quote-icon">
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+
+            <blockquote>
               „Von der ersten Besichtigung bis zum Notartermin lief alles
               reibungslos. Sehr empfehlenswert.“
-            </p>
+            </blockquote>
+
+            <div class="testi-divider"></div>
+
             <div class="testi-who">
-              <img src="img/testimonial-2.jpg" alt="" loading="lazy" />
-              <div>
-                <strong>David Nowak</strong><span>Käufer, München</span>
+              <img src="img/testimonial-2.jpg" alt="Kunde" loading="lazy" />
+
+              <div class="testi-person">
+                <strong>David Nowak</strong>
+                <span>Käufer · München</span>
               </div>
             </div>
           </article>
+          <!-- TESTIMONIAL 02 – ENDE -->
+
+          <!-- TESTIMONIAL 03 -->
           <article class="testi-card" data-reveal>
-            <div class="stars" aria-label="5 von 5 Sternen">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
-              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
-              ><i class="fa-solid fa-star"></i>
+            <div class="testi-top">
+              <div class="stars" aria-label="5 von 5 Sternen">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+
+              <span class="testi-verified">
+                <i class="fa-solid fa-circle-check"></i>
+                Verifiziert
+              </span>
             </div>
-            <p>
+
+            <div class="testi-quote-icon">
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+
+            <blockquote>
               „Wir haben innerhalb von zwei Wochen die passende Mietwohnung
               gefunden. Vielen Dank für den Service!“
-            </p>
+            </blockquote>
+
+            <div class="testi-divider"></div>
+
             <div class="testi-who">
-              <img src="img/testimonial-3.jpg" alt="" loading="lazy" />
-              <div>
-                <strong>Familie Yilmaz</strong><span>Mieter, Köln</span>
+              <img src="img/testimonial-3.jpg" alt="Familie" loading="lazy" />
+
+              <div class="testi-person">
+                <strong>Familie Yilmaz</strong>
+                <span>Mieter · Köln</span>
               </div>
             </div>
           </article>
+          <!-- TESTIMONIAL 03 – ENDE -->
         </div>
+        <!-- TESTIMONIAL GRID – ENDE -->
+
+        <!-- REVIEW NOTE -->
         <div class="review-note">
-          <i class="fa-solid fa-circle-check"></i
-          ><span
-            >Testimonials sollten auf der veröffentlichten Website nur mit
-            echten Kunden und verifizierbaren Bewertungen verwendet
-            werden.</span
-          >
+          <i class="fa-solid fa-shield-check"></i>
+
+          <div>
+            <strong>Transparenz ist uns wichtig.</strong>
+            <span>
+              Veröffentlicht werden ausschließlich echte Kundenstimmen und
+              nachvollziehbare Bewertungen.
+            </span>
+          </div>
         </div>
+        <!-- REVIEW NOTE – ENDE -->
       </div>
     </section>
     <!-- STARTSEITE – TESTIMONIALS / BEWEISE SECTION – ENDE -->

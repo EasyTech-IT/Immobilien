@@ -369,6 +369,46 @@ document.addEventListener("DOMContentLoaded", () => {
   /* SELECTION EVENTS – ENDE */
 
   /* =========================================================
+     AUSWAHLBUTTONS – START
+     FIX: Frage 3 und weitere Auswahl-Schritte synchronisieren
+  ========================================================== */
+
+  document
+    .querySelectorAll(
+      ".choice-button[data-field], .quality-option[data-field], " +
+        ".timeline-option[data-field], .location-option[data-field]",
+    )
+    .forEach((button) => {
+      if (button.dataset.bound === "true") {
+        return;
+      }
+
+      button.dataset.bound = "true";
+
+      button.addEventListener("click", () => {
+        const field = button.dataset.field;
+        const value = button.dataset.value;
+
+        document.querySelectorAll(`[data-field="${field}"]`).forEach((item) => {
+          item.classList.remove("selected");
+          item.setAttribute("aria-pressed", "false");
+        });
+
+        button.classList.add("selected");
+        button.setAttribute("aria-pressed", "true");
+        state[field] = value;
+
+        if (state.currentStep < state.totalSteps) {
+          setTimeout(() => {
+            showStep(state.currentStep + 1);
+          }, 220);
+        }
+      });
+    });
+
+  /* AUSWAHLBUTTONS – ENDE */
+
+  /* =========================================================
      ZIMMER – START
   ========================================================== */
 

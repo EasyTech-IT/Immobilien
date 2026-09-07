@@ -279,77 +279,151 @@
                 <!-- FRAGE 02 – ENDE -->
 
                 <!-- =================================================
-                   FRAGE 03 – WOHN-/NUTZFLÄCHE
-              ================================================== -->
+   FRAGE 03 – WOHNFLÄCHE
+================================================== -->
+
                 <div class="analysis-step" data-step="3">
                   <div class="step-number">03</div>
 
-                  <h2>Wie groß ist die Wohn- bzw. Nutzfläche?</h2>
+                  <h2>Wie groß ist die Immobilie?</h2>
 
                   <p class="step-description">
-                    Bitte geben Sie die ungefähre Fläche Ihrer Immobilie an.
+                    Wählen Sie die ungefähre Wohn- bzw. Nutzfläche.
                   </p>
 
-                  <div class="input-large">
-                    <input
-                      type="number"
-                      id="livingArea"
-                      name="livingArea"
-                      min="1"
-                      max="99999"
-                      placeholder="z. B. 125"
-                      inputmode="decimal"
-                    />
+                  <div class="choice-grid">
+                    <button
+                      type="button"
+                      class="choice-button"
+                      data-field="livingArea"
+                      data-value="bis 50"
+                    >
+                      <strong>Bis 50 m²</strong>
+                    </button>
 
-                    <span>m²</span>
-                  </div>
+                    <button
+                      type="button"
+                      class="choice-button"
+                      data-field="livingArea"
+                      data-value="51–80"
+                    >
+                      <strong>51–80 m²</strong>
+                    </button>
 
-                  <div class="input-hint">
-                    <i class="fa-solid fa-circle-info"></i>
-                    Wohn- oder Nutzfläche laut Unterlagen, falls vorhanden.
+                    <button
+                      type="button"
+                      class="choice-button"
+                      data-field="livingArea"
+                      data-value="81–120"
+                    >
+                      <strong>81–120 m²</strong>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="choice-button"
+                      data-field="livingArea"
+                      data-value="121–160"
+                    >
+                      <strong>121–160 m²</strong>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="choice-button"
+                      data-field="livingArea"
+                      data-value="161–200"
+                    >
+                      <strong>161–200 m²</strong>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="choice-button"
+                      data-field="livingArea"
+                      data-value="über 200"
+                    >
+                      <strong>Über 200 m²</strong>
+                    </button>
                   </div>
                 </div>
+
                 <!-- FRAGE 03 – ENDE -->
 
                 <!-- =================================================
-                   FRAGE 04 – GRUNDSTÜCKSFLÄCHE
-              ================================================== -->
+   FRAGE 04 – GRUNDSTÜCK
+================================================== -->
+
                 <div class="analysis-step" data-step="4">
                   <div class="step-number">04</div>
 
-                  <h2>Wie groß ist die Grundstücksfläche?</h2>
+                  <h2>Wie groß ist das Grundstück?</h2>
 
                   <p class="step-description">
-                    Falls Ihre Immobilie über ein Grundstück verfügt, geben Sie
-                    hier die Fläche an.
+                    Wählen Sie die ungefähre Grundstücksfläche.
                   </p>
 
-                  <div class="input-large">
-                    <input
-                      type="number"
-                      id="plotArea"
-                      name="plotArea"
-                      min="0"
-                      max="999999"
-                      placeholder="z. B. 650"
-                      inputmode="decimal"
-                    />
+                  <div class="choice-grid">
+                    <button
+                      type="button"
+                      class="choice-button"
+                      data-field="plotArea"
+                      data-value="kein Grundstück"
+                    >
+                      <strong>Kein Grundstück</strong>
+                    </button>
 
-                    <span>m²</span>
+                    <button
+                      type="button"
+                      class="choice-button"
+                      data-field="plotArea"
+                      data-value="bis 250"
+                    >
+                      <strong>Bis 250 m²</strong>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="choice-button"
+                      data-field="plotArea"
+                      data-value="251–500"
+                    >
+                      <strong>251–500 m²</strong>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="choice-button"
+                      data-field="plotArea"
+                      data-value="501–750"
+                    >
+                      <strong>501–750 m²</strong>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="choice-button"
+                      data-field="plotArea"
+                      data-value="751–1000"
+                    >
+                      <strong>751–1.000 m²</strong>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="choice-button"
+                      data-field="plotArea"
+                      data-value="über 1000"
+                    >
+                      <strong>Über 1.000 m²</strong>
+                    </button>
                   </div>
-
-                  <button
-                    type="button"
-                    class="skip-button"
-                    data-skip="plotArea"
-                  >
-                    Keine Grundstücksfläche angeben
-                  </button>
                 </div>
+
                 <!-- FRAGE 04 – ENDE -->
 
                 <!-- =================================================
-                   FRAGE 05 – ZIMMER
+                   FRAGE 05 – ZIMMER – START
               ================================================== -->
                 <div class="analysis-step" data-step="5">
                   <div class="step-number">05</div>
@@ -360,68 +434,164 @@
                     Wählen Sie die ungefähre Anzahl der Zimmer.
                   </p>
 
-                  <div class="room-grid">
-                    <button type="button" class="room-option" data-value="1">
+                  <div
+                    class="room-grid"
+                    role="group"
+                    aria-label="Anzahl der Zimmer"
+                  >
+                    <button
+                      type="button"
+                      class="room-option"
+                      data-field="rooms"
+                      data-value="1"
+                      aria-label="1 Zimmer"
+                    >
                       1
                     </button>
 
-                    <button type="button" class="room-option" data-value="2">
+                    <button
+                      type="button"
+                      class="room-option"
+                      data-field="rooms"
+                      data-value="2"
+                      aria-label="2 Zimmer"
+                    >
                       2
                     </button>
 
-                    <button type="button" class="room-option" data-value="3">
+                    <button
+                      type="button"
+                      class="room-option"
+                      data-field="rooms"
+                      data-value="3"
+                      aria-label="3 Zimmer"
+                    >
                       3
                     </button>
 
-                    <button type="button" class="room-option" data-value="4">
+                    <button
+                      type="button"
+                      class="room-option"
+                      data-field="rooms"
+                      data-value="4"
+                      aria-label="4 Zimmer"
+                    >
                       4
                     </button>
 
-                    <button type="button" class="room-option" data-value="5">
+                    <button
+                      type="button"
+                      class="room-option"
+                      data-field="rooms"
+                      data-value="5"
+                      aria-label="5 Zimmer"
+                    >
                       5
                     </button>
 
-                    <button type="button" class="room-option" data-value="6">
+                    <button
+                      type="button"
+                      class="room-option"
+                      data-field="rooms"
+                      data-value="6"
+                      aria-label="6 Zimmer"
+                    >
                       6
                     </button>
 
-                    <button type="button" class="room-option" data-value="7">
+                    <button
+                      type="button"
+                      class="room-option"
+                      data-field="rooms"
+                      data-value="7"
+                      aria-label="7 Zimmer"
+                    >
                       7
                     </button>
 
-                    <button type="button" class="room-option" data-value="8+">
+                    <button
+                      type="button"
+                      class="room-option"
+                      data-field="rooms"
+                      data-value="8+"
+                      aria-label="8 oder mehr Zimmer"
+                    >
                       8+
                     </button>
                   </div>
                 </div>
-                <!-- FRAGE 05 – ENDE -->
+                <!-- FRAGE 05 – ZIMMER – ENDE -->
 
                 <!-- =================================================
-                   FRAGE 06 – BAUJAHR
-              ================================================== -->
+   FRAGE 06 – BAUJAHR
+================================================== -->
+
                 <div class="analysis-step" data-step="6">
                   <div class="step-number">06</div>
 
-                  <h2>Wann wurde die Immobilie gebaut?</h2>
+                  <h2>Aus welcher Bauzeit stammt die Immobilie?</h2>
 
                   <p class="step-description">
-                    Geben Sie möglichst das ursprüngliche Baujahr an.
+                    Wählen Sie den Zeitraum, der am besten passt.
                   </p>
 
-                  <div class="input-large">
-                    <input
-                      type="number"
-                      id="buildYear"
-                      name="buildYear"
-                      min="1800"
-                      max="2026"
-                      placeholder="z. B. 1998"
-                      inputmode="numeric"
-                    />
+                  <div class="choice-grid">
+                    <button
+                      type="button"
+                      class="choice-button"
+                      data-field="buildYear"
+                      data-value="vor 1919"
+                    >
+                      <strong>Vor 1919</strong>
+                    </button>
 
-                    <span>Baujahr</span>
+                    <button
+                      type="button"
+                      class="choice-button"
+                      data-field="buildYear"
+                      data-value="1919–1948"
+                    >
+                      <strong>1919–1948</strong>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="choice-button"
+                      data-field="buildYear"
+                      data-value="1949–1978"
+                    >
+                      <strong>1949–1978</strong>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="choice-button"
+                      data-field="buildYear"
+                      data-value="1979–1999"
+                    >
+                      <strong>1979–1999</strong>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="choice-button"
+                      data-field="buildYear"
+                      data-value="2000–2015"
+                    >
+                      <strong>2000–2015</strong>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="choice-button"
+                      data-field="buildYear"
+                      data-value="ab 2016"
+                    >
+                      <strong>Ab 2016</strong>
+                    </button>
                   </div>
                 </div>
+
                 <!-- FRAGE 06 – ENDE -->
 
                 <!-- =================================================
@@ -756,63 +926,206 @@
                 </div>
                 <!-- FRAGE 10 – ENDE -->
 
-                <!-- =================================================
-                   FRAGE 11 – LAGE
-              ================================================== -->
+                <!-- =========================================================
+   FRAGE 11 – LAGE – START
+========================================================== -->
                 <div class="analysis-step" data-step="11">
                   <div class="step-number">11</div>
 
-                  <h2>Wo befindet sich Ihre Immobilie?</h2>
+                  <h2>Wo liegt die Immobilie?</h2>
 
                   <p class="step-description">
-                    Die Lage ist einer der wichtigsten Faktoren für die
-                    Immobilienanalyse.
+                    Wählen Sie zunächst das Bundesland. Die genaue Adresse
+                    benötigen wir erst im weiteren Bewertungs- bzw.
+                    Verkaufsprozess.
                   </p>
 
-                  <div class="form-fields">
+                  <!-- BUNDESLAND -->
+                  <div class="location-grid">
+                    <button
+                      type="button"
+                      class="location-option"
+                      data-field="state"
+                      data-value="Hessen"
+                    >
+                      <i class="fa-solid fa-location-dot"></i>
+                      <span>
+                        <strong>Hessen</strong>
+                        <small>Frankfurt · Rhein-Main</small>
+                      </span>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="location-option"
+                      data-field="state"
+                      data-value="Bayern"
+                    >
+                      <i class="fa-solid fa-location-dot"></i>
+                      <span>
+                        <strong>Bayern</strong>
+                        <small>München · Nürnberg · Augsburg</small>
+                      </span>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="location-option"
+                      data-field="state"
+                      data-value="Baden-Württemberg"
+                    >
+                      <i class="fa-solid fa-location-dot"></i>
+                      <span>
+                        <strong>Baden-Württemberg</strong>
+                        <small>Stuttgart · Mannheim · Karlsruhe</small>
+                      </span>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="location-option"
+                      data-field="state"
+                      data-value="Nordrhein-Westfalen"
+                    >
+                      <i class="fa-solid fa-location-dot"></i>
+                      <span>
+                        <strong>Nordrhein-Westfalen</strong>
+                        <small>Köln · Düsseldorf · Dortmund</small>
+                      </span>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="location-option"
+                      data-field="state"
+                      data-value="Rheinland-Pfalz"
+                    >
+                      <i class="fa-solid fa-location-dot"></i>
+                      <span>
+                        <strong>Rheinland-Pfalz</strong>
+                        <small>Mainz · Koblenz · Trier</small>
+                      </span>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="location-option"
+                      data-field="state"
+                      data-value="Niedersachsen"
+                    >
+                      <i class="fa-solid fa-location-dot"></i>
+                      <span>
+                        <strong>Niedersachsen</strong>
+                        <small>Hannover · Braunschweig · Oldenburg</small>
+                      </span>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="location-option"
+                      data-field="state"
+                      data-value="Berlin"
+                    >
+                      <i class="fa-solid fa-location-dot"></i>
+                      <span>
+                        <strong>Berlin</strong>
+                        <small>Berlin</small>
+                      </span>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="location-option"
+                      data-field="state"
+                      data-value="Hamburg"
+                    >
+                      <i class="fa-solid fa-location-dot"></i>
+                      <span>
+                        <strong>Hamburg</strong>
+                        <small>Hamburg</small>
+                      </span>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="location-option"
+                      data-field="state"
+                      data-value="Schleswig-Holstein"
+                    >
+                      <i class="fa-solid fa-location-dot"></i>
+                      <span>
+                        <strong>Schleswig-Holstein</strong>
+                        <small>Kiel · Lübeck · Flensburg</small>
+                      </span>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="location-option"
+                      data-field="state"
+                      data-value="Sachsen"
+                    >
+                      <i class="fa-solid fa-location-dot"></i>
+                      <span>
+                        <strong>Sachsen</strong>
+                        <small>Dresden · Leipzig · Chemnitz</small>
+                      </span>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="location-option"
+                      data-field="state"
+                      data-value="Sachsen-Anhalt"
+                    >
+                      <i class="fa-solid fa-location-dot"></i>
+                      <span>
+                        <strong>Sachsen-Anhalt</strong>
+                        <small>Magdeburg · Halle</small>
+                      </span>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="location-option"
+                      data-field="state"
+                      data-value="Thüringen"
+                    >
+                      <i class="fa-solid fa-location-dot"></i>
+                      <span>
+                        <strong>Thüringen</strong>
+                        <small>Erfurt · Jena · Weimar</small>
+                      </span>
+                    </button>
+                  </div>
+
+                  <!-- PLZ -->
+                  <div class="location-postcode" id="locationPostcode">
                     <div class="form-field">
-                      <label for="street"> Straße und Hausnummer </label>
+                      <label for="zip">PLZ der Immobilie</label>
 
                       <div class="input-wrapper">
-                        <i class="fa-solid fa-location-dot"></i>
-
-                        <input
-                          type="text"
-                          id="street"
-                          name="street"
-                          placeholder="z. B. Hauptstraße 25"
-                        />
-                      </div>
-                    </div>
-
-                    <div class="form-row">
-                      <div class="form-field">
-                        <label for="zip"> PLZ </label>
+                        <i class="fa-solid fa-map-pin"></i>
 
                         <input
                           type="text"
                           id="zip"
                           name="zip"
-                          placeholder="60311"
+                          placeholder="z. B. 60311"
                           maxlength="5"
                           inputmode="numeric"
-                        />
-                      </div>
-
-                      <div class="form-field">
-                        <label for="city"> Ort </label>
-
-                        <input
-                          type="text"
-                          id="city"
-                          name="city"
-                          placeholder="Frankfurt am Main"
+                          autocomplete="postal-code"
                         />
                       </div>
                     </div>
+
+                    <p class="input-hint">
+                      <i class="fa-solid fa-circle-info"></i>
+                      Die PLZ reicht für die erste Immobilienanalyse aus.
+                    </p>
                   </div>
                 </div>
-                <!-- FRAGE 11 – ENDE -->
+                <!-- FRAGE 11 – LAGE – ENDE -->
 
                 <!-- =================================================
                    FRAGE 12 – KONTAKTDATEN
