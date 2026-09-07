@@ -324,6 +324,7 @@
 .analysis-sidebar h2 {
   margin: 12px 0 14px;
 
+  color: #ffffff;
   font-family: "Fraunces", serif;
   font-size: 25px;
   line-height: 1.15;
@@ -333,9 +334,10 @@
 .analysis-sidebar p {
   margin: 0;
 
-  color: rgba(255, 255, 255, 0.68);
+  color: rgba(255, 255, 255, 0.86);
   font-size: 12px;
   line-height: 1.7;
+  font-weight: 500;
 }
 
 .sidebar-divider {
@@ -361,13 +363,15 @@
   display: block;
   margin-bottom: 4px;
 
+  color: #ffffff;
   font-size: 11px;
+  font-weight: 800;
 }
 
 .sidebar-trust span {
   display: block;
 
-  color: rgba(255, 255, 255, 0.56);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 10px;
   line-height: 1.5;
 }

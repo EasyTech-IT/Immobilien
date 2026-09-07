@@ -186,21 +186,25 @@ function initNavigation() {
   );
 
   if (navToggle && nav) {
+    const closeMenu = () => {
+      nav.classList.remove("is-open");
+      header.classList.remove("nav-open");
+      navToggle.classList.remove("is-active");
+      navToggle.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("nav-open");
+    };
+
     navToggle.addEventListener("click", () => {
       const isOpen = nav.classList.toggle("is-open");
 
+      header.classList.toggle("nav-open", isOpen);
       navToggle.classList.toggle("is-active", isOpen);
       navToggle.setAttribute("aria-expanded", String(isOpen));
       document.body.classList.toggle("nav-open", isOpen);
     });
 
     nav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        nav.classList.remove("is-open");
-        navToggle.classList.remove("is-active");
-        navToggle.setAttribute("aria-expanded", "false");
-        document.body.classList.remove("nav-open");
-      });
+      link.addEventListener("click", closeMenu);
     });
   }
 }

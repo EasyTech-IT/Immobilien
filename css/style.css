@@ -6114,3 +6114,179 @@ button:focus-visible {
 /* =========================================================
   STARTSEITE – HOMEPAGE ERWEITERUNG – ENDE
   ========================================================= */
+
+/* =========================================================
+  MOBILE-COMPACT-FIXES.CSS
+  =========================================================
+  Nach style.css einbinden (überschreibt gezielt einzelne
+  Mobile-Werte, ohne die bestehende Datei umzubauen).
+
+  INHALTSVERZEICHNIS
+  ├── PAGE HERO (fehlte bisher komplett auf Mobile)
+  ├── STARTSEITE HERO
+  ├── HOME-SECTION / TESTIMONIALS / VALUATION – Abstände
+  ├── FOOTER
+  ├── DETAIL-SEITE (Spec-Strip / Agent-Card)
+  ├── ADMIN – TABELLE SCROLLBAR MACHEN
+  └── ADMIN – DASHBOARD ABSTÄNDE
+  ========================================================= */
+
+@media (max-width: 700px) {
+  /* ---------------------------------------------------------
+    PAGE HERO
+    Bisher ohne Mobile-Override: 150px oben ist auf dem Handy
+    fast ein Viertel des Screens, bevor Inhalt kommt.
+    --------------------------------------------------------- */
+  .page-hero {
+    padding: 96px 0 36px;
+  }
+  .page-hero h1 {
+    font-size: clamp(1.7rem, 8vw, 2.3rem);
+    margin: 6px 0 8px;
+  }
+  .page-hero p {
+    font-size: 0.86rem;
+    line-height: 1.6;
+  }
+  .page-head {
+    padding: 22px 0;
+  }
+  .page-head h1 {
+    font-size: 1.5rem;
+  }
+
+  /* ---------------------------------------------------------
+    STARTSEITE – HERO
+    Vertikale Luft reduzieren, Eyebrow/Description straffen.
+    --------------------------------------------------------- */
+  .hero-inner {
+    padding-top: 84px !important;
+    padding-bottom: 72px !important;
+  }
+  .hero-content h1 {
+    font-size: clamp(1.9rem, 9vw, 2.6rem) !important;
+  }
+  .hero-description {
+    margin-top: 14px !important;
+    font-size: 0.86rem !important;
+    line-height: 1.55 !important;
+  }
+  .hero-actions {
+    margin-top: 20px !important;
+    gap: 8px !important;
+  }
+  .hero-eyebrow {
+    margin-bottom: 12px !important;
+    padding: 5px 10px 5px 6px !important;
+    font-size: 0.6rem !important;
+  }
+
+  /* ---------------------------------------------------------
+    HOME-SECTION / TESTIMONIALS / VALUATION
+    Einheitlich kompaktere Section-Abstände auf Mobile.
+    --------------------------------------------------------- */
+  .home-section {
+    padding: 44px 0 !important;
+  }
+  .testimonials-section {
+    padding: 48px 0 !important;
+  }
+  .valuation-section {
+    padding: 48px 0 !important;
+  }
+  .section-head-row {
+    margin-bottom: 20px !important;
+  }
+  .home-section .section-head h2 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem) !important;
+  }
+  .home-section .section-head p {
+    font-size: 0.8rem !important;
+    margin-top: 10px !important;
+  }
+
+  /* ---------------------------------------------------------
+    FOOTER
+    Auf Mobile stapeln sich vier Spalten untereinander –
+    Innenabstände reduzieren, damit es nicht endlos scrollt.
+    --------------------------------------------------------- */
+  .site-footer {
+    padding-top: 36px;
+  }
+  .footer-grid {
+    gap: 26px;
+    padding-bottom: 24px;
+  }
+  .footer-grid h4 {
+    margin-bottom: 10px;
+    font-size: 0.86rem;
+  }
+  .footer-grid li {
+    margin-bottom: 7px;
+    font-size: 0.82rem;
+  }
+  .footer-bottom {
+    padding: 14px 0;
+    font-size: 0.72rem;
+  }
+  .footer-bottom a {
+    margin-left: 12px;
+  }
+
+  /* ---------------------------------------------------------
+    IMMOBILIEN-DETAIL – Spec-Strip / Agent-Card
+    --------------------------------------------------------- */
+  .spec-box {
+    padding: 11px;
+  }
+  .spec-box b {
+    font-size: 1rem;
+  }
+  .agent-card {
+    padding: 16px;
+  }
+  .detail-price {
+    font-size: 1.5rem;
+  }
+
+  /* ---------------------------------------------------------
+    ADMIN – TABELLE
+    Die Tabelle hatte keine Mobile-Strategie und würde das
+    Layout aufbrechen. Horizontal scrollbar machen statt
+    Spalten zu quetschen.
+    --------------------------------------------------------- */
+  .admin-panel {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .admin-table {
+    min-width: 640px;
+  }
+  .admin-search {
+    min-width: 0;
+    width: 100%;
+  }
+  .admin-panel-head {
+    padding: 14px 16px;
+  }
+
+  /* ---------------------------------------------------------
+    ADMIN – DASHBOARD ABSTÄNDE
+    --------------------------------------------------------- */
+  .admin-main {
+    padding: 20px 16px;
+  }
+  .admin-topbar {
+    margin-bottom: 18px;
+  }
+  .stat-grid {
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  .stat-card {
+    padding: 14px 16px;
+  }
+  .stat-card b {
+    font-size: 1.35rem;
+  }
+}

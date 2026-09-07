@@ -177,73 +177,6 @@
 
    ========================================================= */
 
-.services-hero {
-  min-height: 690px;
-
-  display: flex;
-
-  align-items: center;
-
-  padding: 150px 0 110px;
-
-  background:
-    radial-gradient(
-      circle at 78% 30%,
-
-      rgba(201, 168, 106, 0.13),
-      transparent 28%
-    ),
-    linear-gradient(135deg, var(--services-green-dark), var(--services-green));
-
-  color: var(--services-white);
-}
-
-.services-hero-bg {
-  position: absolute;
-
-  inset: 0;
-
-  pointer-events: none;
-}
-
-.services-hero-orb {
-  position: absolute;
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
-
-  border-radius: 50%;
-}
-
-.services-hero-orb-one {
-  width: 520px;
-
-  height: 520px;
-
-  right: -170px;
-
-  top: -140px;
-}
-
-.services-hero-orb-two {
-  width: 280px;
-
-  height: 280px;
-
-  right: 120px;
-
-  bottom: -180px;
-
-  border-color: rgba(201, 168, 106, 0.16);
-}
-
-.services-hero-content {
-  position: relative;
-
-  z-index: 2;
-
-  max-width: 850px;
-}
-
 .breadcrumb {
   display: flex;
 
@@ -484,6 +417,14 @@
   color: var(--services-white);
 }
 
+.service-card-featured .service-label {
+  color: var(--services-gold-light);
+}
+
+.service-card-featured h3 {
+  color: var(--services-white);
+}
+
 .service-card-top {
   display: flex;
 
@@ -575,7 +516,8 @@
 }
 
 .service-card-featured p {
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.86);
+  font-weight: 500;
 }
 
 .service-link {
@@ -887,13 +829,8 @@
   padding: 150px 0 110px;
 
   background:
-    radial-gradient(
-      circle at 78% 30%,
-
-      rgba(212, 184, 134, 0.16),
-      transparent 30%
-    ),
-    linear-gradient(135deg, #071f1b 0%, #0b3028 55%, #123b33 100%);
+    linear-gradient(135deg, rgba(11, 37, 33, 0.8), rgba(18, 53, 47, 0.72)),
+    url("../img/header.jpg") center center / cover no-repeat;
 
   color: #ffffff;
 }
