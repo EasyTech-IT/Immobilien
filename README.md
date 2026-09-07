@@ -39,3 +39,7 @@ python3 -m http.server 8080
 ```
 
 und dann `http://localhost:8080` aufrufen.
+
+## Copyright & Nutzung
+© 2026 [Ihr Name]. Alle Rechte vorbehalten.  
+Die Nutzung, Vervielfältigung oder Verbreitung der Inhalte (einschließlich Karten und Grafiken) ist ohne ausdrückliche schriftliche Genehmigung untersagt.
