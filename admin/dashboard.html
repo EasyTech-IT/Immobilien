@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin-Dashboard — Makaan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- =====================================================
+  ADMIN – DASHBOARD SECTION – START
+  CSS: style.css → ADMIN – DASHBOARD SECTION
+  JS: admin.js → ADMIN – DASHBOARD SECTION
+  ===================================================== -->
+    <div class="admin-shell">
+      <aside class="admin-side">
+        <a href="../index.html" class="logo"
+          ><span class="mark">M</span> Makaan</a
+        >
+        <nav>
+          <a href="dashboard.html" class="active">📋 Immobilien</a>
+          <a href="../index.html" target="_blank">🌐 Website ansehen</a>
+          <a href="#" data-logout>⏻ Abmelden</a>
+        </nav>
+      </aside>
+
+      <main class="admin-main">
+        <div class="admin-topbar">
+          <div>
+            <h2 style="margin-bottom: 2px">Immobilienverwaltung</h2>
+            <p style="margin: 0; font-size: 0.88rem">
+              Immobilien hinzufügen, bearbeiten oder löschen.
+            </p>
+          </div>
+          <button class="btn btn-primary" data-add-btn>+ Neue Immobilie</button>
+        </div>
+
+        <div class="stat-grid" data-stats></div>
+
+        <div class="admin-panel">
+          <div class="admin-panel-head">
+            <h3 style="margin: 0">
+              Alle Immobilien
+              <span
+                style="
+                  font-weight: 400;
+                  color: var(--ink-soft);
+                  font-size: 0.85rem;
+                "
+                data-table-count
+              ></span>
+            </h3>
+            <div style="display: flex; gap: 10px; align-items: center">
+              <input
+                type="search"
+                class="admin-search"
+                placeholder="Suchen nach Titel, Stadt, Typ…"
+                data-admin-search
+              />
+              <button class="btn btn-outline btn-sm" data-reset-demo>
+                Demo-Daten zurücksetzen
+              </button>
+            </div>
+          </div>
+          <div style="overflow-x: auto">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Immobilie</th>
+                  <th>Typ</th>
+                  <th>Status</th>
+                  <th>Preis</th>
+                  <th>Fläche</th>
+                  <th>Aktionen</th>
+                </tr>
+              </thead>
+              <tbody data-admin-tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- ADMIN – DASHBOARD SECTION – ENDE -->
+
+    <!-- =====================================================
+  ADMIN – MODALS SECTION – START
+  CSS: style.css → ADMIN – DASHBOARD SECTION
+  JS: admin.js → ADMIN – MODALS SECTION
+  ===================================================== -->
+    <!-- Add / Edit Modal -->
+    <div class="modal-overlay" data-modal>
+      <div class="modal">
+        <div class="modal-head">
+          <h3 data-modal-title style="margin: 0">Neue Immobilie</h3>
+          <button class="icon-btn" data-modal-close>✕</button>
+        </div>
+        <form data-property-form>
+          <div class="modal-body">
+            <div class="form-grid">
+              <div class="full">
+                <label for="m-title">Titel</label>
+                <input
+                  type="text"
+                  id="m-title"
+                  name="title"
+                  required
+                  placeholder="z. B. Lichtdurchflutete Altbauwohnung"
+                />
+              </div>
+              <div>
+                <label for="m-type">Immobilientyp</label>
+                <select id="m-type" name="type" required>
+                  <option>Wohnung</option>
+                  <option>Haus</option>
+                  <option>Villa</option>
+                  <option>Büro</option>
+                  <option>Eigentumswohnung</option>
+                  <option>Reihenhaus</option>
+                </select>
+              </div>
+              <div>
+                <label for="m-status">Angebot</label>
+                <select id="m-status" name="status" required>
+                  <option value="sale">Zum Verkauf</option>
+                  <option value="rent">Zur Miete</option>
+                </select>
+              </div>
+              <div>
+                <label for="m-price"
+                  >Preis (€)
+                  <span style="font-weight: 400"
+                    >— bei Miete: pro Monat</span
+                  ></label
+                >
+                <input
+                  type="number"
+                  id="m-price"
+                  name="price"
+                  min="0"
+                  required
+                />
+              </div>
+              <div>
+                <label for="m-size">Wohnfläche (m²)</label>
+                <input type="number" id="m-size" name="size" min="0" required />
+              </div>
+              <div>
+                <label for="m-city">Stadt</label>
+                <input type="text" id="m-city" name="city" required />
+              </div>
+              <div>
+                <label for="m-zip">PLZ</label>
+                <input type="text" id="m-zip" name="zip" required />
+              </div>
+              <div class="full">
+                <label for="m-address">Adresse</label>
+                <input
+                  type="text"
+                  id="m-address"
+                  name="address"
+                  required
+                  placeholder="Straße und Hausnummer"
+                />
+              </div>
+              <div>
+                <label for="m-bed">Zimmer</label>
+                <input
+                  type="number"
+                  id="m-bed"
+                  name="bedrooms"
+                  min="0"
+                  required
+                />
+              </div>
+              <div>
+                <label for="m-bath">Badezimmer</label>
+                <input
+                  type="number"
+                  id="m-bath"
+                  name="bathrooms"
+                  min="0"
+                  required
+                />
+              </div>
+              <div>
+                <label for="m-year">Baujahr</label>
+                <input
+                  type="number"
+                  id="m-year"
+                  name="yearBuilt"
+                  min="1800"
+                  max="2100"
+                  required
+                />
+              </div>
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                  padding-top: 22px;
+                "
+              >
+                <input
+                  type="checkbox"
+                  id="m-featured"
+                  name="featured"
+                  style="width: auto"
+                />
+                <label for="m-featured" style="margin: 0"
+                  >Auf Startseite hervorheben</label
+                >
+              </div>
+              <div class="full">
+                <label for="m-desc">Beschreibung</label>
+                <textarea id="m-desc" name="description" required></textarea>
+              </div>
+              <div class="full">
+                <label for="m-features"
+                  >Ausstattungsmerkmale
+                  <span style="font-weight: 400">(kommagetrennt)</span></label
+                >
+                <input
+                  type="text"
+                  id="m-features"
+                  name="features"
+                  placeholder="Balkon, Einbauküche, Garage"
+                />
+              </div>
+              <div class="full">
+                <label>Bilder</label>
+                <div class="img-upload-row" data-image-thumbs></div>
+                <label
+                  for="m-images"
+                  class="upload-btn"
+                  style="
+                    margin-top: 8px;
+                    width: auto;
+                    padding: 8px 14px;
+                    display: inline-flex;
+                    gap: 8px;
+                    align-items: center;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    color: var(--pine-700);
+                  "
+                  >📷 Bilder hochladen</label
+                >
+                <input
+                  type="file"
+                  id="m-images"
+                  data-image-input
+                  accept="image/*"
+                  multiple
+                  style="display: none"
+                />
+                <p class="helper-text">
+                  Bilder werden lokal im Browser gespeichert (Demo-Modus).
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-foot">
+            <button type="button" class="btn btn-outline" data-modal-close>
+              Abbrechen
+            </button>
+            <button type="submit" class="btn btn-primary">Speichern</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- ADMIN – MODALS SECTION – ENDE -->
+
+    <script src="../js/data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/admin.js"></script>
+    <script>
+      initDashboard();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+/* =========================================================
+   GLOBAL – HEADER-KOMPATIBILITÄT – START
+   Wird von leistungen.html als Legacy-Asset geladen.
+   Die zentrale Header-Gestaltung liegt in style.css.
+   ========================================================= */
+
+.site-header,
+.valuation-header {
+  width: 100%;
+}
+
+/* =========================================================
+   GLOBAL – HEADER-KOMPATIBILITÄT – ENDE
+   ========================================================= */

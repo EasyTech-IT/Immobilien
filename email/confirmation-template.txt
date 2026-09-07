@@ -1,0 +1,23 @@
+Betreff: {{betreff}}
+
+Hallo {{vorname}},
+
+vielen Dank für Ihre Nachricht. Ihre Anfrage{{leistung_text}} ist erfolgreich bei uns eingegangen.
+
+{{anliegen_text}}
+
+{{analyse_text}}
+
+{{weitere_angaben_text}}
+
+Wir prüfen Ihre Angaben nun sorgfältig und melden uns zeitnah persönlich bei Ihnen. Bitte antworten Sie auf diese E-Mail, falls Sie Ihrer Anfrage noch etwas hinzufügen möchten.
+
+Vielen Dank für Ihr Vertrauen.
+
+Beste Grüße
+Ihr Makaan-Team
+
+Makaan Immobilien
+Rhein-Main-Gebiet
+info@makaan-immobilien.de
++49 123 455 678

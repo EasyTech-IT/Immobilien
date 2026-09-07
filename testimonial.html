@@ -1,291 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-
-<head>
-    <meta charset="utf-8">
-    <title>Makaan - Immobilienportal</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
-    
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
-
-<body>
-    <div class="container-fluid bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Erfahrungen von Kundinnen und Kunden mit Makaan Immobilien."
+    />
+    <title>Kundenstimmen | Makaan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+  </head>
+  <body>
+    <!-- SECTION: GLOBAL – HEADER / NAVIGATION – START -->
+    <header class="site-header" id="siteHeader">
+      <div class="container header-row">
+        <a href="index.html" class="logo" aria-label="Makaan Startseite"
+          ><span class="mark">M</span><span class="logo-text">Makaan</span></a
+        >
+        <nav class="main-nav" id="mainNav" aria-label="Hauptnavigation">
+          <a href="index.html">Startseite</a>
+          <a href="property-list.html">Immobilien</a>
+          <a href="immobilie-verkaufen.html">Verkaufen</a>
+          <a href="propertyanalyse.html">Bewertung</a>
+          <a href="leistungen.html">Leistungen</a>
+          <a href="about.html">Über uns</a>
+          <a href="testimonial.html" class="active">Kundenstimmen</a>
+          <a href="contact.html">Kontakt</a>
+        </nav>
+        <div class="header-cta">
+          <a href="contact.html" class="btn btn-primary btn-sm"
+            ><i class="fa-regular fa-calendar"></i> Beratung</a
+          >
         </div>
-        <!-- Spinner End -->
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Menü öffnen"
+          aria-expanded="false"
+          type="button"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <!-- SECTION: GLOBAL – HEADER / NAVIGATION – ENDE -->
 
-
-        <!-- Navbar Start -->
-        <div class="container-fluid nav-bar bg-transparent">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
-                <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
-                    <div class="icon p-2 me-2">
-                        <img class="img-fluid" src="img/icon-deal.png" alt="Icon" style="width: 30px; height: 30px;">
-                    </div>
-                    <h1 class="m-0 text-primary">Makaan</h1>
-                </a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link">Startseite</a>
-                        <a href="about.html" class="nav-item nav-link">Über uns</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Immobilien</a>
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <a href="property-list.html" class="dropdown-item">Immobilienliste</a>
-                                <a href="property-type.html" class="dropdown-item">Immobilientyp</a>
-                                <a href="property-agent.html" class="dropdown-item">Immobilienmakler</a>
-                            </div>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Seiten</a>
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <a href="testimonial.html" class="dropdown-item active">Kundenstimmen</a>
-                                <a href="404.html" class="dropdown-item">404-Fehler</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Kontakt</a>
-                    </div>
-                    <a href="tel:0123455678" class="btn btn-primary px-3 d-none d-lg-flex">Jetzt anrufen</a>
-                </div>
-            </nav>
+    <main>
+      <!-- SECTION: KUNDENSTIMMEN – HERO – START -->
+      <section class="page-hero section--stone">
+        <div class="container">
+          <span class="eyebrow">Kundenstimmen</span>
+          <h1>Erfahrungen, die Vertrauen schaffen.</h1>
+          <p>
+            Lesen Sie, wie Käufer, Mieter und Eigentümer die Zusammenarbeit mit
+            Makaan erlebt haben.
+          </p>
         </div>
-        <!-- Navbar End -->
+      </section>
+      <!-- SECTION: KUNDENSTIMMEN – HERO – ENDE -->
 
-
-        <!-- Header Start -->
-        <div class="container-fluid header bg-white p-0">
-            <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
-                <div class="col-md-6 p-5 mt-lg-5">
-                    <h1 class="display-5 animated fadeIn mb-4">Kundenstimmen</h1> 
-                        <nav aria-label="breadcrumb animated fadeIn">
-                        <ol class="breadcrumb text-uppercase">
-                            <li class="breadcrumb-item"><a href="#">Startseite</a></li>
-                            <li class="breadcrumb-item"><a href="#">Seiten</a></li>
-                            <li class="breadcrumb-item text-body active" aria-current="page">Kundenstimmen</li>
-                        </ol>
-                    </nav>
+      <!-- SECTION: KUNDENSTIMMEN – TESTIMONIALS – START -->
+      <section class="section">
+        <div class="container">
+          <div class="testi-grid">
+            <article class="testi-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                „Die Beratung war persönlich, klar und zuverlässig. Wir haben
+                schnell unser neues Zuhause gefunden.“
+              </p>
+              <div class="testi-who">
+                <img src="img/testimonial-1.jpg" alt="Katrin Meyer" />
+                <div>
+                  <strong>Katrin Meyer</strong><span>Käuferin, Berlin</span>
                 </div>
-                <div class="col-md-6 animated fadeIn">
-                    <img class="img-fluid" src="img/header.jpg" alt="">
+              </div>
+            </article>
+            <article class="testi-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                „Von der ersten Besichtigung bis zum Notartermin lief alles
+                reibungslos.“
+              </p>
+              <div class="testi-who">
+                <img src="img/testimonial-2.jpg" alt="David Nowak" />
+                <div>
+                  <strong>David Nowak</strong><span>Käufer, München</span>
                 </div>
-            </div>
+              </div>
+            </article>
+            <article class="testi-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                „Wir haben die passende Mietwohnung gefunden und wurden
+                jederzeit transparent informiert.“
+              </p>
+              <div class="testi-who">
+                <img src="img/testimonial-3.jpg" alt="Familie Yilmaz" />
+                <div>
+                  <strong>Familie Yilmaz</strong><span>Mieter, Köln</span>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
-        <!-- Header End -->
+      </section>
+      <!-- SECTION: KUNDENSTIMMEN – TESTIMONIALS – ENDE -->
+    </main>
 
-
-        <!-- Suchen Start -->
-        <div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
-            <div class="container">
-                <div class="row g-2">
-                    <div class="col-md-10">
-                        <div class="row g-2">
-                            <div class="col-md-4">
-                                <input type="text" class="form-control border-0 py-3" placeholder="Suchbegriff">
-                            </div>
-                            <div class="col-md-4">
-                                <select class="form-select border-0 py-3">
-                                    <option selected>Immobilientyp</option>
-                                    <option value="1">Immobilientyp 1</option>
-                                    <option value="2">Immobilientyp 2</option>
-                                    <option value="3">Immobilientyp 3</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4">
-                                <select class="form-select border-0 py-3">
-                                    <option selected>Standort</option>
-                                    <option value="1">Standort 1</option>
-                                    <option value="2">Hamburg</option>
-                                    <option value="3">München</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <button class="btn btn-dark border-0 w-100 py-3">Suchen</button>
-                    </div>
-                </div>
-            </div>
+    <!-- SECTION: GLOBAL – FOOTER – START -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <span>© 2026 Makaan. Erstellt von EasyTech Solutions.</span
+          ><span
+            ><a href="propertyanalyse.html">Bewertung</a
+            ><a href="contact.html">Kontakt</a></span
+          >
         </div>
-        <!-- Suchen End -->
-
-
-        <!-- Kundenstimmen Start -->
-        <div class="container-fluid py-5">
-            <div class="container">
-                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-3">Das sagen unsere Kunden</h1>
-                    <p>Erfahrungen unserer Kunden zeigen, wie wir Sie zuverlässig auf dem Weg zur Wunschimmobilie begleiten.</p>
-                </div>
-                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="testimonial-item bg-light rounded p-3">
-                        <div class="bg-white border rounded p-4">
-                            <p>Die Beratung war freundlich, kompetent und zuverlässig. Wir haben schnell unser neues Zuhause gefunden.</p>
-                            <div class="d-flex align-items-center">
-                                <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-1.jpg" style="width: 45px; height: 45px;">
-                                <div class="ps-3">
-                                    <h6 class="fw-bold mb-1">Kundenname</h6>
-                                    <small>Beruf</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item bg-light rounded p-3">
-                        <div class="bg-white border rounded p-4">
-                            <p>Die Beratung war freundlich, kompetent und zuverlässig. Wir haben schnell unser neues Zuhause gefunden.</p>
-                            <div class="d-flex align-items-center">
-                                <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-2.jpg" style="width: 45px; height: 45px;">
-                                <div class="ps-3">
-                                    <h6 class="fw-bold mb-1">Kundenname</h6>
-                                    <small>Beruf</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item bg-light rounded p-3">
-                        <div class="bg-white border rounded p-4">
-                            <p>Die Beratung war freundlich, kompetent und zuverlässig. Wir haben schnell unser neues Zuhause gefunden.</p>
-                            <div class="d-flex align-items-center">
-                                <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-3.jpg" style="width: 45px; height: 45px;">
-                                <div class="ps-3">
-                                    <h6 class="fw-bold mb-1">Kundenname</h6>
-                                    <small>Beruf</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Kundenstimmen End -->
-        
-
-        <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-lg-3 col-md-6">
-                        <h5 class="text-white mb-4">Kontakt aufnehmen</h5>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Musterstraße 123, Berlin, Deutschland</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h5 class="text-white mb-4">Schnellzugriff</h5>
-                        <a class="btn btn-link text-white-50" href="">Über uns</a>
-                        <a class="btn btn-link text-white-50" href="">Kontakt</a>
-                        <a class="btn btn-link text-white-50" href="">Unsere Leistungen</a>
-                        <a class="btn btn-link text-white-50" href="">Datenschutzerklärung</a>
-                        <a class="btn btn-link text-white-50" href="">Allgemeine Geschäftsbedingungen</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h5 class="text-white mb-4">Fotogalerie</h5>
-                        <div class="row g-2 pt-2">
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-1.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-2.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-3.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-4.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-5.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-6.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h5 class="text-white mb-4">Newsletter</h5>
-                        <p>Erhalten Sie aktuelle Angebote und Neuigkeiten direkt per E-Mail.</p>
-                        <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Ihre E-Mail-Adresse">
-                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Anmelden</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Makaan</a>, Alle Rechte vorbehalten. 
-							
-							<!--/*** The authorâ€™s attribution link must remain intact in the template. ***/-->
-                            <!--/*** If you wish to remove this credit link, please purchase the Pro Version . ***/-->
-                            Erstellt von <a class="border-bottom" href="https://easytechit.de">EasyTech Solutionx</a>
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="">Startseite</a>
-                                <a href="">Cookies</a>
-                                <a href="">Hilfe</a>
-                                <a href="">FAQs</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
-
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
+      </div>
+    </footer>
+    <!-- SECTION: GLOBAL – FOOTER – ENDE -->
+    <script src="js/data.js"></script>
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
-

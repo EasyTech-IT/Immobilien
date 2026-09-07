@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Immobilie — Makaan</title>
+
+    <!-- =====================================================
+      GOOGLE FONTS
+    ===================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- =====================================================
+      FONT AWESOME
+    ===================================================== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- =====================================================
+      GLOBAL CSS
+    ===================================================== -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <!-- =====================================================
+      PROPERTY DETAIL CSS
+    ===================================================== -->
+    <link rel="stylesheet" href="css/property-detail.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+  GLOBAL – HEADER / NAVIGATION – START
+  ===================================================== -->
+    <header class="site-header" id="siteHeader">
+      <div class="container header-row">
+        <a href="index.html" class="logo" aria-label="Makaan Startseite">
+          <span class="mark">M</span><span class="logo-text">Makaan</span>
+        </a>
+
+        <nav class="main-nav" id="mainNav" aria-label="Hauptnavigation">
+          <a href="index.html" class="active">Startseite</a>
+          <a href="property-list.html">Immobilien</a>
+          <a href="property-sell.html">Verkaufen</a>
+          <a href="propertyanalyse.html">Bewertung</a>
+          <a href="leistungen.html">Leistungen</a>
+          <a href="about.html">Über uns</a>
+          <a href="contact.html">Kontakt</a>
+        </nav>
+
+        <div class="header-cta">
+          <a href="contact.html" class="btn btn-primary btn-sm"
+            ><i class="fa-regular fa-calendar"></i> Beratung</a
+          >
+        </div>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Menü öffnen"
+          aria-expanded="false"
+          type="button"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <!-- GLOBAL – HEADER / NAVIGATION – ENDE -->
+
+    <!-- =====================================================
+      IMMOBILIEN DETAIL – BREADCRUMB – START
+    ===================================================== -->
+
+    <div class="property-breadcrumb">
+      <div class="container">
+        <div class="detail-crumbs">
+          <a href="index.html"> Startseite </a>
+
+          <i class="fa-solid fa-chevron-right"></i>
+
+          <a href="property-list.html"> Immobilien </a>
+
+          <i class="fa-solid fa-chevron-right"></i>
+
+          <span data-crumb-title> Immobilie </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- IMMOBILIEN DETAIL – BREADCRUMB – ENDE -->
+
+    <!-- =====================================================
+      IMMOBILIEN DETAIL – HERO / GALERIE – START
+    ===================================================== -->
+
+    <main data-detail-root>
+      <section class="property-gallery-section">
+        <div class="container">
+          <div class="property-gallery" data-gallery></div>
+        </div>
+      </section>
+
+      <!-- IMMOBILIEN DETAIL – HERO / GALERIE – ENDE -->
+
+      <!-- =====================================================
+        IMMOBILIEN DETAIL – MAIN CONTENT – START
+      ===================================================== -->
+
+      <section class="property-main-section">
+        <div class="container">
+          <div class="property-detail-layout">
+            <!-- =================================================
+              LEFT CONTENT
+            ================================================= -->
+
+            <div class="property-main-content">
+              <!-- ===============================================
+                PROPERTY HEADER – START
+              =============================================== -->
+
+              <div class="property-heading">
+                <div class="property-heading-top">
+                  <div class="property-status-group">
+                    <div class="property-status" data-detail-status></div>
+
+                    <span class="property-type" data-detail-type></span>
+                  </div>
+
+                  <button
+                    class="property-favorite"
+                    type="button"
+                    aria-label="Immobilie merken"
+                    data-favorite
+                  >
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
+
+                <h1 data-page-title>Immobilie wird geladen …</h1>
+
+                <div class="property-location">
+                  <i class="fa-solid fa-location-dot"></i>
+
+                  <span data-detail-addr> Standort wird geladen … </span>
+                </div>
+              </div>
+
+              <!-- PROPERTY HEADER – ENDE -->
+
+              <!-- ===============================================
+                PRICE / KEY INFO – START
+              =============================================== -->
+
+              <div class="property-price-row">
+                <div>
+                  <span class="price-label"> Kaufpreis </span>
+
+                  <div class="property-price" data-detail-price></div>
+                </div>
+
+                <div class="price-per-square">
+                  <span> Kaufpreis / m² </span>
+
+                  <strong data-price-square> — </strong>
+                </div>
+              </div>
+
+              <!-- PRICE / KEY INFO – ENDE -->
+
+              <!-- ===============================================
+                KEY FACTS – START
+              =============================================== -->
+
+              <div class="property-facts" data-spec-strip></div>
+
+              <!-- KEY FACTS – ENDE -->
+
+              <!-- ===============================================
+                DESCRIPTION – START
+              =============================================== -->
+
+              <section class="detail-content-section">
+                <div class="detail-section-heading">
+                  <span class="detail-eyebrow"> Das Objekt </span>
+
+                  <h2>Beschreibung</h2>
+                </div>
+
+                <div class="property-description" data-detail-desc></div>
+              </section>
+
+              <!-- DESCRIPTION – ENDE -->
+
+              <!-- ===============================================
+                FEATURES – START
+              =============================================== -->
+
+              <section class="detail-content-section">
+                <div class="detail-section-heading">
+                  <span class="detail-eyebrow"> Ausstattung </span>
+
+                  <h2>Ausstattung &amp; Highlights</h2>
+                </div>
+
+                <div class="property-features" data-feature-list></div>
+              </section>
+
+              <!-- FEATURES – ENDE -->
+
+              <!-- ===============================================
+                ADDITIONAL INFORMATION – START
+              =============================================== -->
+
+              <section class="detail-content-section">
+                <div class="detail-section-heading">
+                  <span class="detail-eyebrow"> Weitere Informationen </span>
+
+                  <h2>Objektinformationen</h2>
+                </div>
+
+                <div class="information-grid">
+                  <div class="information-item">
+                    <span> Objektart </span>
+
+                    <strong data-info-type> — </strong>
+                  </div>
+
+                  <div class="information-item">
+                    <span> Baujahr </span>
+
+                    <strong data-info-year> — </strong>
+                  </div>
+
+                  <div class="information-item">
+                    <span> Wohnfläche </span>
+
+                    <strong data-info-size> — </strong>
+                  </div>
+
+                  <div class="information-item">
+                    <span> Zimmer </span>
+
+                    <strong data-info-rooms> — </strong>
+                  </div>
+
+                  <div class="information-item">
+                    <span> Badezimmer </span>
+
+                    <strong data-info-bathrooms> — </strong>
+                  </div>
+
+                  <div class="information-item">
+                    <span> Grundstück </span>
+
+                    <strong data-info-land> — </strong>
+                  </div>
+                </div>
+              </section>
+
+              <!-- ADDITIONAL INFORMATION – ENDE -->
+
+              <!-- ===============================================
+                ENERGY – START
+              =============================================== -->
+
+              <section class="energy-card">
+                <div class="energy-icon">
+                  <i class="fa-solid fa-leaf"></i>
+                </div>
+
+                <div class="energy-content">
+                  <span class="detail-eyebrow"> Energie </span>
+
+                  <h3>Energieinformationen</h3>
+
+                  <div class="energy-grid" data-energy>
+                    <div>
+                      <span>Energieausweis</span>
+                      <strong>—</strong>
+                    </div>
+
+                    <div>
+                      <span>Energiebedarf</span>
+                      <strong>—</strong>
+                    </div>
+
+                    <div>
+                      <span>Effizienzklasse</span>
+                      <strong>—</strong>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- ENERGY – ENDE -->
+
+              <!-- ===============================================
+                LOCATION – START
+              =============================================== -->
+
+              <section class="detail-content-section">
+                <div class="detail-section-heading">
+                  <span class="detail-eyebrow"> Lage </span>
+
+                  <h2>Wohnen in bester Umgebung</h2>
+                </div>
+
+                <div class="location-card">
+                  <div class="location-map">
+                    <div class="map-placeholder">
+                      <i class="fa-solid fa-location-dot"></i>
+
+                      <span> Lage der Immobilie </span>
+                    </div>
+                  </div>
+
+                  <div class="location-info">
+                    <span class="detail-eyebrow"> Standort </span>
+
+                    <h3 data-location-title>—</h3>
+
+                    <p>
+                      Die genaue Lage und weitere Informationen zur Umgebung
+                      erhalten Sie gerne auf Anfrage.
+                    </p>
+
+                    <a href="contact.html" class="text-link">
+                      Lageinformationen anfragen
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </section>
+
+              <!-- LOCATION – ENDE -->
+            </div>
+
+            <!-- =================================================
+              RIGHT SIDEBAR
+            ================================================= -->
+
+            <aside class="property-sidebar">
+              <!-- ===============================================
+                CONTACT CARD – START
+              =============================================== -->
+
+              <div class="agent-card">
+                <div class="agent-card-label">Persönlich für Sie da</div>
+
+                <div class="agent-profile" data-agent></div>
+
+                <div class="agent-divider"></div>
+
+                <div class="agent-actions">
+                  <a href="#contact-property" class="agent-action">
+                    <i class="fa-regular fa-envelope"></i>
+
+                    <span> Anfrage senden </span>
+                  </a>
+
+                  <a href="tel:0123455678" class="agent-action">
+                    <i class="fa-solid fa-phone"></i>
+
+                    <span> Direkt anrufen </span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- CONTACT CARD – ENDE -->
+
+              <!-- ===============================================
+                EXPOSÉ FORM – START
+              =============================================== -->
+
+              <div class="expose-card" id="contact-property">
+                <div class="expose-heading">
+                  <span class="detail-eyebrow"> Interesse? </span>
+
+                  <h3>Exposé anfordern</h3>
+
+                  <p>
+                    Erhalten Sie weitere Informationen zur Immobilie und
+                    vereinbaren Sie einen persönlichen Besichtigungstermin.
+                  </p>
+                </div>
+
+                <form class="property-contact-form" data-contact-form>
+                  <div class="form-field">
+                    <label for="c-name"> Name </label>
+
+                    <input
+                      type="text"
+                      id="c-name"
+                      name="name"
+                      placeholder="Ihr vollständiger Name"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="c-email"> E-Mail </label>
+
+                    <input
+                      type="email"
+                      id="c-email"
+                      name="email"
+                      placeholder="ihre@email.de"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="c-phone"> Telefonnummer </label>
+
+                    <input
+                      type="tel"
+                      id="c-phone"
+                      name="phone"
+                      placeholder="Ihre Telefonnummer"
+                    />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="c-msg"> Nachricht </label>
+
+                    <textarea
+                      id="c-msg"
+                      name="message"
+                      rows="5"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <label class="form-consent">
+                    <input type="checkbox" required />
+
+                    <span>
+                      Ich stimme der Kontaktaufnahme bezüglich dieser Immobilie
+                      zu.
+                    </span>
+                  </label>
+
+                  <button type="submit" class="btn btn-primary btn-block">
+                    <span> Exposé anfordern </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+
+                  <div class="form-msg" data-form-msg></div>
+                </form>
+              </div>
+
+              <!-- EXPOSÉ FORM – ENDE -->
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- IMMOBILIEN DETAIL – MAIN CONTENT – ENDE -->
+
+      <!-- =====================================================
+        SIMILAR PROPERTIES – START
+      ===================================================== -->
+
+      <section class="similar-properties">
+        <div class="container">
+          <div class="section-head detail-section-head">
+            <div>
+              <span class="detail-eyebrow"> Weitere Objekte </span>
+
+              <h2>Ähnliche Immobilien</h2>
+            </div>
+
+            <a href="property-list.html" class="text-link">
+              Alle Immobilien
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="listing-grid" data-related></div>
+        </div>
+      </section>
+
+      <!-- SIMILAR PROPERTIES – ENDE -->
+
+      <!-- =====================================================
+        PREMIUM CTA – START
+      ===================================================== -->
+
+      <section class="property-final-cta">
+        <div class="container">
+          <div class="final-cta-inner">
+            <div>
+              <span class="detail-eyebrow"> Persönliche Beratung </span>
+
+              <h2>Sie möchten diese Immobilie persönlich kennenlernen?</h2>
+
+              <p>
+                Wir begleiten Sie von der ersten Anfrage bis zur erfolgreichen
+                Kaufentscheidung.
+              </p>
+            </div>
+
+            <div class="final-cta-actions">
+              <a href="#contact-property" class="btn btn-light">
+                Anfrage senden
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a href="tel:0123455678" class="cta-phone">
+                <i class="fa-solid fa-phone"></i>
+                0123 455 678
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PREMIUM CTA – ENDE -->
+    </main>
+
+    <!-- =====================================================
+      GLOBAL – FOOTER – START
+    ===================================================== -->
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <span> © 2026 Makaan. Erstellt von EasyTech Solutions. </span>
+
+          <span>
+            <a href="index.html"> Startseite </a>
+
+            <a href="contact.html"> Kontakt </a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- GLOBAL – FOOTER – ENDE -->
+
+    <!-- =====================================================
+      JAVASCRIPT
+    ===================================================== -->
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/detail.js"></script>
+  </body>
+</html>

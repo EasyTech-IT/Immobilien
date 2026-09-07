@@ -1,366 +1,710 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="utf-8">
-    <title>Makaan - Immobilienportal</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <title>Über uns | Makaan</title>
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <meta
+      name="description"
+      content="Immobilien Ghumman steht für persönliche Immobilienberatung, regionale Marktkenntnis und eine transparente Begleitung beim Kauf und Verkauf von Immobilien."
+    />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
-    
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/about.css" />
+  </head>
 
-<body>
-    <div class="container-fluid bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
+  <body>
+    <!-- =====================================================
+  GLOBAL – HEADER / NAVIGATION – START
+  ===================================================== -->
+    <header class="site-header" id="siteHeader">
+      <div class="container header-row">
+        <a href="index.html" class="logo" aria-label="Makaan Startseite">
+          <span class="mark">M</span><span class="logo-text">Makaan</span>
+        </a>
+
+        <nav class="main-nav" id="mainNav" aria-label="Hauptnavigation">
+          <a href="index.html" class="active">Startseite</a>
+          <a href="property-list.html">Immobilien</a>
+          <a href="property-sell.html">Verkaufen</a>
+          <a href="propertyanalyse.html">Bewertung</a>
+          <a href="leistungen.html">Leistungen</a>
+          <a href="about.html">Über uns</a>
+          <a href="contact.html">Kontakt</a>
+        </nav>
+
+        <div class="header-cta">
+          <a href="contact.html" class="btn btn-primary btn-sm"
+            ><i class="fa-regular fa-calendar"></i> Beratung</a
+          >
         </div>
-        <!-- Spinner End -->
 
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Menü öffnen"
+          aria-expanded="false"
+          type="button"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <!-- GLOBAL – HEADER / NAVIGATION – ENDE -->
 
-        <!-- Navbar Start -->
-        <div class="container-fluid nav-bar bg-transparent">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
-                <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
-                    <div class="icon p-2 me-2">
-                        <img class="img-fluid" src="img/icon-deal.png" alt="Icon" style="width: 30px; height: 30px;">
-                    </div>
-                    <h1 class="m-0 text-primary">Makaan</h1>
+    <!-- =====================================================
+    ÜBER UNS – HERO SECTION – START
+    ===================================================== -->
+    <main>
+      <section class="about-hero">
+        <div class="about-hero-bg"></div>
+
+        <div class="container about-hero-inner">
+          <div class="about-breadcrumb">
+            <a href="index.html">Startseite</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span>Über uns</span>
+          </div>
+
+          <div class="about-hero-content">
+            <span class="eyebrow eyebrow-light"> ÜBER IMMOBILIEN GHUMMAN </span>
+
+            <h1>
+              Immobilien sind<br />
+              <em>Vertrauenssache.</em>
+            </h1>
+
+            <p>
+              Wir begleiten Menschen persönlich beim Kauf, Verkauf und der
+              Bewertung ihrer Immobilie – mit klarer Beratung, regionaler
+              Marktkenntnis und einem Anspruch an Qualität.
+            </p>
+
+            <div class="about-hero-actions">
+              <a href="contact.html" class="btn btn-gold">
+                Persönlich kennenlernen
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a href="#ueber-uns" class="about-text-link">
+                Mehr über uns
+                <i class="fa-solid fa-arrow-down"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-hero-scroll">
+          <span>Entdecken</span>
+          <i class="fa-solid fa-arrow-down"></i>
+        </div>
+      </section>
+      <!-- ÜBER UNS – HERO SECTION – ENDE -->
+
+      <!-- =====================================================
+      ÜBER UNS – INTRO / PERSÖNLICH – START
+      ===================================================== -->
+      <section class="about-intro section" id="ueber-uns">
+        <div class="container">
+          <div class="about-intro-grid">
+            <div class="about-intro-image">
+              <div class="image-frame">
+                <img
+                  src="img/about.jpg"
+                  alt="Persönliche Immobilienberatung bei Immobilien Ghumman"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="image-badge">
+                <i class="fa-solid fa-handshake"></i>
+
+                <div>
+                  <strong>Persönlich.</strong>
+                  <span>Transparent. Verlässlich.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-intro-content">
+              <span class="eyebrow"> Über uns </span>
+
+              <h2>
+                Persönliche Beratung statt
+                <span>anonymer Abwicklung.</span>
+              </h2>
+
+              <p class="lead">
+                Eine Immobilie ist mehr als ein Quadratmeterpreis, ein Exposé
+                oder ein Eintrag im Immobilienportal.
+              </p>
+
+              <p>
+                Hinter jeder Immobilie stehen Menschen, persönliche
+                Entscheidungen und oft ein wichtiger neuer Lebensabschnitt.
+                Genau deshalb setzen wir bei Immobilien Ghumman auf eine
+                persönliche und nachvollziehbare Beratung.
+              </p>
+
+              <p>
+                Wir möchten nicht einfach eine Immobilie vermitteln. Unser Ziel
+                ist es, gemeinsam mit unseren Kunden die richtige Entscheidung
+                zu treffen – ehrlich, strukturiert und mit einem Blick auf den
+                tatsächlichen Markt.
+              </p>
+
+              <div class="about-signature">
+                <div class="signature-line"></div>
+
+                <div>
+                  <strong>Immobilien Ghumman</strong>
+                  <span>Persönlich an Ihrer Seite.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ÜBER UNS – INTRO / PERSÖNLICH – ENDE -->
+
+      <!-- =====================================================
+      ÜBER UNS – ANSPRUCH – START
+      ===================================================== -->
+      <section class="about-principles section section--stone">
+        <div class="container">
+          <div class="section-head about-section-head">
+            <div>
+              <span class="eyebrow"> Unser Anspruch </span>
+
+              <h2>
+                Was uns in der
+                <span>Zusammenarbeit</span> wichtig ist.
+              </h2>
+            </div>
+
+            <p>
+              Gute Immobilienberatung beginnt für uns nicht mit dem
+              Verkaufsgespräch, sondern mit dem Zuhören.
+            </p>
+          </div>
+
+          <div class="principles-grid">
+            <article class="principle-card">
+              <div class="principle-number">01</div>
+
+              <div class="principle-icon">
+                <i class="fa-solid fa-user"></i>
+              </div>
+
+              <h3>Persönlich</h3>
+
+              <p>
+                Sie haben einen festen Ansprechpartner und wissen, mit wem Sie
+                es zu tun haben. Kurze Wege und direkte Kommunikation gehören
+                für uns dazu.
+              </p>
+            </article>
+
+            <article class="principle-card">
+              <div class="principle-number">02</div>
+
+              <div class="principle-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+
+              <h3>Fundiert</h3>
+
+              <p>
+                Entscheidungen sollten auf nachvollziehbaren Informationen
+                beruhen. Deshalb betrachten wir Immobilie, Lage und Markt immer
+                im Zusammenhang.
+              </p>
+            </article>
+
+            <article class="principle-card">
+              <div class="principle-number">03</div>
+
+              <div class="principle-icon">
+                <i class="fa-solid fa-eye"></i>
+              </div>
+
+              <h3>Transparent</h3>
+
+              <p>
+                Wir sprechen offen über Möglichkeiten, Chancen und Grenzen. Eine
+                realistische Einschätzung ist für uns wichtiger als ein
+                Versprechen.
+              </p>
+            </article>
+
+            <article class="principle-card">
+              <div class="principle-number">04</div>
+
+              <div class="principle-icon">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+              </div>
+
+              <h3>Ergebnisorientiert</h3>
+
+              <p>
+                Von der ersten Einschätzung bis zum Abschluss behalten wir das
+                gemeinsame Ziel im Blick und begleiten den Prozess strukturiert.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- ÜBER UNS – ANSPRUCH – ENDE -->
+
+      <!-- =====================================================
+      ÜBER UNS – REGION – START
+      ===================================================== -->
+      <section class="about-region section">
+        <div class="container">
+          <div class="region-grid">
+            <div class="region-content">
+              <span class="eyebrow"> Unsere Region </span>
+
+              <h2>
+                Marktkenntnis beginnt
+                <span>vor Ort.</span>
+              </h2>
+
+              <p>
+                Immobilien lassen sich nicht ausschließlich anhand von Zahlen
+                beurteilen. Lage, Umfeld, Infrastruktur, Nachfrage und die
+                Besonderheiten einzelner Wohnlagen spielen eine entscheidende
+                Rolle.
+              </p>
+
+              <p>
+                Deshalb legen wir großen Wert auf regionale Nähe. Wir möchten
+                die Märkte verstehen, in denen wir für unsere Kunden tätig sind
+                – und nicht nur allgemeine Durchschnittswerte betrachten.
+              </p>
+
+              <div class="region-points">
+                <div class="region-point">
+                  <i class="fa-solid fa-location-dot"></i>
+
+                  <div>
+                    <strong>Regionale Nähe</strong>
+                    <span>Persönliche Termine vor Ort</span>
+                  </div>
+                </div>
+
+                <div class="region-point">
+                  <i class="fa-solid fa-chart-line"></i>
+
+                  <div>
+                    <strong>Marktverständnis</strong>
+                    <span>Lage und Nachfrage im Blick</span>
+                  </div>
+                </div>
+
+                <div class="region-point">
+                  <i class="fa-solid fa-comments"></i>
+
+                  <div>
+                    <strong>Direkte Kommunikation</strong>
+                    <span>Kurze Wege und klare Antworten</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="region-visual">
+              <div class="region-card region-card-main">
+                <div class="region-card-image">
+                  <img
+                    src="img/about.jpg"
+                    alt="Immobilien und Wohnlagen in der Region"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="region-card-content">
+                  <span>IMMOBILIEN GHUMMAN</span>
+
+                  <strong> Nah am Markt. Nah am Menschen. </strong>
+                </div>
+              </div>
+
+              <div class="region-floating-card">
+                <i class="fa-solid fa-location-crosshairs"></i>
+
+                <div>
+                  <strong>Vor Ort</strong>
+                  <span>statt nur online</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ÜBER UNS – REGION – ENDE -->
+
+      <!-- =====================================================
+      ÜBER UNS – ARBEITSWEISE – START
+      ===================================================== -->
+      <section class="about-process section section--dark">
+        <div class="container">
+          <div class="section-head center about-process-head">
+            <span class="eyebrow eyebrow-light"> Unsere Arbeitsweise </span>
+
+            <h2>
+              Von der ersten
+              <span>Frage</span> bis zum Abschluss.
+            </h2>
+
+            <p>
+              Eine gute Zusammenarbeit braucht einen klaren Ablauf. Wir halten
+              die einzelnen Schritte nachvollziehbar und stimmen sie auf Ihre
+              persönliche Situation ab.
+            </p>
+          </div>
+
+          <div class="about-process-grid">
+            <div class="process-step">
+              <span class="process-index">01</span>
+
+              <div class="process-icon">
+                <i class="fa-solid fa-comments"></i>
+              </div>
+
+              <h3>Kennenlernen</h3>
+
+              <p>
+                Wir sprechen über Ihre Situation, Ihre Ziele und die Fragen, die
+                für Sie wichtig sind.
+              </p>
+            </div>
+
+            <div class="process-line"></div>
+
+            <div class="process-step">
+              <span class="process-index">02</span>
+
+              <div class="process-icon">
+                <i class="fa-solid fa-house"></i>
+              </div>
+
+              <h3>Immobilie verstehen</h3>
+
+              <p>
+                Wir betrachten die Immobilie, ihre Eigenschaften, die Lage und
+                das Marktumfeld.
+              </p>
+            </div>
+
+            <div class="process-line"></div>
+
+            <div class="process-step">
+              <span class="process-index">03</span>
+
+              <div class="process-icon">
+                <i class="fa-solid fa-file-circle-check"></i>
+              </div>
+
+              <h3>Strategie entwickeln</h3>
+
+              <p>
+                Gemeinsam definieren wir die nächsten sinnvollen Schritte und
+                schaffen eine klare Grundlage.
+              </p>
+            </div>
+
+            <div class="process-line"></div>
+
+            <div class="process-step">
+              <span class="process-index">04</span>
+
+              <div class="process-icon">
+                <i class="fa-solid fa-handshake"></i>
+              </div>
+
+              <h3>Begleiten</h3>
+
+              <p>
+                Wir bleiben an Ihrer Seite und begleiten den Prozess bis zum
+                vereinbarten Ziel.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ÜBER UNS – ARBEITSWEISE – ENDE -->
+
+      <!-- =====================================================
+      ÜBER UNS – VERTRAUEN – START
+      ===================================================== -->
+      <section class="about-trust section">
+        <div class="container">
+          <div class="trust-layout">
+            <div class="trust-heading">
+              <span class="eyebrow"> Darauf können Sie zählen </span>
+
+              <h2>
+                Klarheit statt
+                <span>Immobilienfloskeln.</span>
+              </h2>
+
+              <p>
+                Wir möchten, dass Sie jederzeit verstehen, was gerade passiert,
+                warum eine Entscheidung getroffen wird und welche Möglichkeiten
+                Sie haben.
+              </p>
+            </div>
+
+            <div class="trust-list">
+              <div class="trust-item">
+                <div class="trust-item-icon">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div>
+                  <strong>Persönlicher Ansprechpartner</strong>
+                  <p>Direkte Kommunikation ohne unnötige Umwege.</p>
+                </div>
+              </div>
+
+              <div class="trust-item">
+                <div class="trust-item-icon">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div>
+                  <strong>Nachvollziehbare Beratung</strong>
+                  <p>
+                    Einschätzungen und Empfehlungen werden verständlich erklärt.
+                  </p>
+                </div>
+              </div>
+
+              <div class="trust-item">
+                <div class="trust-item-icon">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div>
+                  <strong>Individuelle Lösungen</strong>
+                  <p>Keine Immobilie und keine Situation ist identisch.</p>
+                </div>
+              </div>
+
+              <div class="trust-item">
+                <div class="trust-item-icon">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div>
+                  <strong>Begleitung auf Augenhöhe</strong>
+                  <p>Wir beraten – die Entscheidung bleibt bei Ihnen.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ÜBER UNS – VERTRAUEN – ENDE -->
+
+      <!-- =====================================================
+      ÜBER UNS – TEAM / ANSPRECHPARTNER – START
+      ===================================================== -->
+      <section class="about-team section section--stone">
+        <div class="container">
+          <div class="section-head center">
+            <span class="eyebrow"> Persönlicher Ansprechpartner </span>
+
+            <h2>
+              Menschen statt
+              <span>Maklerhotline.</span>
+            </h2>
+
+            <p>
+              Bei Immobilien Ghumman steht die persönliche Betreuung im
+              Mittelpunkt. Lernen Sie Ihren Ansprechpartner kennen und sprechen
+              Sie direkt mit uns.
+            </p>
+          </div>
+
+          <div class="team-feature">
+            <div class="team-feature-image">
+              <img
+                src="img/team-1.jpg"
+                alt="Ihr persönlicher Ansprechpartner bei Immobilien Ghumman"
+                loading="lazy"
+              />
+
+              <div class="team-image-label">
+                <i class="fa-solid fa-user"></i>
+                Persönlich für Sie da
+              </div>
+            </div>
+
+            <div class="team-feature-content">
+              <span class="team-role"> IMMOBILIENBERATUNG </span>
+
+              <h3>Immobilien Ghumman</h3>
+
+              <p class="team-lead">
+                „Gute Beratung bedeutet für mich, zuerst zu verstehen, was für
+                den Menschen hinter der Immobilie wirklich wichtig ist.“
+              </p>
+
+              <p>
+                Ob Sie über einen Verkauf nachdenken, eine Immobilie suchen oder
+                zunächst nur wissen möchten, wo Sie marktlich stehen: Wir nehmen
+                uns Zeit für Ihr Anliegen.
+              </p>
+
+              <div class="team-contact">
+                <a href="tel:+490123455678">
+                  <i class="fa-solid fa-phone"></i>
+                  <span>0123 455 678</span>
                 </a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link">Startseite</a>
-                        <a href="about.html" class="nav-item nav-link active">Über uns</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Immobilien</a>
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <a href="property-list.html" class="dropdown-item">Immobilienliste</a>
-                                <a href="property-type.html" class="dropdown-item">Immobilientyp</a>
-                                <a href="property-agent.html" class="dropdown-item">Immobilienmakler</a>
-                            </div>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Seiten</a>
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <a href="testimonial.html" class="dropdown-item">Kundenstimmen</a>
-                                <a href="404.html" class="dropdown-item">404-Fehler</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Kontakt</a>
-                    </div>
-                    <a href="tel:0123455678" class="btn btn-primary px-3 d-none d-lg-flex">Jetzt anrufen</a>
-                </div>
-            </nav>
-        </div>
-        <!-- Navbar End -->
 
+                <a href="mailto:info@immobilien-ghumman.de">
+                  <i class="fa-solid fa-envelope"></i>
+                  <span>info@immobilien-ghumman.de</span>
+                </a>
+              </div>
 
-        <!-- Header Start -->
-        <div class="container-fluid header bg-white p-0">
-            <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
-                <div class="col-md-6 p-5 mt-lg-5">
-                    <h1 class="display-5 animated fadeIn mb-4">Über uns</h1>
-                        <nav aria-label="breadcrumb animated fadeIn">
-                        <ol class="breadcrumb text-uppercase">
-                            <li class="breadcrumb-item"><a href="#">Startseite</a></li>
-                            <li class="breadcrumb-item"><a href="#">Seiten</a></li>
-                            <li class="breadcrumb-item text-body active" aria-current="page">Über uns</li>
-                        </ol>
-                    </nav>
-                </div>
-                <div class="col-md-6 animated fadeIn">
-                    <img class="img-fluid" src="img/header.jpg" alt="">
-                </div>
+              <a href="contact.html" class="btn btn-primary">
+                Gespräch vereinbaren
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
+          </div>
         </div>
-        <!-- Header End -->
+      </section>
+      <!-- ÜBER UNS – TEAM / ANSPRECHPARTNER – ENDE -->
 
+      <!-- =====================================================
+      ÜBER UNS – CTA / IMMOBILIENBEWERTUNG – START
+      ===================================================== -->
+      <section class="about-valuation-cta section">
+        <div class="container">
+          <div class="valuation-banner">
+            <div class="valuation-banner-content">
+              <span class="eyebrow eyebrow-light"> NÄCHSTER SCHRITT </span>
 
-        <!-- Suchen Start -->
-        <div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
-            <div class="container">
-                <div class="row g-2">
-                    <div class="col-md-10">
-                        <div class="row g-2">
-                            <div class="col-md-4">
-                                <input type="text" class="form-control border-0 py-3" placeholder="Suchbegriff">
-                            </div>
-                            <div class="col-md-4">
-                                <select class="form-select border-0 py-3">
-                                    <option selected>Immobilientyp</option>
-                                    <option value="1">Immobilientyp 1</option>
-                                    <option value="2">Immobilientyp 2</option>
-                                    <option value="3">Immobilientyp 3</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4">
-                                <select class="form-select border-0 py-3">
-                                    <option selected>Standort</option>
-                                    <option value="1">Standort 1</option>
-                                    <option value="2">Hamburg</option>
-                                    <option value="3">München</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <button class="btn btn-dark border-0 w-100 py-3">Suchen</button>
-                    </div>
-                </div>
+              <h2>
+                Sie möchten wissen,
+                <span>was Ihre Immobilie wert ist?</span>
+              </h2>
+
+              <p>
+                Beantworten Sie unsere 12 kurzen Fragen und geben Sie uns einen
+                ersten Überblick über Ihre Immobilie.
+              </p>
+
+              <div class="valuation-banner-actions">
+                <a href="immobilienbewertung.html" class="btn btn-gold">
+                  Immobilie bewerten
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="contact.html" class="btn btn-outline-light">
+                  Kontakt aufnehmen
+                </a>
+              </div>
             </div>
+
+            <div class="valuation-banner-icon">
+              <i class="fa-solid fa-house-chimney"></i>
+            </div>
+          </div>
         </div>
-        <!-- Suchen End -->
+      </section>
+      <!-- ÜBER UNS – CTA / IMMOBILIENBEWERTUNG – ENDE -->
+    </main>
 
+    <!-- =====================================================
+    GLOBAL – FOOTER – START
+    ===================================================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <a href="index.html" class="logo">
+              <span class="mark">G</span>
+              <span>Immobilien Ghumman</span>
+            </a>
 
-        <!-- Über uns Start -->
-        <div class="container-fluid py-5">
-            <div class="container">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                        <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                            <img class="img-fluid w-100" src="img/about.jpg">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                        <h1 class="mb-4">Der beste Ort für Ihre Traumimmobilie</h1>
-                        <p class="mb-4">Wir bieten Ihnen eine sorgfältige Auswahl hochwertiger Immobilien und begleiten Sie persönlich bei jedem Schritt.</p>
-                        <p><i class="fa fa-check text-primary me-3"></i>Persönliche Beratung und zuverlässiger Service</p>
-                        <p><i class="fa fa-check text-primary me-3"></i>Große Auswahl an passenden Immobilien</p>
-                        <p><i class="fa fa-check text-primary me-3"></i>Unterstützung bis zum erfolgreichen Abschluss</p>
-                        <a class="btn btn-primary py-3 px-5 mt-3" href="">Mehr erfahren</a>
-                    </div>
-                </div>
-            </div>
+            <p>
+              Persönliche Immobilienberatung mit regionaler Nähe, transparenter
+              Kommunikation und einem klaren Anspruch an Qualität.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h4>Navigation</h4>
+
+            <a href="index.html">Startseite</a>
+            <a href="property-list.html">Immobilien</a>
+            <a href="about.html">Über uns</a>
+            <a href="testimonial.html">Kundenstimmen</a>
+            <a href="contact.html">Kontakt</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Services</h4>
+
+            <a href="immobilienbewertung.html"> Immobilienbewertung </a>
+
+            <a href="property-list.html"> Immobilien kaufen </a>
+
+            <a href="contact.html"> Immobilie verkaufen </a>
+
+            <a href="contact.html"> Beratung </a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Kontakt</h4>
+
+            <a href="tel:+490123455678">
+              <i class="fa-solid fa-phone"></i>
+              0123 455 678
+            </a>
+
+            <a href="mailto:info@immobilien-ghumman.de">
+              <i class="fa-solid fa-envelope"></i>
+              info@immobilien-ghumman.de
+            </a>
+          </div>
         </div>
-        <!-- Über uns End -->
 
+        <div class="footer-bottom">
+          <span> © 2026 Immobilien Ghumman. Alle Rechte vorbehalten. </span>
 
-        <!-- Call to Action Start -->
-        <div class="container-fluid py-5">
-            <div class="container">
-                <div class="bg-light rounded p-3">
-                    <div class="bg-white rounded p-4" style="border: 1px dashed rgba(0, 185, 142, .3)">
-                        <div class="row g-5 align-items-center">
-                            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                                <img class="img-fluid rounded w-100" src="img/call-to-action.jpg" alt="">
-                            </div>
-                            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                                <div class="mb-4">
-                                    <h1 class="mb-3">Kontakt zu unserem zertifizierten Makler</h1>
-                                    <p>Wir beraten Sie persönlich und zuverlässig bei der Suche nach Ihrer passenden Immobilie.</p>
-                                </div>
-                                <a href="" class="btn btn-primary py-3 px-4 me-2"><i class="fa fa-phone-alt me-2"></i>Anrufen</a>
-                                <a href="" class="btn btn-dark py-3 px-4"><i class="fa fa-calendar-alt me-2"></i>Termin vereinbaren</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <div>
+            <a href="#">Impressum</a>
+            <a href="#">Datenschutz</a>
+          </div>
         </div>
-        <!-- Call to Action End -->
+      </div>
+    </footer>
+    <!-- GLOBAL – FOOTER – ENDE -->
 
-
-        <!-- Team Start -->
-        <div class="container-fluid py-5">
-            <div class="container">
-                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-3">Immobilienmakler</h1>
-                    <p>Unser erfahrenes Maklerteam unterstützt Sie persönlich und zuverlässig bei der Suche nach Ihrer passenden Immobilie.</p>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="team-item rounded overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="img/team-1.jpg" alt="">
-                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Vollständiger Name</h5>
-                                <small>Position</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="team-item rounded overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="img/team-2.jpg" alt="">
-                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Vollständiger Name</h5>
-                                <small>Position</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="team-item rounded overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="img/team-3.jpg" alt="">
-                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Vollständiger Name</h5>
-                                <small>Position</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="team-item rounded overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="img/team-4.jpg" alt="">
-                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Vollständiger Name</h5>
-                                <small>Position</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Team End -->
-        
-
-        <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-lg-3 col-md-6">
-                        <h5 class="text-white mb-4">Kontakt aufnehmen</h5>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Musterstraße 123, Berlin, Deutschland</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h5 class="text-white mb-4">Schnellzugriff</h5>
-                        <a class="btn btn-link text-white-50" href="">Über uns</a>
-                        <a class="btn btn-link text-white-50" href="">Kontakt</a>
-                        <a class="btn btn-link text-white-50" href="">Unsere Leistungen</a>
-                        <a class="btn btn-link text-white-50" href="">Datenschutzerklärung</a>
-                        <a class="btn btn-link text-white-50" href="">Allgemeine Geschäftsbedingungen</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h5 class="text-white mb-4">Fotogalerie</h5>
-                        <div class="row g-2 pt-2">
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-1.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-2.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-3.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-4.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-5.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-6.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h5 class="text-white mb-4">Newsletter</h5>
-                        <p>Erhalten Sie aktuelle Angebote und Neuigkeiten direkt per E-Mail.</p>
-                        <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Ihre E-Mail-Adresse">
-                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Anmelden</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Makaan</a>, Alle Rechte vorbehalten. 
-							
-							<!--/*** The authorâ€™s attribution link must remain intact in the template. ***/-->
-                            <!--/*** If you wish to remove this credit link, please purchase the Pro Version . ***/-->
-                            Erstellt von <a class="border-bottom" href="https://easytechit.de">EasyTech Solutionx</a>
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="">Startseite</a>
-                                <a href="">Cookies</a>
-                                <a href="">Hilfe</a>
-                                <a href="">FAQs</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
-
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
+    <script src="js/data.js"></script>
     <script src="js/main.js"></script>
-</body>
-
+    <script src="js/about.js"></script>
+  </body>
 </html>

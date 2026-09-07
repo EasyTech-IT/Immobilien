@@ -1,0 +1,1779 @@
+/* =========================================================
+   MAKAAN – SELLER PAGE
+   ========================================================= */
+
+/* =========================================================
+   VARIABLES – START
+   ========================================================= */
+
+:root {
+  --seller-green: #12352f;
+  --seller-green-dark: #0b2521;
+  --seller-green-soft: #1b443c;
+
+  --seller-gold: #c9a86a;
+  --seller-gold-light: #e0c99b;
+
+  --seller-cream: #f7f4ee;
+  --seller-white: #ffffff;
+
+  --seller-text: #1c2522;
+  --seller-muted: #68716d;
+
+  --seller-border: rgba(18, 53, 47, 0.12);
+
+  --seller-shadow: 0 25px 70px rgba(12, 35, 31, 0.1);
+
+  --seller-radius: 24px;
+}
+
+/* =========================================================
+   VARIABLES – ENDE
+   ========================================================= */
+
+/* =========================================================
+   GENERAL – START
+   ========================================================= */
+
+.seller-page {
+  overflow-x: hidden;
+}
+
+.seller-hero,
+.seller-evaluation,
+.seller-final-cta {
+  position: relative;
+}
+
+.section-padding {
+  padding: 120px 0;
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 22px;
+
+  color: var(--seller-green);
+
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.section-eyebrow::before {
+  content: "";
+
+  width: 30px;
+  height: 1px;
+
+  background: var(--seller-gold);
+}
+
+.section-eyebrow.light {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.section-heading {
+  max-width: 760px;
+
+  margin-bottom: 60px;
+}
+
+.section-heading h2,
+.seller-intro h2,
+.process-header h2,
+.seller-contact-info h2,
+.seller-faq h2,
+.final-cta-inner h2 {
+  margin: 0;
+
+  color: var(--seller-green-dark);
+
+  font-family: "Fraunces", serif;
+  font-size: clamp(42px, 5vw, 72px);
+  font-weight: 600;
+
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.section-heading h2 em,
+.seller-intro h2 em,
+.process-header h2 em,
+.seller-faq h2 em,
+.final-cta-inner h2 em {
+  color: var(--seller-gold);
+
+  font-style: normal;
+}
+
+.section-heading p {
+  max-width: 650px;
+
+  margin: 25px 0 0;
+
+  color: var(--seller-muted);
+
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   GENERAL – ENDE
+   ========================================================= */
+
+/* =========================================================
+   HERO – START
+   ========================================================= */
+
+.seller-hero {
+  position: relative;
+
+  min-height: 780px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #071c18;
+}
+
+/* =========================================================
+   HERO MEDIA
+   ========================================================= */
+
+.seller-hero-media {
+  position: absolute;
+  inset: 0;
+
+  z-index: 0;
+}
+
+.seller-hero-media img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* =========================================================
+   HERO OVERLAY
+   ========================================================= */
+
+.seller-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  background: linear-gradient(
+    90deg,
+    rgba(5, 24, 20, 0.97) 0%,
+    rgba(7, 28, 24, 0.91) 35%,
+    rgba(7, 28, 24, 0.7) 58%,
+    rgba(7, 28, 24, 0.3) 100%
+  );
+
+  pointer-events: none;
+}
+
+/* zusätzlicher Verlauf nach unten */
+.seller-hero::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.12) 0%,
+    transparent 55%,
+    rgba(0, 0, 0, 0.28) 100%
+  );
+}
+
+/* =========================================================
+   HERO CONTAINER
+   ========================================================= */
+
+.seller-hero-container {
+  position: relative;
+
+  z-index: 3;
+
+  width: 100%;
+}
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.seller-hero-content {
+  position: relative;
+
+  max-width: 760px;
+
+  padding: 150px 0 120px;
+
+  color: #ffffff;
+}
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.seller-eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 25px;
+
+  color: #e1c994;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 0.2em;
+  line-height: 1.4;
+
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   HERO TITLE
+   ========================================================= */
+
+.seller-hero h1 {
+  margin: 0;
+
+  max-width: 850px;
+
+  font-family: "Fraunces", serif;
+
+  font-size: clamp(58px, 7vw, 100px);
+
+  font-weight: 600;
+
+  line-height: 0.94;
+
+  letter-spacing: -0.055em;
+
+  color: #ffffff;
+
+  text-shadow: 0 3px 16px rgba(0, 0, 0, 0.22);
+}
+
+.seller-hero h1 span {
+  display: block;
+
+  color: #e1c994;
+
+  text-shadow: 0 3px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================================================
+   HERO MAIN TEXT
+   ========================================================= */
+
+.seller-hero-text {
+  max-width: 650px;
+
+  margin: 36px 0 15px;
+
+  color: #ffffff;
+
+  font-size: 21px;
+  line-height: 1.65;
+  font-weight: 500;
+
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================================
+   HERO DESCRIPTION
+   ========================================================= */
+
+.seller-hero-description {
+  max-width: 610px;
+
+  margin: 0 0 38px;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   HERO ACTIONS
+   ========================================================= */
+
+.seller-hero-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  flex-wrap: wrap;
+}
+
+/* =========================================================
+   GLOBAL BUTTON
+   ========================================================= */
+
+.btn {
+  min-height: 56px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 13px;
+
+  padding: 0 26px;
+
+  border: 1px solid transparent;
+  border-radius: 6px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.btn-primary {
+  background: #d4b886;
+
+  color: #071c18;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
+}
+
+.btn-primary:hover {
+  background: #e1c994;
+
+  color: #071c18;
+
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
+}
+
+/* =========================================================
+   OUTLINE BUTTON
+   ========================================================= */
+
+.btn-light-outline {
+  border-color: rgba(255, 255, 255, 0.42);
+
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.btn-light-outline:hover {
+  border-color: rgba(225, 201, 148, 0.75);
+
+  background: rgba(255, 255, 255, 0.13);
+
+  color: #ffffff;
+}
+
+/* =========================================================
+   WHITE BUTTON
+   ========================================================= */
+
+.btn-white {
+  background: #ffffff;
+
+  color: #071c18;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.btn-white:hover {
+  background: #e1c994;
+
+  color: #071c18;
+}
+
+/* =========================================================
+   FULL WIDTH BUTTON
+   ========================================================= */
+
+.btn-full {
+  width: 100%;
+}
+
+/* =========================================================
+   TRUST ITEMS
+   ========================================================= */
+
+.seller-hero-trust {
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+
+  margin-top: 42px;
+
+  flex-wrap: wrap;
+}
+
+.seller-hero-trust div {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  color: rgba(255, 255, 255, 0.84);
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.seller-hero-trust i {
+  color: #d4b886;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   SCROLL INDICATOR
+   ========================================================= */
+
+.hero-scroll-indicator {
+  position: absolute;
+
+  right: 50px;
+  bottom: 45px;
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+.hero-scroll-indicator i {
+  color: #d4b886;
+}
+
+/* =========================================================
+   FOCUS ACCESSIBILITY
+   ========================================================= */
+
+.btn:focus-visible {
+  outline: 3px solid #e1c994;
+
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+  .seller-hero {
+    min-height: 700px;
+  }
+
+  .seller-hero-content {
+    max-width: 680px;
+
+    padding: 120px 0 100px;
+  }
+
+  .seller-hero h1 {
+    font-size: clamp(52px, 9vw, 78px);
+  }
+
+  .seller-hero-text {
+    font-size: 18px;
+  }
+
+  .hero-scroll-indicator {
+    right: 30px;
+    bottom: 30px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 575px) {
+  .seller-hero {
+    min-height: 720px;
+
+    align-items: flex-start;
+  }
+
+  .seller-hero-media img {
+    object-position: 62% center;
+  }
+
+  .seller-hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(5, 24, 20, 0.9) 0%,
+      rgba(7, 28, 24, 0.88) 45%,
+      rgba(7, 28, 24, 0.94) 100%
+    );
+  }
+
+  .seller-hero-content {
+    max-width: 100%;
+
+    padding: 105px 0 80px;
+  }
+
+  .seller-eyebrow {
+    margin-bottom: 20px;
+
+    font-size: 10px;
+
+    letter-spacing: 0.16em;
+  }
+
+  .seller-hero h1 {
+    font-size: 48px;
+
+    line-height: 0.98;
+
+    letter-spacing: -0.045em;
+  }
+
+  .seller-hero-text {
+    margin-top: 25px;
+
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  .seller-hero-description {
+    margin-bottom: 30px;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, 0.86);
+  }
+
+  .seller-hero-actions {
+    width: 100%;
+
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .seller-hero-actions .btn {
+    width: 100%;
+  }
+
+  .seller-hero-trust {
+    gap: 14px 20px;
+
+    margin-top: 30px;
+  }
+
+  .seller-hero-trust div {
+    font-size: 11px;
+  }
+
+  .hero-scroll-indicator {
+    display: none;
+  }
+}
+
+/* =========================================================
+   HERO – ENDE
+   ========================================================= */
+
+/* =========================================================
+   TRUST BAR – START
+   ========================================================= */
+
+.seller-trust-bar {
+  position: relative;
+  z-index: 4;
+
+  margin-top: -1px;
+
+  background: #fff;
+
+  border-bottom: 1px solid var(--seller-border);
+}
+
+.seller-trust-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  border-left: 1px solid var(--seller-border);
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+
+  min-height: 105px;
+
+  padding: 20px 25px;
+
+  border-right: 1px solid var(--seller-border);
+}
+
+.trust-item > i {
+  color: var(--seller-gold);
+
+  font-size: 20px;
+}
+
+.trust-item strong {
+  display: block;
+
+  color: var(--seller-green-dark);
+
+  font-size: 13px;
+}
+
+.trust-item span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: var(--seller-muted);
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   TRUST BAR – ENDE
+   ========================================================= */
+
+/* =========================================================
+   INTRO – START
+   ========================================================= */
+
+.seller-intro {
+  background: var(--seller-cream);
+}
+
+.seller-intro-grid {
+  display: grid;
+
+  grid-template-columns: 180px 1fr;
+
+  gap: 80px;
+
+  max-width: 1180px;
+
+  margin: 0 auto;
+}
+
+.seller-section-label {
+  padding-top: 8px;
+}
+
+.seller-section-label span {
+  display: block;
+
+  color: var(--seller-gold);
+
+  font-family: "Fraunces", serif;
+  font-size: 55px;
+  line-height: 1;
+}
+
+.seller-section-label small {
+  display: block;
+
+  margin-top: 12px;
+
+  color: var(--seller-muted);
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.seller-intro-content {
+  max-width: 800px;
+}
+
+.seller-intro-content .lead {
+  margin: 38px 0 20px;
+
+  color: var(--seller-green-dark);
+
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.seller-intro-content p:not(.lead) {
+  color: var(--seller-muted);
+
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 25px;
+
+  color: var(--seller-green);
+
+  font-size: 13px;
+  font-weight: 800;
+
+  text-decoration: none;
+}
+
+.text-link i {
+  color: var(--seller-gold);
+
+  transition: transform 0.2s ease;
+}
+
+.text-link:hover i {
+  transform: translateX(5px);
+}
+
+/* =========================================================
+   INTRO – ENDE
+   ========================================================= */
+
+/* =========================================================
+   EVALUATION – START
+   ========================================================= */
+
+.seller-evaluation {
+  padding: 100px 0;
+
+  background: var(--seller-cream);
+}
+
+.evaluation-card {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 1.15fr 0.85fr;
+
+  overflow: hidden;
+
+  border-radius: var(--seller-radius);
+
+  background: linear-gradient(
+    135deg,
+    var(--seller-green-dark),
+    var(--seller-green)
+  );
+
+  box-shadow: var(--seller-shadow);
+}
+
+.evaluation-content {
+  padding: 75px;
+}
+
+.evaluation-content h2 {
+  max-width: 600px;
+
+  margin: 0;
+
+  color: #fff;
+
+  font-family: "Fraunces", serif;
+
+  font-size: clamp(40px, 4.5vw, 62px);
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+}
+
+.evaluation-content p {
+  max-width: 550px;
+
+  margin: 25px 0 35px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  line-height: 1.8;
+}
+
+.evaluation-steps {
+  padding: 60px 55px;
+
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.evaluation-step {
+  display: grid;
+
+  grid-template-columns: 45px 1fr;
+
+  gap: 18px;
+
+  padding: 25px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.evaluation-step:first-child {
+  padding-top: 0;
+}
+
+.evaluation-step:last-child {
+  border-bottom: 0;
+}
+
+.evaluation-step > span {
+  color: var(--seller-gold);
+
+  font-family: "Fraunces", serif;
+
+  font-size: 22px;
+}
+
+.evaluation-step strong {
+  display: block;
+
+  color: #fff;
+
+  font-size: 14px;
+}
+
+.evaluation-step p {
+  margin: 7px 0 0;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   EVALUATION – ENDE
+   ========================================================= */
+
+/* =========================================================
+   BENEFITS – START
+   ========================================================= */
+
+.seller-benefits {
+  background: #fff;
+}
+
+.seller-heading {
+  display: grid;
+
+  grid-template-columns: 0.8fr 1.2fr;
+
+  column-gap: 80px;
+
+  max-width: 100%;
+
+  align-items: end;
+}
+
+.seller-heading .section-eyebrow {
+  grid-column: 1 / -1;
+}
+
+.seller-heading h2 {
+  max-width: 650px;
+}
+
+.seller-heading p {
+  max-width: 480px;
+
+  margin: 0;
+}
+
+.seller-benefits-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid var(--seller-border);
+  border-left: 1px solid var(--seller-border);
+}
+
+.seller-benefit {
+  position: relative;
+
+  min-height: 330px;
+
+  padding: 42px;
+
+  border-right: 1px solid var(--seller-border);
+  border-bottom: 1px solid var(--seller-border);
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.seller-benefit:hover {
+  background: var(--seller-cream);
+}
+
+.seller-benefit.featured {
+  background: var(--seller-green);
+}
+
+.seller-benefit.featured h3,
+.seller-benefit.featured p {
+  color: #fff;
+}
+
+.benefit-number {
+  color: var(--seller-gold);
+
+  font-family: "Fraunces", serif;
+
+  font-size: 15px;
+}
+
+.benefit-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 35px 0 25px;
+
+  border: 1px solid var(--seller-border);
+
+  border-radius: 50%;
+
+  color: var(--seller-gold);
+}
+
+.seller-benefit.featured .benefit-icon {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.seller-benefit h3 {
+  margin: 0 0 15px;
+
+  color: var(--seller-green-dark);
+
+  font-family: "Fraunces", serif;
+
+  font-size: 27px;
+}
+
+.seller-benefit p {
+  max-width: 370px;
+
+  margin: 0;
+
+  color: var(--seller-muted);
+
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.benefit-line {
+  position: absolute;
+
+  right: 42px;
+  bottom: 42px;
+
+  width: 35px;
+  height: 1px;
+
+  background: var(--seller-gold);
+}
+
+/* =========================================================
+   BENEFITS – ENDE
+   ========================================================= */
+
+/* =========================================================
+   PROCESS – START
+   ========================================================= */
+
+.seller-process {
+  background: var(--seller-cream);
+}
+
+.process-header {
+  display: grid;
+
+  grid-template-columns: 1fr 0.55fr;
+
+  gap: 80px;
+
+  align-items: end;
+
+  margin-bottom: 75px;
+}
+
+.process-header p {
+  margin: 0;
+
+  color: var(--seller-muted);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.seller-timeline {
+  position: relative;
+}
+
+.seller-timeline::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 34px;
+
+  width: 1px;
+
+  background: var(--seller-border);
+}
+
+.timeline-item {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 70px 1fr;
+
+  gap: 45px;
+
+  padding: 0 0 65px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-number {
+  position: relative;
+  z-index: 2;
+
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--seller-border);
+
+  border-radius: 50%;
+
+  background: var(--seller-cream);
+
+  color: var(--seller-green);
+
+  font-family: "Fraunces", serif;
+
+  font-size: 18px;
+}
+
+.timeline-item.active .timeline-number {
+  border-color: var(--seller-gold);
+
+  background: var(--seller-gold);
+
+  color: var(--seller-green-dark);
+}
+
+.timeline-content {
+  padding-top: 5px;
+}
+
+.timeline-content > span {
+  color: var(--seller-gold);
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.timeline-content h3 {
+  margin: 9px 0 12px;
+
+  color: var(--seller-green-dark);
+
+  font-family: "Fraunces", serif;
+
+  font-size: 32px;
+}
+
+.timeline-content p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: var(--seller-muted);
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.timeline-content a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 18px;
+
+  color: var(--seller-green);
+
+  font-size: 12px;
+  font-weight: 800;
+
+  text-decoration: none;
+}
+
+/* =========================================================
+   PROCESS – ENDE
+   ========================================================= */
+
+/* =========================================================
+   SUCCESS / PROPERTIES – START
+   ========================================================= */
+
+.seller-success {
+  background: #fff;
+}
+
+.seller-property-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+.seller-success-action {
+  margin-top: 35px;
+
+  text-align: right;
+}
+
+/* Falls bestehende property-card verwendet wird */
+
+.seller-property-grid .property-card {
+  border-radius: 18px;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   SUCCESS / PROPERTIES – ENDE
+   ========================================================= */
+
+/* =========================================================
+   CONTACT – START
+   ========================================================= */
+
+.seller-contact {
+  background: var(--seller-cream);
+}
+
+.seller-contact-grid {
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 100px;
+
+  align-items: start;
+}
+
+.seller-contact-info h2 {
+  font-size: clamp(45px, 5vw, 68px);
+}
+
+.seller-contact-info > p {
+  max-width: 550px;
+
+  color: var(--seller-muted);
+
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.contact-points {
+  margin-top: 45px;
+}
+
+.contact-points > div {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 19px 0;
+
+  border-bottom: 1px solid var(--seller-border);
+}
+
+.contact-points i {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fff;
+
+  color: var(--seller-gold);
+}
+
+.contact-points small {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: var(--seller-muted);
+
+  font-size: 10px;
+}
+
+.contact-points strong {
+  color: var(--seller-green-dark);
+
+  font-size: 13px;
+}
+
+.seller-form-wrapper {
+  padding: 50px;
+
+  border-radius: var(--seller-radius);
+
+  background: #fff;
+
+  box-shadow: var(--seller-shadow);
+}
+
+.seller-form-heading span {
+  color: var(--seller-gold);
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.seller-form-heading h3 {
+  margin: 10px 0 7px;
+
+  color: var(--seller-green-dark);
+
+  font-family: "Fraunces", serif;
+
+  font-size: 34px;
+}
+
+.seller-form-heading p {
+  margin: 0 0 35px;
+
+  color: var(--seller-muted);
+
+  font-size: 13px;
+}
+
+.form-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--seller-green-dark);
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  padding: 15px 16px;
+
+  border: 1px solid var(--seller-border);
+
+  border-radius: 6px;
+
+  outline: none;
+
+  background: #fff;
+
+  color: var(--seller-text);
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 13px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group textarea {
+  min-height: 130px;
+
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--seller-gold);
+
+  box-shadow: 0 0 0 3px rgba(201, 168, 106, 0.1);
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  margin: 5px 0 20px;
+
+  color: var(--seller-muted);
+
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.form-checkbox input {
+  margin-top: 3px;
+}
+
+.form-checkbox a {
+  color: var(--seller-green);
+
+  font-weight: 700;
+}
+
+.form-message {
+  display: none;
+
+  margin: 15px 0 0;
+
+  padding: 13px;
+
+  border-radius: 5px;
+
+  background: var(--seller-cream);
+
+  color: var(--seller-green);
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   CONTACT – ENDE
+   ========================================================= */
+
+/* =========================================================
+   FAQ – START
+   ========================================================= */
+
+.seller-faq {
+  background: #fff;
+}
+
+.seller-faq-grid {
+  display: grid;
+
+  grid-template-columns: 0.7fr 1.3fr;
+
+  gap: 100px;
+}
+
+.seller-faq-grid > div:first-child p {
+  max-width: 400px;
+
+  margin-top: 25px;
+
+  color: var(--seller-muted);
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.faq-list {
+  border-top: 1px solid var(--seller-border);
+}
+
+.faq-list details {
+  border-bottom: 1px solid var(--seller-border);
+}
+
+.faq-list summary {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  padding: 25px 0;
+
+  cursor: pointer;
+
+  list-style: none;
+
+  color: var(--seller-green-dark);
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list summary i {
+  color: var(--seller-gold);
+
+  transition: transform 0.2s ease;
+}
+
+.faq-list details[open] summary i {
+  transform: rotate(45deg);
+}
+
+.faq-list details p {
+  max-width: 720px;
+
+  margin: -5px 0 25px;
+
+  color: var(--seller-muted);
+
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   FAQ – ENDE
+   ========================================================= */
+
+/* =========================================================
+   FINAL CTA – START
+   ========================================================= */
+
+.seller-final-cta {
+  padding: 120px 0;
+
+  background: linear-gradient(
+    135deg,
+    var(--seller-green-dark),
+    var(--seller-green)
+  );
+}
+
+.final-cta-inner {
+  max-width: 850px;
+
+  margin: auto;
+
+  text-align: center;
+}
+
+.final-cta-inner h2 {
+  color: #fff;
+}
+
+.final-cta-inner p {
+  margin: 25px 0 35px;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 17px;
+}
+
+/* =========================================================
+   FINAL CTA – ENDE
+   ========================================================= */
+
+/* =========================================================
+   RESPONSIVE – TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+  .section-padding {
+    padding: 90px 0;
+  }
+
+  .seller-trust-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .seller-intro-grid {
+    grid-template-columns: 100px 1fr;
+
+    gap: 40px;
+  }
+
+  .evaluation-card {
+    grid-template-columns: 1fr;
+  }
+
+  .evaluation-steps {
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .seller-benefits-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .process-header {
+    grid-template-columns: 1fr;
+  }
+
+  .seller-property-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .seller-contact-grid {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .seller-faq-grid {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE – MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+  .section-padding {
+    padding: 70px 0;
+  }
+
+  .seller-hero {
+    min-height: 720px;
+  }
+
+  .seller-hero-content {
+    padding: 120px 0 80px;
+  }
+
+  .seller-hero h1 {
+    font-size: clamp(50px, 15vw, 70px);
+  }
+
+  .seller-hero-text {
+    font-size: 17px;
+  }
+
+  .seller-hero-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .seller-hero-actions .btn {
+    width: 100%;
+  }
+
+  .seller-hero-trust {
+    flex-wrap: wrap;
+
+    gap: 12px 20px;
+  }
+
+  .hero-scroll-indicator {
+    display: none;
+  }
+
+  .seller-trust-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seller-intro-grid {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .seller-section-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .seller-section-label span {
+    font-size: 35px;
+  }
+
+  .seller-section-label small {
+    margin-top: 0;
+  }
+
+  .seller-intro h2,
+  .section-heading h2,
+  .seller-contact-info h2,
+  .seller-faq h2 {
+    font-size: 43px;
+  }
+
+  .evaluation-content {
+    padding: 40px 25px;
+  }
+
+  .evaluation-steps {
+    padding: 25px;
+  }
+
+  .evaluation-content h2 {
+    font-size: 43px;
+  }
+
+  .seller-heading {
+    display: block;
+  }
+
+  .seller-heading p {
+    margin-top: 25px;
+  }
+
+  .seller-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seller-benefit {
+    min-height: auto;
+
+    padding: 32px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 50px 1fr;
+
+    gap: 25px;
+  }
+
+  .timeline-number {
+    width: 50px;
+    height: 50px;
+
+    font-size: 14px;
+  }
+
+  .seller-timeline::before {
+    left: 24px;
+  }
+
+  .timeline-content h3 {
+    font-size: 27px;
+  }
+
+  .seller-property-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seller-form-wrapper {
+    padding: 25px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+  .seller-final-cta {
+    padding: 80px 0;
+  }
+
+  .final-cta-inner h2 {
+    font-size: 43px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE – ENDE
+   ========================================================= */

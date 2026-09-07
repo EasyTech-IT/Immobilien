@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin-Login — Makaan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- =====================================================
+  ADMIN – LOGIN SECTION – START
+  CSS: style.css → ADMIN – LOGIN SECTION
+  JS: admin.js → ADMIN – LOGIN SECTION
+  ===================================================== -->
+    <div class="login-shell">
+      <div class="login-card">
+        <a href="../index.html" class="logo"
+          ><span class="mark">M</span> Makaan</a
+        >
+        <p class="hint">Admin-Bereich — Immobilien verwalten</p>
+        <form data-login-form>
+          <div class="field" style="margin-bottom: 14px">
+            <label for="passcode">Zugangscode</label>
+            <input
+              type="password"
+              id="passcode"
+              name="passcode"
+              required
+              placeholder="Zugangscode eingeben"
+              autofocus
+            />
+          </div>
+          <div
+            class="form-msg err"
+            data-login-error
+            style="margin-bottom: 14px"
+          ></div>
+          <button type="submit" class="btn btn-primary btn-block">
+            Anmelden
+          </button>
+        </form>
+        <p class="helper-text" style="text-align: center; margin-top: 16px">
+          Demo-Zugangscode: <strong>makaan2026</strong><br />
+          Hinweis: reine Frontend-Demo, keine echte Authentifizierung.
+        </p>
+        <p class="helper-text" style="text-align: center; margin-top: 10px">
+          <a href="../index.html">← Zurück zur Website</a>
+        </p>
+      </div>
+    </div>
+    <!-- ADMIN – LOGIN SECTION – ENDE -->
+
+    <script src="../js/data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/admin.js"></script>
+    <script>
+      initLoginForm();
+    </script>
+  </body>
+</html>

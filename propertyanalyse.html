@@ -1,0 +1,1038 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Immobilienanalyse | Makaan Immobilien</title>
+    <meta
+      name="description"
+      content="Analysieren Sie Ihre Immobilie in 12 einfachen Schritten und erhalten Sie eine fundierte Einschätzung."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/propertyanalyse.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+  GLOBAL – HEADER / NAVIGATION – START
+  ===================================================== -->
+    <header class="site-header" id="siteHeader">
+      <div class="container header-row">
+        <a href="index.html" class="logo" aria-label="Makaan Startseite">
+          <span class="mark">M</span><span class="logo-text">Makaan</span>
+        </a>
+
+        <nav class="main-nav" id="mainNav" aria-label="Hauptnavigation">
+          <a href="index.html" class="active">Startseite</a>
+          <a href="property-list.html">Immobilien</a>
+          <a href="property-sell.html">Verkaufen</a>
+          <a href="propertyanalyse.html">Bewertung</a>
+          <a href="leistungen.html">Leistungen</a>
+          <a href="about.html">Über uns</a>
+          <a href="contact.html">Kontakt</a>
+        </nav>
+
+        <div class="header-cta">
+          <a href="contact.html" class="btn btn-primary btn-sm"
+            ><i class="fa-regular fa-calendar"></i> Beratung</a
+          >
+        </div>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Menü öffnen"
+          aria-expanded="false"
+          type="button"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <!-- GLOBAL – HEADER / NAVIGATION – ENDE -->
+
+    <!-- =========================================================
+       PROPERTY ANALYSE – HERO – START
+  ========================================================== -->
+    <main>
+      <section class="analysis-hero">
+        <div class="analysis-hero-bg"></div>
+
+        <div class="container analysis-hero-content">
+          <div class="eyebrow">
+            <span></span>
+            Immobilienanalyse
+          </div>
+
+          <h1>
+            Ihre Immobilie.
+            <em>Unser genauer Blick.</em>
+          </h1>
+
+          <p>
+            Beantworten Sie 12 Fragen zu Ihrer Immobilie. Auf dieser Grundlage
+            können wir Objekt, Lage und Rahmenbedingungen gezielt einschätzen.
+          </p>
+
+          <div class="hero-points">
+            <div>
+              <i class="fa-solid fa-check"></i>
+              <span>12 einfache Schritte</span>
+            </div>
+
+            <div>
+              <i class="fa-solid fa-check"></i>
+              <span>Unverbindlich</span>
+            </div>
+
+            <div>
+              <i class="fa-solid fa-check"></i>
+              <span>Individuelle Analyse</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PROPERTY ANALYSE – HERO – ENDE -->
+
+      <!-- =========================================================
+         PROPERTY ANALYSE – FORMULAR – START
+    ========================================================== -->
+      <section class="analysis-section">
+        <div class="container">
+          <div class="analysis-layout">
+            <!-- INFO SIDEBAR -->
+            <aside class="analysis-sidebar">
+              <div class="analysis-sidebar-card">
+                <div class="sidebar-icon">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <span class="sidebar-label"> PROPERTY ANALYSE </span>
+
+                <h2>In 12 Schritten zu einer fundierten Einschätzung.</h2>
+
+                <p>
+                  Je genauer Ihre Angaben sind, desto besser können wir die
+                  Immobilie und ihre Rahmenbedingungen einschätzen.
+                </p>
+
+                <div class="sidebar-divider"></div>
+
+                <div class="sidebar-trust">
+                  <i class="fa-solid fa-lock"></i>
+
+                  <div>
+                    <strong>Ihre Angaben bleiben vertraulich.</strong>
+                    <span>
+                      Die Daten werden ausschließlich für Ihre Immobilienanalyse
+                      verwendet.
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </aside>
+
+            <!-- ANALYSIS CARD -->
+            <div class="analysis-card">
+              <!-- PROGRESS -->
+              <div class="analysis-progress">
+                <div class="progress-top">
+                  <span>
+                    Frage <strong id="currentStep">1</strong> von 12
+                  </span>
+
+                  <span id="progressPercent">8 %</span>
+                </div>
+
+                <div class="progress-track">
+                  <div
+                    class="progress-bar"
+                    id="progressBar"
+                    style="width: 8.33%"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- FORM -->
+              <form id="propertyAnalysisForm" novalidate>
+                <!-- =================================================
+                   FRAGE 01 – IMMOBILIENART
+              ================================================== -->
+                <div class="analysis-step active" data-step="1">
+                  <div class="step-number">01</div>
+
+                  <h2>Welche Immobilienart möchten Sie analysieren?</h2>
+
+                  <p class="step-description">
+                    Wählen Sie zunächst die grundsätzliche Art Ihrer Immobilie.
+                  </p>
+
+                  <div class="option-grid option-grid-2">
+                    <button
+                      type="button"
+                      class="selection-card"
+                      data-value="Wohnung"
+                      data-field="propertyType"
+                    >
+                      <span class="selection-icon">
+                        <i class="fa-solid fa-building"></i>
+                      </span>
+
+                      <span class="selection-content">
+                        <strong>Wohnung</strong>
+                        <small>Eigentums- oder Etagenwohnung</small>
+                      </span>
+
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="selection-card"
+                      data-value="Haus"
+                      data-field="propertyType"
+                    >
+                      <span class="selection-icon">
+                        <i class="fa-solid fa-house"></i>
+                      </span>
+
+                      <span class="selection-content">
+                        <strong>Haus</strong>
+                        <small>Einfamilienhaus, Reihenhaus etc.</small>
+                      </span>
+
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="selection-card"
+                      data-value="Grundstück"
+                      data-field="propertyType"
+                    >
+                      <span class="selection-icon">
+                        <i class="fa-solid fa-map"></i>
+                      </span>
+
+                      <span class="selection-content">
+                        <strong>Grundstück</strong>
+                        <small>Baugrundstück oder sonstiges Grundstück</small>
+                      </span>
+
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="selection-card"
+                      data-value="Gewerbeimmobilie"
+                      data-field="propertyType"
+                    >
+                      <span class="selection-icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                      </span>
+
+                      <span class="selection-content">
+                        <strong>Gewerbeimmobilie</strong>
+                        <small>Gewerblich genutzte Immobilie</small>
+                      </span>
+
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+                <!-- FRAGE 01 – ENDE -->
+
+                <!-- =================================================
+                   FRAGE 02 – UNTERART
+              ================================================== -->
+                <div class="analysis-step" data-step="2">
+                  <div class="step-number">02</div>
+
+                  <h2>Um welche Unterart handelt es sich?</h2>
+
+                  <p class="step-description">
+                    Die Auswahl richtet sich nach Ihrer Immobilienart.
+                  </p>
+
+                  <div
+                    class="option-grid option-grid-2"
+                    id="propertySubtypeOptions"
+                  ></div>
+                </div>
+                <!-- FRAGE 02 – ENDE -->
+
+                <!-- =================================================
+                   FRAGE 03 – WOHN-/NUTZFLÄCHE
+              ================================================== -->
+                <div class="analysis-step" data-step="3">
+                  <div class="step-number">03</div>
+
+                  <h2>Wie groß ist die Wohn- bzw. Nutzfläche?</h2>
+
+                  <p class="step-description">
+                    Bitte geben Sie die ungefähre Fläche Ihrer Immobilie an.
+                  </p>
+
+                  <div class="input-large">
+                    <input
+                      type="number"
+                      id="livingArea"
+                      name="livingArea"
+                      min="1"
+                      max="99999"
+                      placeholder="z. B. 125"
+                      inputmode="decimal"
+                    />
+
+                    <span>m²</span>
+                  </div>
+
+                  <div class="input-hint">
+                    <i class="fa-solid fa-circle-info"></i>
+                    Wohn- oder Nutzfläche laut Unterlagen, falls vorhanden.
+                  </div>
+                </div>
+                <!-- FRAGE 03 – ENDE -->
+
+                <!-- =================================================
+                   FRAGE 04 – GRUNDSTÜCKSFLÄCHE
+              ================================================== -->
+                <div class="analysis-step" data-step="4">
+                  <div class="step-number">04</div>
+
+                  <h2>Wie groß ist die Grundstücksfläche?</h2>
+
+                  <p class="step-description">
+                    Falls Ihre Immobilie über ein Grundstück verfügt, geben Sie
+                    hier die Fläche an.
+                  </p>
+
+                  <div class="input-large">
+                    <input
+                      type="number"
+                      id="plotArea"
+                      name="plotArea"
+                      min="0"
+                      max="999999"
+                      placeholder="z. B. 650"
+                      inputmode="decimal"
+                    />
+
+                    <span>m²</span>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="skip-button"
+                    data-skip="plotArea"
+                  >
+                    Keine Grundstücksfläche angeben
+                  </button>
+                </div>
+                <!-- FRAGE 04 – ENDE -->
+
+                <!-- =================================================
+                   FRAGE 05 – ZIMMER
+              ================================================== -->
+                <div class="analysis-step" data-step="5">
+                  <div class="step-number">05</div>
+
+                  <h2>Wie viele Zimmer hat die Immobilie?</h2>
+
+                  <p class="step-description">
+                    Wählen Sie die ungefähre Anzahl der Zimmer.
+                  </p>
+
+                  <div class="room-grid">
+                    <button type="button" class="room-option" data-value="1">
+                      1
+                    </button>
+
+                    <button type="button" class="room-option" data-value="2">
+                      2
+                    </button>
+
+                    <button type="button" class="room-option" data-value="3">
+                      3
+                    </button>
+
+                    <button type="button" class="room-option" data-value="4">
+                      4
+                    </button>
+
+                    <button type="button" class="room-option" data-value="5">
+                      5
+                    </button>
+
+                    <button type="button" class="room-option" data-value="6">
+                      6
+                    </button>
+
+                    <button type="button" class="room-option" data-value="7">
+                      7
+                    </button>
+
+                    <button type="button" class="room-option" data-value="8+">
+                      8+
+                    </button>
+                  </div>
+                </div>
+                <!-- FRAGE 05 – ENDE -->
+
+                <!-- =================================================
+                   FRAGE 06 – BAUJAHR
+              ================================================== -->
+                <div class="analysis-step" data-step="6">
+                  <div class="step-number">06</div>
+
+                  <h2>Wann wurde die Immobilie gebaut?</h2>
+
+                  <p class="step-description">
+                    Geben Sie möglichst das ursprüngliche Baujahr an.
+                  </p>
+
+                  <div class="input-large">
+                    <input
+                      type="number"
+                      id="buildYear"
+                      name="buildYear"
+                      min="1800"
+                      max="2026"
+                      placeholder="z. B. 1998"
+                      inputmode="numeric"
+                    />
+
+                    <span>Baujahr</span>
+                  </div>
+                </div>
+                <!-- FRAGE 06 – ENDE -->
+
+                <!-- =================================================
+                   FRAGE 07 – MODERNISIERUNG
+              ================================================== -->
+                <div class="analysis-step" data-step="7">
+                  <div class="step-number">07</div>
+
+                  <h2>Wann wurde die Immobilie zuletzt modernisiert?</h2>
+
+                  <p class="step-description">
+                    Wählen Sie das Jahr der letzten wesentlichen Modernisierung.
+                  </p>
+
+                  <div class="option-grid option-grid-2">
+                    <button
+                      type="button"
+                      class="selection-card"
+                      data-value="Noch nicht modernisiert"
+                      data-field="modernization"
+                    >
+                      <span class="selection-icon">
+                        <i class="fa-solid fa-house-circle-xmark"></i>
+                      </span>
+
+                      <span class="selection-content">
+                        <strong>Noch nicht modernisiert</strong>
+                        <small>Keine wesentliche Modernisierung</small>
+                      </span>
+
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="selection-card"
+                      data-value="2020–2026"
+                      data-field="modernization"
+                    >
+                      <span class="selection-icon">
+                        <i class="fa-solid fa-calendar-check"></i>
+                      </span>
+
+                      <span class="selection-content">
+                        <strong>2020–2026</strong>
+                        <small>In den letzten Jahren modernisiert</small>
+                      </span>
+
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="selection-card"
+                      data-value="2010–2019"
+                      data-field="modernization"
+                    >
+                      <span class="selection-icon">
+                        <i class="fa-solid fa-calendar-days"></i>
+                      </span>
+
+                      <span class="selection-content">
+                        <strong>2010–2019</strong>
+                        <small>Modernisierung im letzten Jahrzehnt</small>
+                      </span>
+
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="selection-card"
+                      data-value="Vor 2010"
+                      data-field="modernization"
+                    >
+                      <span class="selection-icon">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                      </span>
+
+                      <span class="selection-content">
+                        <strong>Vor 2010</strong>
+                        <small>Länger zurückliegende Modernisierung</small>
+                      </span>
+
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+                <!-- FRAGE 07 – ENDE -->
+
+                <!-- =================================================
+                   FRAGE 08 – AUSSTATTUNGSQUALITÄT
+              ================================================== -->
+                <div class="analysis-step" data-step="8">
+                  <div class="step-number">08</div>
+
+                  <h2>Wie würden Sie die Ausstattungsqualität beschreiben?</h2>
+
+                  <p class="step-description">
+                    Wählen Sie die Ausstattung, die Ihre Immobilie am besten
+                    beschreibt.
+                  </p>
+
+                  <div class="quality-list">
+                    <button
+                      type="button"
+                      class="quality-option"
+                      data-value="Einfach"
+                      data-field="quality"
+                    >
+                      <span class="quality-marker">01</span>
+
+                      <span>
+                        <strong>Einfach</strong>
+                        <small>Funktionale und einfache Ausstattung</small>
+                      </span>
+
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="quality-option"
+                      data-value="Mittel"
+                      data-field="quality"
+                    >
+                      <span class="quality-marker">02</span>
+
+                      <span>
+                        <strong>Mittel</strong>
+                        <small>Solide und zeitgemäße Ausstattung</small>
+                      </span>
+
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="quality-option"
+                      data-value="Gehoben"
+                      data-field="quality"
+                    >
+                      <span class="quality-marker">03</span>
+
+                      <span>
+                        <strong>Gehoben</strong>
+                        <small>Hochwertige Materialien und Ausstattung</small>
+                      </span>
+
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="quality-option"
+                      data-value="Hochwertig"
+                      data-field="quality"
+                    >
+                      <span class="quality-marker">04</span>
+
+                      <span>
+                        <strong>Hochwertig</strong>
+                        <small
+                          >Exklusive und besonders hochwertige
+                          Ausstattung</small
+                        >
+                      </span>
+
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+                <!-- FRAGE 08 – ENDE -->
+
+                <!-- =================================================
+                   FRAGE 09 – AKTUELLE NUTZUNG
+              ================================================== -->
+                <div class="analysis-step" data-step="9">
+                  <div class="step-number">09</div>
+
+                  <h2>Wie wird die Immobilie aktuell genutzt?</h2>
+
+                  <p class="step-description">
+                    Bitte wählen Sie die aktuelle Nutzung.
+                  </p>
+
+                  <div class="option-grid option-grid-2">
+                    <button
+                      type="button"
+                      class="selection-card"
+                      data-value="Selbst genutzt"
+                      data-field="usage"
+                    >
+                      <span class="selection-icon">
+                        <i class="fa-solid fa-house-user"></i>
+                      </span>
+
+                      <span class="selection-content">
+                        <strong>Selbst genutzt</strong>
+                        <small>Eigennutzung durch Eigentümer</small>
+                      </span>
+
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="selection-card"
+                      data-value="Vermietet"
+                      data-field="usage"
+                    >
+                      <span class="selection-icon">
+                        <i class="fa-solid fa-key"></i>
+                      </span>
+
+                      <span class="selection-content">
+                        <strong>Vermietet</strong>
+                        <small>Aktuell vermietet</small>
+                      </span>
+
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="selection-card"
+                      data-value="Leerstehend"
+                      data-field="usage"
+                    >
+                      <span class="selection-icon">
+                        <i class="fa-solid fa-door-open"></i>
+                      </span>
+
+                      <span class="selection-content">
+                        <strong>Leerstehend</strong>
+                        <small>Aktuell nicht genutzt</small>
+                      </span>
+
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="selection-card"
+                      data-value="Sonstige Nutzung"
+                      data-field="usage"
+                    >
+                      <span class="selection-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                      </span>
+
+                      <span class="selection-content">
+                        <strong>Sonstige Nutzung</strong>
+                        <small>Andere aktuelle Nutzung</small>
+                      </span>
+
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+                <!-- FRAGE 09 – ENDE -->
+
+                <!-- =================================================
+                   FRAGE 10 – VERKAUFSZEITPUNKT
+              ================================================== -->
+                <div class="analysis-step" data-step="10">
+                  <div class="step-number">10</div>
+
+                  <h2>Wann möchten Sie Ihre Immobilie verkaufen?</h2>
+
+                  <p class="step-description">
+                    Ihr gewünschter Verkaufszeitpunkt hilft uns, die passende
+                    Strategie einzuschätzen.
+                  </p>
+
+                  <div class="timeline-options">
+                    <button
+                      type="button"
+                      class="timeline-option"
+                      data-value="Sofort"
+                      data-field="saleTime"
+                    >
+                      <span>01</span>
+                      <strong>Sofort</strong>
+                      <small>Ich möchte zeitnah verkaufen.</small>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="timeline-option"
+                      data-value="1–3 Monate"
+                      data-field="saleTime"
+                    >
+                      <span>02</span>
+                      <strong>1–3 Monate</strong>
+                      <small>Verkauf in absehbarer Zeit.</small>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="timeline-option"
+                      data-value="3–6 Monate"
+                      data-field="saleTime"
+                    >
+                      <span>03</span>
+                      <strong>3–6 Monate</strong>
+                      <small>Mittelfristige Planung.</small>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="timeline-option"
+                      data-value="6–12 Monate"
+                      data-field="saleTime"
+                    >
+                      <span>04</span>
+                      <strong>6–12 Monate</strong>
+                      <small>Langfristigere Planung.</small>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="timeline-option"
+                      data-value="Noch offen"
+                      data-field="saleTime"
+                    >
+                      <span>05</span>
+                      <strong>Noch offen</strong>
+                      <small>Ich möchte mich zunächst informieren.</small>
+                    </button>
+                  </div>
+                </div>
+                <!-- FRAGE 10 – ENDE -->
+
+                <!-- =================================================
+                   FRAGE 11 – LAGE
+              ================================================== -->
+                <div class="analysis-step" data-step="11">
+                  <div class="step-number">11</div>
+
+                  <h2>Wo befindet sich Ihre Immobilie?</h2>
+
+                  <p class="step-description">
+                    Die Lage ist einer der wichtigsten Faktoren für die
+                    Immobilienanalyse.
+                  </p>
+
+                  <div class="form-fields">
+                    <div class="form-field">
+                      <label for="street"> Straße und Hausnummer </label>
+
+                      <div class="input-wrapper">
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <input
+                          type="text"
+                          id="street"
+                          name="street"
+                          placeholder="z. B. Hauptstraße 25"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="form-field">
+                        <label for="zip"> PLZ </label>
+
+                        <input
+                          type="text"
+                          id="zip"
+                          name="zip"
+                          placeholder="60311"
+                          maxlength="5"
+                          inputmode="numeric"
+                        />
+                      </div>
+
+                      <div class="form-field">
+                        <label for="city"> Ort </label>
+
+                        <input
+                          type="text"
+                          id="city"
+                          name="city"
+                          placeholder="Frankfurt am Main"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- FRAGE 11 – ENDE -->
+
+                <!-- =================================================
+                   FRAGE 12 – KONTAKTDATEN
+              ================================================== -->
+                <div class="analysis-step" data-step="12">
+                  <div class="step-number">12</div>
+
+                  <h2>Wohin dürfen wir Ihre Analyse senden?</h2>
+
+                  <p class="step-description">
+                    Zum Abschluss benötigen wir Ihre Kontaktdaten.
+                  </p>
+
+                  <div class="form-fields">
+                    <div class="form-row">
+                      <div class="form-field">
+                        <label for="firstName"> Vorname * </label>
+
+                        <input
+                          type="text"
+                          id="firstName"
+                          name="firstName"
+                          placeholder="Vorname"
+                          required
+                        />
+                      </div>
+
+                      <div class="form-field">
+                        <label for="lastName"> Nachname * </label>
+
+                        <input
+                          type="text"
+                          id="lastName"
+                          name="lastName"
+                          placeholder="Nachname"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form-field">
+                      <label for="email"> E-Mail-Adresse * </label>
+
+                      <div class="input-wrapper">
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          placeholder="ihre@email.de"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form-field">
+                      <label for="phone"> Telefonnummer </label>
+
+                      <div class="input-wrapper">
+                        <i class="fa-solid fa-phone"></i>
+
+                        <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          placeholder="+49 151 12345678"
+                        />
+                      </div>
+                    </div>
+
+                    <label class="privacy-check">
+                      <input
+                        type="checkbox"
+                        id="privacy"
+                        name="privacy"
+                        required
+                      />
+
+                      <span class="custom-check">
+                        <i class="fa-solid fa-check"></i>
+                      </span>
+
+                      <span>
+                        Ich habe die
+                        <a href="datenschutz.html" data-legal="datenschutz"
+                          >Datenschutzerklärung</a
+                        >
+                        gelesen und akzeptiere die Verarbeitung meiner Angaben
+                        zur Bearbeitung meiner Anfrage.
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <!-- FRAGE 12 – ENDE -->
+
+                <!-- NAVIGATION -->
+                <div class="analysis-navigation">
+                  <button type="button" class="back-button" id="backButton">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Zurück
+                  </button>
+
+                  <button type="button" class="next-button" id="nextButton">
+                    Weiter
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+
+                  <button type="submit" class="submit-button" id="submitButton">
+                    Analyse anfordern
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PROPERTY ANALYSE – FORMULAR – ENDE -->
+
+      <!-- =========================================================
+         PROPERTY ANALYSE – TRUST – START
+    ========================================================== -->
+      <section class="analysis-trust">
+        <div class="container">
+          <div class="trust-grid">
+            <div class="trust-item">
+              <i class="fa-solid fa-chart-column"></i>
+
+              <div>
+                <strong>Objektbezogen</strong>
+                <span> Ihre Angaben bilden die Grundlage der Analyse. </span>
+              </div>
+            </div>
+
+            <div class="trust-item">
+              <i class="fa-solid fa-location-crosshairs"></i>
+
+              <div>
+                <strong>Lageorientiert</strong>
+                <span>
+                  Die Lage wird bei der Einschätzung berücksichtigt.
+                </span>
+              </div>
+            </div>
+
+            <div class="trust-item">
+              <i class="fa-solid fa-user-tie"></i>
+
+              <div>
+                <strong>Persönlich</strong>
+                <span> Bei Fragen steht Ihnen unser Team zur Verfügung. </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PROPERTY ANALYSE – TRUST – ENDE -->
+    </main>
+
+    <!-- =========================================================
+       GLOBAL – FOOTER – START
+  ========================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="brand">
+              <span class="brand-mark">M</span>
+              <span class="brand-text">Makaan</span>
+            </a>
+
+            <p>
+              Immobilienberatung mit persönlicher Betreuung, fundierter Analyse
+              und klarer Strategie.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h4>Immobilien</h4>
+
+            <a href="property-list.html">Immobilien kaufen</a>
+            <a href="immobilie-verkaufen.html">Immobilie verkaufen</a>
+            <a href="propertyanalyse.html">Immobilienanalyse</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Makaan</h4>
+
+            <a href="about.html">Über uns</a>
+            <a href="leistungen.html">Leistungen</a>
+            <a href="contact.html">Kontakt</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Kontakt</h4>
+
+            <a href="tel:+49123455678"> +49 123 455 678 </a>
+
+            <a href="mailto:info@makaan-immobilien.de">
+              info@makaan-immobilien.de
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span> © 2026 Makaan Immobilien </span>
+
+          <div>
+            <a href="#">Impressum</a>
+            <a href="#">Datenschutz</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- =========================================================
+       GLOBAL – FOOTER – ENDE
+  ========================================================== -->
+
+    <script src="js/main.js"></script>
+    <script src="js/propertyanalyse.js"></script>
+  </body>
+</html>

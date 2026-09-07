@@ -1,0 +1,2448 @@
+/* =========================================================
+   PROPERTY LIST – INHALTSVERZEICHNIS
+   =========================================================
+
+   01. PAGE VARIABLES
+   02. PROPERTY HERO
+   03. SEARCH PANEL
+   04. QUICK FILTERS
+   05. LISTING HEADER
+   06. FILTER SIDEBAR
+   07. PROPERTY GRID
+   08. PROPERTY CARD
+   09. EMPTY STATE
+   10. PAGINATION
+   11. OFF MARKET
+   12. SERVICE SECTION
+   13. SEARCH PROFILE CTA
+   14. MODAL
+   15. RESPONSIVE
+   ========================================================= */
+
+/* =========================================================
+   01. PAGE VARIABLES – START
+   ========================================================= */
+
+:root {
+  --property-green: #12352f;
+  --property-green-dark: #0a2420;
+  --property-gold: #c9a86a;
+  --property-gold-light: #e2ca9a;
+
+  --property-bg: #f7f5f0;
+  --property-white: #ffffff;
+  --property-text: #18211f;
+  --property-muted: #707975;
+  --property-border: #e7e3da;
+
+  --property-radius: 18px;
+  --property-radius-lg: 28px;
+
+  --property-shadow: 0 18px 50px rgba(15, 39, 34, 0.08);
+}
+
+html,
+body {
+  overflow-x: clip;
+}
+
+/* 01. PAGE VARIABLES – ENDE */
+
+/* =========================================================
+   02. PROPERTY HERO – START
+   ========================================================= */
+
+.property-hero {
+  position: relative;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  /* Hintergrundbild */
+  background:
+    linear-gradient(
+      110deg,
+      rgba(5, 24, 20, 0.97) 0%,
+      rgba(8, 32, 27, 0.93) 45%,
+      rgba(8, 32, 27, 0.82) 100%
+    ),
+    url("../img/header.jpg") center / cover no-repeat;
+}
+
+/* Zusätzliche Abdunklung für bessere Lesbarkeit */
+.property-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.18) 0%,
+    rgba(0, 0, 0, 0.08) 45%,
+    rgba(0, 0, 0, 0.28) 100%
+  );
+}
+
+.property-hero-inner {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* Goldener Lichtakzent */
+.property-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+
+  background: radial-gradient(
+    circle at 82% 18%,
+    rgba(201, 168, 106, 0.14),
+    transparent 32%
+  );
+}
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.property-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 45px;
+
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.property-breadcrumb a {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.property-breadcrumb a:hover {
+  color: #d4b886;
+}
+
+.property-breadcrumb span {
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.property-breadcrumb strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.property-hero-copy {
+  max-width: 720px;
+  color: #ffffff;
+}
+
+/* Eyebrow */
+.property-hero-copy .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 20px;
+
+  color: #e1c994;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.property-hero-copy .eyebrow i {
+  color: #d4b886;
+}
+
+/* =========================================================
+   HERO HEADLINE
+   ========================================================= */
+
+.property-hero-copy h1 {
+  margin: 0;
+
+  font-family: "Fraunces", serif;
+  font-size: clamp(44px, 6vw, 78px);
+  line-height: 0.98;
+
+  font-weight: 600;
+  letter-spacing: -0.04em;
+
+  color: #ffffff;
+
+  /* leichte Lesbarkeit auf Bild */
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.22);
+}
+
+.property-hero-copy h1 em {
+  display: block;
+
+  color: #e1c994;
+  font-style: normal;
+
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================================================
+   HERO DESCRIPTION
+   ========================================================= */
+
+.property-hero-copy p {
+  max-width: 620px;
+
+  margin: 25px 0 0;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: 16px;
+  line-height: 1.75;
+  font-weight: 400;
+
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.22);
+}
+
+/* =========================================================
+   SEARCH PANEL
+   ========================================================= */
+
+.property-search-panel {
+  position: relative;
+  z-index: 4;
+
+  margin-top: 45px;
+
+  padding: 8px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 18px;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.25),
+    0 8px 25px rgba(0, 0, 0, 0.12);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* =========================================================
+   SEARCH TABS
+   ========================================================= */
+
+.search-tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  padding: 4px;
+
+  border-bottom: 1px solid rgba(10, 40, 34, 0.08);
+}
+
+.search-tab {
+  border: 0;
+  background: transparent;
+
+  padding: 11px 20px;
+
+  border-radius: 10px;
+
+  color: #52605b;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.search-tab:hover {
+  color: #0b3028;
+  background: rgba(212, 184, 134, 0.12);
+}
+
+.search-tab.active {
+  color: #ffffff;
+  background: #0b3028;
+}
+
+/* =========================================================
+   SEARCH FORM
+   ========================================================= */
+
+.hero-search-form {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr auto;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px;
+}
+
+/* Search fields */
+.hero-search-field {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  min-height: 62px;
+
+  padding: 10px 16px;
+
+  border: 1px solid rgba(11, 48, 40, 0.1);
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.hero-search-field:focus-within {
+  border-color: rgba(212, 184, 134, 0.8);
+
+  box-shadow: 0 0 0 3px rgba(212, 184, 134, 0.12);
+}
+
+.hero-search-field > i {
+  flex-shrink: 0;
+
+  color: #a18148;
+  font-size: 17px;
+}
+
+.hero-search-field > div {
+  min-width: 0;
+  width: 100%;
+}
+
+.hero-search-field label {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #68736f;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hero-search-field input,
+.hero-search-field select {
+  width: 100%;
+
+  padding: 0;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: #17352f;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hero-search-field input::placeholder {
+  color: #7b8581;
+  opacity: 1;
+}
+
+.hero-search-field select {
+  cursor: pointer;
+}
+
+/* =========================================================
+   SEARCH BUTTON
+   ========================================================= */
+
+.property-search-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  min-height: 62px;
+
+  padding: 0 25px;
+
+  border: 0;
+  border-radius: 12px;
+
+  background: #0b3028;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 20px rgba(11, 48, 40, 0.18);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.property-search-button:hover {
+  background: #12483c;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 12px 25px rgba(11, 48, 40, 0.25);
+}
+
+.property-search-button i {
+  color: #e1c994;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 991px) {
+  .property-hero {
+    min-height: auto;
+  }
+
+  .property-hero-inner {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  .property-breadcrumb {
+    margin-bottom: 30px;
+  }
+
+  .property-hero-copy h1 {
+    font-size: clamp(42px, 9vw, 62px);
+  }
+
+  .hero-search-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-search-location {
+    grid-column: 1 / -1;
+  }
+
+  .property-search-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .property-hero-inner {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .property-breadcrumb {
+    margin-bottom: 25px;
+  }
+
+  .property-hero-copy h1 {
+    font-size: 43px;
+    line-height: 1.02;
+  }
+
+  .property-hero-copy p {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .property-search-panel {
+    margin-top: 35px;
+    border-radius: 15px;
+  }
+
+  .search-tabs {
+    overflow-x: auto;
+  }
+
+  .search-tab {
+    flex: 1;
+    white-space: nowrap;
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .hero-search-form {
+    grid-template-columns: 1fr;
+    padding: 8px;
+  }
+
+  .hero-search-location {
+    grid-column: auto;
+  }
+
+  .hero-search-field,
+  .property-search-button {
+    min-height: 58px;
+  }
+}
+
+/* =========================================================
+   02. PROPERTY HERO – ENDE
+   ========================================================= */
+
+/* =========================================================
+   03. SEARCH PANEL – START
+   ========================================================= */
+
+.property-search-panel {
+  position: relative;
+
+  max-width: 1050px;
+  margin-top: 48px;
+
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  border-radius: 22px;
+
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
+
+  overflow: hidden;
+}
+
+.search-tabs {
+  display: flex;
+  align-items: center;
+
+  padding: 8px;
+
+  border-bottom: 1px solid var(--property-border);
+}
+
+.search-tab {
+  appearance: none;
+  border: 0;
+  background: transparent;
+
+  padding: 12px 20px;
+
+  border-radius: 12px;
+
+  color: var(--property-muted);
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.search-tab:hover {
+  color: var(--property-green);
+}
+
+.search-tab.active {
+  color: #fff;
+  background: var(--property-green);
+}
+
+.hero-search-form {
+  display: grid;
+  grid-template-columns:
+    minmax(240px, 1.5fr)
+    minmax(180px, 1fr)
+    minmax(170px, 1fr)
+    auto;
+
+  align-items: stretch;
+}
+
+.hero-search-field {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  min-height: 86px;
+  padding: 15px 22px;
+
+  border-right: 1px solid var(--property-border);
+}
+
+.hero-search-field > i {
+  color: var(--property-gold);
+  font-size: 18px;
+}
+
+.hero-search-field label {
+  display: block;
+  margin-bottom: 5px;
+
+  color: var(--property-muted);
+
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hero-search-field input,
+.hero-search-field select {
+  width: 100%;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: var(--property-text);
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.hero-search-field select {
+  cursor: pointer;
+}
+
+.property-search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-width: 150px;
+  padding: 0 26px;
+
+  border: 0;
+
+  background: var(--property-gold);
+  color: var(--property-green-dark);
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 800;
+
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.property-search-button:hover {
+  background: var(--property-gold-light);
+}
+
+/* 03. SEARCH PANEL – ENDE */
+
+/* =========================================================
+   04. QUICK FILTERS – START
+   ========================================================= */
+
+.quick-filter-section {
+  background: #fff;
+  border-bottom: 1px solid var(--property-border);
+}
+
+.quick-filter-inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  min-height: 72px;
+
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.quick-filter-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.quick-filter-label {
+  margin-right: 8px;
+
+  color: var(--property-muted);
+
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  white-space: nowrap;
+  letter-spacing: 0.08em;
+}
+
+.quick-filter {
+  flex: 0 0 auto;
+
+  padding: 9px 15px;
+
+  border: 1px solid var(--property-border);
+  border-radius: 999px;
+
+  background: #fff;
+  color: var(--property-text);
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.quick-filter:hover,
+.quick-filter.active {
+  border-color: var(--property-green);
+  background: var(--property-green);
+  color: #fff;
+}
+
+.quick-filter.reset {
+  border-color: transparent;
+  color: var(--property-muted);
+}
+
+/* 04. QUICK FILTERS – ENDE */
+
+/* =========================================================
+   05. LISTING HEADER – START
+   ========================================================= */
+
+.property-main {
+  padding: 100px 0;
+  background: var(--property-bg);
+}
+
+.listing-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+
+  margin-bottom: 50px;
+}
+
+.listing-heading {
+  max-width: 650px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--property-gold);
+
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.listing-heading h2,
+.section-intro h2 {
+  margin: 10px 0 14px;
+
+  color: var(--property-green);
+
+  font-family: "Fraunces", serif;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.05;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.listing-heading h2 em,
+.section-intro h2 em,
+.search-profile-inner h2 em,
+.offmarket-content h2 em,
+.profile-modal h2 em {
+  color: var(--property-gold);
+  font-style: normal;
+}
+
+.listing-heading p {
+  margin: 0;
+
+  color: var(--property-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.listing-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.sort-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort-control label {
+  color: var(--property-muted);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.sort-control select {
+  min-width: 175px;
+
+  padding: 11px 14px;
+
+  border: 1px solid var(--property-border);
+  border-radius: 10px;
+
+  background: #fff;
+  color: var(--property-text);
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  outline: none;
+}
+
+.mobile-filter-button {
+  display: none;
+
+  align-items: center;
+  gap: 8px;
+
+  padding: 11px 15px;
+
+  border: 1px solid var(--property-border);
+  border-radius: 10px;
+
+  background: #fff;
+  color: var(--property-green);
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+/* 05. LISTING HEADER – ENDE */
+
+/* =========================================================
+   06. FILTER SIDEBAR – START
+   ========================================================= */
+
+.property-content-layout {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  gap: 45px;
+  align-items: start;
+}
+
+.property-filter {
+  position: sticky;
+  top: 110px;
+
+  padding: 24px;
+
+  border: 1px solid var(--property-border);
+  border-radius: var(--property-radius);
+
+  background: #fff;
+  box-shadow: var(--property-shadow);
+}
+
+.filter-mobile-header {
+  display: none;
+}
+
+.filter-section {
+  padding: 0 0 24px;
+  margin-bottom: 24px;
+
+  border-bottom: 1px solid var(--property-border);
+}
+
+.filter-section:last-of-type {
+  border-bottom: 0;
+}
+
+.filter-section-title {
+  margin-bottom: 14px;
+
+  color: var(--property-green);
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.filter-input-icon {
+  position: relative;
+}
+
+.filter-input-icon i {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: var(--property-gold);
+  font-size: 13px;
+}
+
+.filter-input-icon input {
+  width: 100%;
+
+  padding: 12px 12px 12px 36px;
+
+  border: 1px solid var(--property-border);
+  border-radius: 10px;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.custom-check-list {
+  display: grid;
+  gap: 10px;
+}
+
+.custom-check-list label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: var(--property-muted);
+
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.custom-check-list input {
+  accent-color: var(--property-green);
+}
+
+.status-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.status-switch label {
+  cursor: pointer;
+}
+
+.status-switch input,
+.room-options input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.status-switch span {
+  display: block;
+
+  padding: 8px 10px;
+
+  border: 1px solid var(--property-border);
+  border-radius: 8px;
+
+  color: var(--property-muted);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.status-switch input:checked + span {
+  border-color: var(--property-green);
+  background: var(--property-green);
+  color: #fff;
+}
+
+.filter-price-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.filter-price-grid label {
+  display: block;
+  margin-bottom: 5px;
+
+  color: var(--property-muted);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.filter-price-grid input {
+  width: 100%;
+
+  padding: 10px;
+
+  border: 1px solid var(--property-border);
+  border-radius: 9px;
+
+  font-family: inherit;
+  font-size: 11px;
+  outline: none;
+}
+
+.room-options {
+  display: flex;
+  gap: 6px;
+}
+
+.room-options label {
+  cursor: pointer;
+}
+
+.room-options span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 35px;
+  height: 35px;
+
+  border: 1px solid var(--property-border);
+  border-radius: 8px;
+
+  color: var(--property-muted);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.room-options input:checked + span {
+  border-color: var(--property-green);
+  background: var(--property-green);
+  color: #fff;
+}
+
+.filter-actions {
+  padding-top: 2px;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* 06. FILTER SIDEBAR – ENDE */
+
+/* =========================================================
+   07. PROPERTY GRID – START
+   ========================================================= */
+
+.results-meta {
+  margin-bottom: 18px;
+
+  color: var(--property-muted);
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.listing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
+
+/* 07. PROPERTY GRID – ENDE */
+
+/* =========================================================
+   08. PROPERTY CARD – START
+   ========================================================= */
+
+.property-card {
+  position: relative;
+
+  overflow: hidden;
+
+  border: 1px solid var(--property-border);
+  border-radius: var(--property-radius);
+
+  background: #fff;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(15, 39, 34, 0.12);
+}
+
+.property-card-image {
+  position: relative;
+  height: 290px;
+  overflow: hidden;
+}
+
+.property-card-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.property-card:hover .property-card-image img {
+  transform: scale(1.04);
+}
+
+.property-card-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    transparent 35%,
+    rgba(0, 0, 0, 0.18)
+  );
+}
+
+.property-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+
+  padding: 7px 11px;
+
+  border-radius: 999px;
+
+  background: var(--property-gold);
+  color: var(--property-green-dark);
+
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.property-status {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+
+  padding: 7px 11px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--property-green);
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.property-favorite {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--property-green);
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.property-favorite:hover,
+.property-favorite.active {
+  background: var(--property-green);
+  color: #fff;
+}
+
+.property-card-body {
+  padding: 22px;
+}
+
+.property-location {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-bottom: 8px;
+
+  color: var(--property-muted);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.property-location i {
+  color: var(--property-gold);
+}
+
+.property-card-title {
+  margin: 0 0 15px;
+
+  color: var(--property-green);
+
+  font-family: "Fraunces", serif;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.property-card-price {
+  margin-bottom: 17px;
+
+  color: var(--property-green);
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.property-card-price span {
+  color: var(--property-muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.property-specs {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding-top: 16px;
+
+  border-top: 1px solid var(--property-border);
+}
+
+.property-spec {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: var(--property-muted);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.property-spec i {
+  color: var(--property-gold);
+}
+
+.property-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 20px;
+}
+
+.property-type {
+  color: var(--property-muted);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.property-detail-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: var(--property-green);
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.property-detail-link i {
+  transition: transform 0.2s ease;
+}
+
+.property-detail-link:hover i {
+  transform: translateX(4px);
+}
+
+/* 08. PROPERTY CARD – ENDE */
+
+/* =========================================================
+   09. EMPTY STATE – START
+   ========================================================= */
+
+.empty-state {
+  padding: 70px 30px;
+
+  border: 1px dashed var(--property-border);
+  border-radius: var(--property-radius);
+
+  background: #fff;
+
+  text-align: center;
+}
+
+.empty-icon {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 18px;
+
+  border-radius: 50%;
+
+  background: #f2eee5;
+  color: var(--property-gold);
+
+  font-size: 20px;
+}
+
+.empty-state h3 {
+  margin: 0 0 8px;
+
+  color: var(--property-green);
+
+  font-family: "Fraunces", serif;
+  font-size: 25px;
+}
+
+.empty-state p {
+  margin: 0 0 22px;
+
+  color: var(--property-muted);
+  font-size: 13px;
+}
+
+/* 09. EMPTY STATE – ENDE */
+
+/* =========================================================
+   10. PAGINATION – START
+   ========================================================= */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+
+  margin-top: 45px;
+}
+
+.pagination button {
+  width: 38px;
+  height: 38px;
+
+  border: 1px solid var(--property-border);
+  border-radius: 9px;
+
+  background: #fff;
+  color: var(--property-muted);
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.pagination button.active,
+.pagination button:hover {
+  border-color: var(--property-green);
+  background: var(--property-green);
+  color: #fff;
+}
+
+/* 10. PAGINATION – ENDE */
+
+/* =========================================================
+   11. OFF MARKET – START
+   ========================================================= */
+
+.offmarket-section {
+  padding: 88px 0;
+  background: var(--property-bg);
+}
+
+/* =========================================================
+   OFF MARKET CARD
+   ========================================================= */
+
+.offmarket-card {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+
+  min-height: 400px;
+
+  overflow: hidden;
+
+  border-radius: var(--property-radius-lg);
+
+  background: linear-gradient(135deg, #071f1b 0%, #0b2b25 50%, #123b33 100%);
+
+  color: #ffffff;
+
+  box-shadow: 0 24px 60px rgba(15, 39, 34, 0.18);
+}
+
+/* dezenter Lichtverlauf */
+.offmarket-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background: radial-gradient(
+    circle at 85% 35%,
+    rgba(212, 184, 134, 0.14),
+    transparent 38%
+  );
+
+  z-index: 1;
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.offmarket-content {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 70px;
+}
+
+.offmarket-content .eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  color: #e1c994;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   HEADLINE
+   ========================================================= */
+
+.offmarket-content h2 {
+  max-width: 620px;
+
+  margin: 12px 0 18px;
+
+  font-family: "Fraunces", serif;
+
+  font-size: clamp(36px, 4vw, 58px);
+  line-height: 1.05;
+
+  font-weight: 600;
+  letter-spacing: -0.025em;
+
+  color: #ffffff;
+
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.16);
+}
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.offmarket-content p {
+  max-width: 570px;
+
+  margin: 0 0 30px;
+
+  color: rgba(255, 255, 255, 0.86);
+
+  font-size: 14px;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.offmarket-content .btn {
+  align-self: flex-start;
+}
+
+.btn-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 46px;
+
+  padding: 12px 20px;
+
+  border: 0;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #0b3028;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn-light:hover {
+  background: #e1c994;
+  color: #071f1b;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+.btn-light i {
+  color: #a18148;
+}
+
+.btn-light:hover i {
+  color: #071f1b;
+}
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+.btn-light:focus-visible,
+.search-profile-inner .btn:focus-visible {
+  outline: 3px solid #e1c994;
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   VISUAL
+   ========================================================= */
+
+.offmarket-visual {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: radial-gradient(
+    circle at center,
+    rgba(212, 184, 134, 0.18),
+    transparent 62%
+  );
+}
+
+/* zusätzlicher Glow */
+.offmarket-visual::before {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  border-radius: 50%;
+
+  background: rgba(212, 184, 134, 0.05);
+
+  filter: blur(5px);
+}
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.offmarket-icon {
+  position: relative;
+  z-index: 2;
+
+  width: 150px;
+  height: 150px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(225, 201, 148, 0.38);
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: #e1c994;
+
+  font-size: 48px;
+
+  box-shadow:
+    0 0 0 12px rgba(225, 201, 148, 0.025),
+    0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================================================
+   VISUAL LABEL
+   ========================================================= */
+
+.offmarket-visual span {
+  position: absolute;
+
+  bottom: 35px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 991px) {
+  .offmarket-card {
+    grid-template-columns: 1fr;
+  }
+
+  .offmarket-content {
+    padding: 55px 45px;
+  }
+
+  .offmarket-visual {
+    min-height: 280px;
+  }
+
+  .offmarket-visual span {
+    bottom: 25px;
+  }
+}
+
+@media (max-width: 575px) {
+  .offmarket-section {
+    padding: 60px 0;
+  }
+
+  .offmarket-card {
+    border-radius: 16px;
+  }
+
+  .offmarket-content {
+    padding: 40px 28px;
+  }
+
+  .offmarket-content h2 {
+    font-size: 38px;
+    line-height: 1.08;
+  }
+
+  .offmarket-content p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .offmarket-content .btn {
+    width: 100%;
+  }
+
+  .offmarket-visual {
+    min-height: 240px;
+  }
+
+  .offmarket-icon {
+    width: 125px;
+    height: 125px;
+    font-size: 40px;
+  }
+}
+
+/* =========================================================
+   11. OFF MARKET – ENDE
+   ========================================================= */
+
+/* =========================================================
+   12. SERVICE SECTION – START
+   ========================================================= */
+
+.property-service-section {
+  position: relative;
+  width: 100%;
+
+  padding: 100px 0;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   SECTION INTRO
+   ========================================================= */
+
+.section-intro {
+  position: relative;
+
+  width: 100%;
+  max-width: 700px;
+
+  margin-bottom: 50px;
+}
+
+.section-intro.centered {
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+}
+
+.section-intro p {
+  margin: 0;
+
+  color: #5f6b66;
+
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.section-intro em,
+.search-profile-inner em,
+.offmarket-content em {
+  color: #a18148;
+  font-style: normal;
+}
+
+/* =========================================================
+   SERVICE GRID
+   ========================================================= */
+
+.service-grid {
+  position: relative;
+
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+
+  align-items: stretch;
+}
+
+/* =========================================================
+   SERVICE CARD
+   ========================================================= */
+
+.service-card {
+  position: relative;
+
+  width: 100%;
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 32px;
+
+  border: 1px solid #e3e9e5;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow: 0 8px 24px rgba(15, 39, 34, 0.05);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(161, 129, 72, 0.25);
+
+  box-shadow: 0 18px 40px rgba(15, 39, 34, 0.1);
+}
+
+.service-card:focus-within {
+  outline: 3px solid rgba(18, 53, 47, 0.18);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   SERVICE ICON
+   ========================================================= */
+
+.service-icon {
+  flex-shrink: 0;
+
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 24px;
+
+  border-radius: 14px;
+
+  background: #edf3ee;
+
+  color: #0b3028;
+
+  font-size: 18px;
+}
+
+/* =========================================================
+   SERVICE TITLE
+   ========================================================= */
+
+.service-card h3 {
+  margin: 0 0 12px;
+
+  color: #0b3028;
+
+  font-family: "Fraunces", serif;
+
+  font-size: 23px;
+  line-height: 1.2;
+
+  font-weight: 600;
+}
+
+/* =========================================================
+   SERVICE DESCRIPTION
+   ========================================================= */
+
+.service-card p {
+  margin: 0;
+
+  color: #5f6b66;
+
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   OPTIONAL CARD FOOTER / LINK
+   ========================================================= */
+
+.service-card .service-link {
+  margin-top: auto;
+  padding-top: 24px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #0b3028;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.service-card .service-link i {
+  color: #a18148;
+
+  transition: transform 0.2s ease;
+}
+
+.service-card .service-link:hover i {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+  .property-service-section {
+    padding: 80px 0;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+  }
+
+  .service-card {
+    padding: 28px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 575px) {
+  .property-service-section {
+    padding: 65px 0;
+  }
+
+  .section-intro.centered {
+    margin-bottom: 35px;
+  }
+
+  .section-intro p {
+    font-size: 14px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  .service-card {
+    min-height: auto;
+
+    padding: 26px;
+  }
+
+  .service-icon {
+    width: 50px;
+    height: 50px;
+
+    margin-bottom: 20px;
+  }
+
+  .service-card h3 {
+    font-size: 21px;
+  }
+}
+
+/* =========================================================
+   12. SERVICE SECTION – ENDE
+   ========================================================= */
+
+/* =========================================================
+   13. SEARCH PROFILE CTA – START
+   ========================================================= */
+
+.search-profile-section {
+  padding: 84px 0;
+
+  background: var(--property-bg);
+}
+
+.search-profile-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+
+  padding: 55px 60px;
+
+  border-radius: var(--property-radius-lg);
+
+  background: #fff;
+  box-shadow: var(--property-shadow);
+  border: 1px solid var(--property-border);
+}
+
+.search-profile-inner h2 {
+  margin: 10px 0 10px;
+
+  color: var(--property-green);
+
+  font-family: "Fraunces", serif;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.05;
+}
+
+.search-profile-inner p {
+  margin: 0;
+
+  color: var(--property-muted);
+
+  font-size: 13px;
+}
+
+/* 13. SEARCH PROFILE CTA – ENDE */
+
+/* =========================================================
+   14. MODAL – START
+   ========================================================= */
+
+.modal {
+  position: fixed;
+  inset: 0;
+
+  z-index: 99999;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(6, 20, 17, 0.72);
+
+  backdrop-filter: blur(8px);
+}
+
+.profile-modal {
+  position: relative;
+  z-index: 2;
+
+  width: min(580px, 100%);
+
+  max-height: 90vh;
+  overflow-y: auto;
+
+  padding: 42px;
+
+  border-radius: 24px;
+
+  background: #fff;
+
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.25);
+}
+
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--property-border);
+  border-radius: 50%;
+
+  background: #fff;
+  color: var(--property-muted);
+
+  cursor: pointer;
+}
+
+.modal-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 14px;
+
+  background: #f4eee2;
+  color: var(--property-gold);
+}
+
+.profile-modal h2 {
+  margin: 10px 0;
+
+  color: var(--property-green);
+
+  font-family: "Fraunces", serif;
+  font-size: 38px;
+  line-height: 1.05;
+}
+
+.profile-modal > p {
+  margin: 0 0 25px;
+
+  color: var(--property-muted);
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.modal-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.modal-field {
+  margin-bottom: 15px;
+}
+
+.modal-field label {
+  display: block;
+  margin-bottom: 7px;
+
+  color: var(--property-green);
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.modal-field input,
+.modal-field select {
+  width: 100%;
+
+  padding: 13px 14px;
+
+  border: 1px solid var(--property-border);
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #fff;
+
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.modal-field input:focus,
+.modal-field select:focus {
+  border-color: var(--property-gold);
+}
+
+.modal-note {
+  display: block;
+
+  margin-top: 15px;
+
+  color: var(--property-muted);
+
+  font-size: 10px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* 14. MODAL – ENDE */
+
+/* =========================================================
+   15. RESPONSIVE – START
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .hero-search-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-search-field:nth-child(2) {
+    border-right: 0;
+  }
+
+  .property-search-button {
+    min-height: 65px;
+  }
+
+  .property-content-layout {
+    grid-template-columns: 230px minmax(0, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 900px) {
+  .property-hero {
+    min-height: auto;
+  }
+
+  .property-hero-inner {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .property-content-layout {
+    display: block;
+  }
+
+  .property-filter {
+    position: fixed;
+    inset: 0 auto 0 0;
+
+    z-index: 9998;
+
+    width: min(330px, 90vw);
+
+    overflow-y: auto;
+
+    border-radius: 0;
+
+    transform: translateX(-100%);
+
+    transition: transform 0.3s ease;
+  }
+
+  .property-filter.open {
+    transform: translateX(0);
+  }
+
+  .filter-mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+  }
+
+  .filter-mobile-header h3 {
+    margin: 0;
+
+    color: var(--property-green);
+    font-family: "Fraunces", serif;
+  }
+
+  .filter-mobile-header button {
+    width: 36px;
+    height: 36px;
+
+    border: 1px solid var(--property-border);
+    border-radius: 50%;
+
+    background: #fff;
+
+    cursor: pointer;
+  }
+
+  .mobile-filter-button {
+    display: inline-flex;
+  }
+
+  .listing-actions {
+    align-items: center;
+  }
+
+  .offmarket-card {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .offmarket-visual {
+    min-height: 220px;
+  }
+
+  .offmarket-content {
+    padding: 48px 28px 42px;
+  }
+
+  .offmarket-content h2 {
+    font-size: clamp(34px, 10vw, 46px);
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .property-service-section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+}
+
+@media (max-width: 700px) {
+  .property-hero-copy h1 {
+    font-size: 48px;
+  }
+
+  .property-hero-copy p {
+    font-size: 14px;
+  }
+
+  .property-search-panel {
+    border-radius: 16px;
+  }
+
+  .search-tabs {
+    overflow-x: auto;
+  }
+
+  .search-tab {
+    flex: 0 0 auto;
+  }
+
+  .hero-search-form {
+    display: block;
+  }
+
+  .hero-search-field {
+    min-height: 72px;
+
+    border-right: 0;
+    border-bottom: 1px solid var(--property-border);
+  }
+
+  .property-search-button {
+    width: 100%;
+    min-height: 60px;
+  }
+
+  .property-main {
+    padding: 70px 0;
+  }
+
+  .listing-header {
+    display: block;
+    margin-bottom: 35px;
+  }
+
+  .listing-actions {
+    justify-content: space-between;
+    margin-top: 25px;
+  }
+
+  .sort-control {
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .sort-control select {
+    min-width: 150px;
+  }
+
+  .listing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .property-card-image {
+    height: 250px;
+  }
+
+  .offmarket-content {
+    padding: 45px 28px;
+  }
+
+  .offmarket-content h2 {
+    font-size: 40px;
+  }
+
+  .search-profile-inner {
+    display: block;
+
+    padding: 40px 28px;
+  }
+
+  .search-profile-inner .btn {
+    margin-top: 25px;
+  }
+
+  .modal-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-modal {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .property-hero-inner {
+    padding-top: 40px;
+    padding-bottom: 45px;
+  }
+
+  .property-breadcrumb {
+    margin-bottom: 30px;
+  }
+
+  .property-hero-copy h1 {
+    font-size: 41px;
+  }
+
+  .quick-filter-inner {
+    min-height: 62px;
+  }
+
+  .listing-heading h2 {
+    font-size: 35px;
+  }
+
+  .listing-actions {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+
+  .sort-control {
+    justify-content: stretch;
+  }
+
+  .sort-control select {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .property-card-body {
+    padding: 18px;
+  }
+
+  .property-card-title {
+    font-size: 20px;
+  }
+
+  .property-specs {
+    gap: 12px;
+  }
+}
+
+/* 15. RESPONSIVE – ENDE */

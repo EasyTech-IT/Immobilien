@@ -1,330 +1,822 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-    <meta charset="utf-8">
-    <title>Makaan - Immobilienportal</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <title>Kontakt | Makaan Immobilien</title>
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
-    
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <meta
+      name="description"
+      content="Kontaktieren Sie Makaan Immobilien. Persönliche Beratung rund um Kauf, Verkauf und Immobilienbewertung."
+    />
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- =========================================================
+       GOOGLE FONTS – START
+       ========================================================= -->
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
-    <div class="container-fluid bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
+    <!-- =========================================================
+       GOOGLE FONTS – ENDE
+       ========================================================= -->
+
+    <!-- =========================================================
+       FONT AWESOME – START
+       ========================================================= -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- =========================================================
+       FONT AWESOME – ENDE
+       ========================================================= -->
+
+    <!-- =========================================================
+       CSS – START
+       ========================================================= -->
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+
+    <!-- =========================================================
+       CSS – ENDE
+       ========================================================= -->
+  </head>
+
+  <body>
+    <!-- =====================================================
+  GLOBAL – HEADER / NAVIGATION – START
+  ===================================================== -->
+    <header class="site-header" id="siteHeader">
+      <div class="container header-row">
+        <a href="index.html" class="logo" aria-label="Makaan Startseite">
+          <span class="mark">M</span><span class="logo-text">Makaan</span>
+        </a>
+
+        <nav class="main-nav" id="mainNav" aria-label="Hauptnavigation">
+          <a href="index.html" class="active">Startseite</a>
+          <a href="property-list.html">Immobilien</a>
+          <a href="property-sell.html">Verkaufen</a>
+          <a href="propertyanalyse.html">Bewertung</a>
+          <a href="leistungen.html">Leistungen</a>
+          <a href="about.html">Über uns</a>
+          <a href="contact.html">Kontakt</a>
+        </nav>
+
+        <div class="header-cta">
+          <a href="contact.html" class="btn btn-primary btn-sm"
+            ><i class="fa-regular fa-calendar"></i> Beratung</a
+          >
         </div>
-        <!-- Spinner End -->
 
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Menü öffnen"
+          aria-expanded="false"
+          type="button"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <!-- GLOBAL – HEADER / NAVIGATION – ENDE -->
 
-        <!-- Navbar Start -->
-        <div class="container-fluid nav-bar bg-transparent">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
-                <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
-                    <div class="icon p-2 me-2">
-                        <img class="img-fluid" src="img/icon-deal.png" alt="Icon" style="width: 30px; height: 30px;">
-                    </div>
-                    <h1 class="m-0 text-primary">Makaan</h1>
-                </a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
+    <main>
+      <!-- =========================================================
+         KONTAKT – HERO – START
+         ========================================================= -->
+
+      <section class="contact-hero">
+        <div class="contact-hero-background">
+          <img src="img/header.jpg" alt="Moderne Immobilie" />
+
+          <div class="contact-hero-overlay"></div>
+        </div>
+
+        <div class="container contact-hero-container">
+          <div class="contact-hero-content">
+            <div class="contact-breadcrumb">
+              <a href="index.html"> Startseite </a>
+
+              <i class="fa-solid fa-chevron-right"></i>
+
+              <span> Kontakt </span>
+            </div>
+
+            <span class="contact-eyebrow"> PERSÖNLICHE BERATUNG </span>
+
+            <h1>
+              Lassen Sie uns
+              <span>sprechen.</span>
+            </h1>
+
+            <p>
+              Ob Immobilienkauf, Verkauf oder erste Einschätzung – wir nehmen
+              uns Zeit für Ihr Anliegen.
+            </p>
+
+            <div class="contact-hero-actions">
+              <a href="#kontaktformular" class="btn btn-primary">
+                Nachricht schreiben
+
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a href="tel:+49123455678" class="contact-call-link">
+                <i class="fa-solid fa-phone"></i>
+
+                Direkt anrufen
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         KONTAKT – HERO – ENDE
+         ========================================================= -->
+
+      <!-- =========================================================
+         KONTAKT – QUICK CONTACT – START
+         ========================================================= -->
+
+      <section class="contact-quick">
+        <div class="container">
+          <div class="contact-quick-grid">
+            <a href="tel:+49123455678" class="contact-quick-card">
+              <div class="quick-icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+
+              <div>
+                <span> TELEFON </span>
+
+                <strong> +49 123 455 678 </strong>
+
+                <small> Persönlich erreichbar </small>
+              </div>
+
+              <i class="fa-solid fa-arrow-right quick-arrow"></i>
+            </a>
+
+            <a
+              href="mailto:info@makaan-immobilien.de"
+              class="contact-quick-card"
+            >
+              <div class="quick-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+
+              <div>
+                <span> E-MAIL </span>
+
+                <strong> info@makaan-immobilien.de </strong>
+
+                <small> Wir antworten zeitnah </small>
+              </div>
+
+              <i class="fa-solid fa-arrow-right quick-arrow"></i>
+            </a>
+
+            <div class="contact-quick-card">
+              <div class="quick-icon">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+
+              <div>
+                <span> ERREICHBARKEIT </span>
+
+                <strong> Mo – Fr </strong>
+
+                <small> 09:00 – 18:00 Uhr </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         KONTAKT – QUICK CONTACT – ENDE
+         ========================================================= -->
+
+      <!-- =========================================================
+         KONTAKT – INTRO – START
+         ========================================================= -->
+
+      <section class="contact-intro section-padding">
+        <div class="container">
+          <div class="contact-intro-grid">
+            <div class="contact-number">
+              <span> 01 </span>
+
+              <small> KONTAKT </small>
+            </div>
+
+            <div class="contact-intro-content">
+              <span class="section-eyebrow"> WIR SIND FÜR SIE DA </span>
+
+              <h2>Immobilienentscheidungen brauchen <em>Vertrauen.</em></h2>
+
+              <p class="contact-lead">
+                Eine Immobilie zu kaufen oder zu verkaufen ist mehr als eine
+                finanzielle Entscheidung. Es geht um Menschen, Ziele und
+                langfristige Entscheidungen.
+              </p>
+
+              <p>
+                Deshalb möchten wir nicht einfach nur Anfragen bearbeiten. Wir
+                möchten verstehen, was Ihnen wichtig ist und welche Lösung zu
+                Ihrer Situation passt.
+              </p>
+
+              <p>
+                Erzählen Sie uns, worum es geht. Wir besprechen gemeinsam,
+                welche nächsten Schritte sinnvoll sind.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         KONTAKT – INTRO – ENDE
+         ========================================================= -->
+
+      <!-- =========================================================
+         KONTAKT – FORMULAR – START
+         ========================================================= -->
+
+      <section
+        id="kontaktformular"
+        class="contact-form-section section-padding"
+      >
+        <div class="container">
+          <div class="contact-form-layout">
+            <!-- ===================================================
+               FORM INFO – START
+               =================================================== -->
+
+            <div class="contact-form-info">
+              <span class="section-eyebrow"> IHRE ANFRAGE </span>
+
+              <h2>Wie können wir Ihnen helfen?</h2>
+
+              <p>
+                Füllen Sie das Formular aus und schildern Sie uns kurz Ihr
+                Anliegen. Wir melden uns persönlich bei Ihnen.
+              </p>
+
+              <div class="contact-topic-list">
+                <div>
+                  <span> 01 </span>
+
+                  <div>
+                    <strong> Immobilie verkaufen </strong>
+
+                    <small> Bewertung & Verkaufsberatung </small>
+                  </div>
+                </div>
+
+                <div>
+                  <span> 02 </span>
+
+                  <div>
+                    <strong> Immobilie kaufen </strong>
+
+                    <small> Objekte & persönliche Beratung </small>
+                  </div>
+                </div>
+
+                <div>
+                  <span> 03 </span>
+
+                  <div>
+                    <strong> Allgemeine Anfrage </strong>
+
+                    <small> Fragen & weitere Anliegen </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ===================================================
+               FORM INFO – ENDE
+               =================================================== -->
+
+            <!-- ===================================================
+               FORMULAR – START
+               =================================================== -->
+
+            <div class="contact-form-card">
+              <div class="contact-form-card-head">
+                <span> SCHREIBEN SIE UNS </span>
+
+                <h3>Kontakt aufnehmen</h3>
+
+                <p>Die mit * markierten Felder sind Pflichtfelder.</p>
+              </div>
+
+              <form id="contactForm" class="contact-form">
+                <div class="form-grid">
+                  <div class="form-field">
+                    <label for="k-salutation"> Anrede </label>
+
+                    <select id="k-salutation" name="salutation">
+                      <option value="">Bitte auswählen</option>
+
+                      <option value="Frau">Frau</option>
+
+                      <option value="Herr">Herr</option>
+
+                      <option value="Divers">Divers</option>
+                    </select>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="k-topic"> Anliegen * </label>
+
+                    <select id="k-topic" name="topic" required>
+                      <option value="">Bitte auswählen</option>
+
+                      <option value="verkaufen">Immobilie verkaufen</option>
+
+                      <option value="kaufen">Immobilie kaufen</option>
+
+                      <option value="bewertung">Immobilienbewertung</option>
+
+                      <option value="objekt">Frage zu einem Objekt</option>
+
+                      <option value="sonstiges">Sonstiges</option>
+                    </select>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="k-name"> Vor- und Nachname * </label>
+
+                    <input
+                      type="text"
+                      id="k-name"
+                      name="name"
+                      placeholder="Max Mustermann"
+                      autocomplete="name"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="k-email"> E-Mail * </label>
+
+                    <input
+                      type="email"
+                      id="k-email"
+                      name="email"
+                      placeholder="max@beispiel.de"
+                      autocomplete="email"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="k-phone"> Telefonnummer </label>
+
+                    <input
+                      type="tel"
+                      id="k-phone"
+                      name="phone"
+                      placeholder="+49 ..."
+                      autocomplete="tel"
+                    />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="k-subject"> Betreff </label>
+
+                    <input
+                      type="text"
+                      id="k-subject"
+                      name="subject"
+                      placeholder="Worum geht es?"
+                    />
+                  </div>
+
+                  <div class="form-field full">
+                    <label for="k-msg"> Nachricht * </label>
+
+                    <textarea
+                      id="k-msg"
+                      name="message"
+                      rows="6"
+                      placeholder="Beschreiben Sie kurz Ihr Anliegen ..."
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+
+                <label class="form-consent">
+                  <input type="checkbox" name="privacy" required />
+
+                  <span>
+                    Ich habe die
+                    <a href="datenschutz.html" data-legal="datenschutz">
+                      Datenschutzerklärung
+                    </a>
+                    gelesen und akzeptiere diese. *
+                  </span>
+                </label>
+
+                <button type="submit" class="btn btn-primary btn-submit">
+                  Nachricht senden
+
+                  <i class="fa-solid fa-arrow-right"></i>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link">Startseite</a>
-                        <a href="about.html" class="nav-item nav-link">Über uns</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Immobilien</a>
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <a href="property-list.html" class="dropdown-item">Immobilienliste</a>
-                                <a href="property-type.html" class="dropdown-item">Immobilientyp</a>
-                                <a href="property-agent.html" class="dropdown-item">Immobilienmakler</a>
-                            </div>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Seiten</a>
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <a href="testimonial.html" class="dropdown-item">Kundenstimmen</a>
-                                <a href="404.html" class="dropdown-item">404-Fehler</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link active">Kontakt</a>
-                    </div>
-                    <a href="tel:0123455678" class="btn btn-primary px-3 d-none d-lg-flex">Jetzt anrufen</a>
-                </div>
-            </nav>
-        </div>
-        <!-- Navbar End -->
 
-
-        <!-- Header Start -->
-        <div class="container-fluid header bg-white p-0">
-            <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
-                <div class="col-md-6 p-5 mt-lg-5">
-                    <h1 class="display-5 animated fadeIn mb-4">Kontakt</h1> 
-                        <nav aria-label="breadcrumb animated fadeIn">
-                        <ol class="breadcrumb text-uppercase">
-                            <li class="breadcrumb-item"><a href="#">Startseite</a></li>
-                            <li class="breadcrumb-item"><a href="#">Seiten</a></li>
-                            <li class="breadcrumb-item text-body active" aria-current="page">Kontakt</li>
-                        </ol>
-                    </nav>
-                </div>
-                <div class="col-md-6 animated fadeIn">
-                    <img class="img-fluid" src="img/header.jpg" alt="">
-                </div>
+                <div
+                  id="contactMsg"
+                  class="contact-form-message"
+                  role="status"
+                  aria-live="polite"
+                ></div>
+              </form>
             </div>
+
+            <!-- ===================================================
+               FORMULAR – ENDE
+               =================================================== -->
+          </div>
         </div>
-        <!-- Header End -->
+      </section>
 
+      <!-- =========================================================
+         KONTAKT – FORMULAR – ENDE
+         ========================================================= -->
 
-        <!-- Suchen Start -->
-        <div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
-            <div class="container">
-                <div class="row g-2">
-                    <div class="col-md-10">
-                        <div class="row g-2">
-                            <div class="col-md-4">
-                                <input type="text" class="form-control border-0 py-3" placeholder="Suchbegriff">
-                            </div>
-                            <div class="col-md-4">
-                                <select class="form-select border-0 py-3">
-                                    <option selected>Immobilientyp</option>
-                                    <option value="1">Immobilientyp 1</option>
-                                    <option value="2">Immobilientyp 2</option>
-                                    <option value="3">Immobilientyp 3</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4">
-                                <select class="form-select border-0 py-3">
-                                    <option selected>Standort</option>
-                                    <option value="1">Standort 1</option>
-                                    <option value="2">Hamburg</option>
-                                    <option value="3">München</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <button class="btn btn-dark border-0 w-100 py-3">Suchen</button>
-                    </div>
+      <!-- =========================================================
+         KONTAKT – LOCATION – START
+         ========================================================= -->
+
+      <section class="contact-location section-padding">
+        <div class="container">
+          <div class="contact-location-grid">
+            <div class="location-content">
+              <span class="section-eyebrow"> UNSER STANDORT </span>
+
+              <h2>
+                Persönlich.
+                <em>Vor Ort.</em>
+              </h2>
+
+              <p>
+                Sie möchten lieber persönlich mit uns sprechen? Besuchen Sie uns
+                gerne nach vorheriger Terminvereinbarung.
+              </p>
+
+              <div class="location-details">
+                <div>
+                  <i class="fa-solid fa-location-dot"></i>
+
+                  <div>
+                    <small> ADRESSE </small>
+
+                    <strong>
+                      Musterstraße 1
+                      <br />
+                      10115 Berlin
+                    </strong>
+                  </div>
                 </div>
+
+                <div>
+                  <i class="fa-solid fa-clock"></i>
+
+                  <div>
+                    <small> ÖFFNUNGSZEITEN </small>
+
+                    <strong>
+                      Montag – Freitag
+                      <br />
+                      09:00 – 18:00 Uhr
+                    </strong>
+                  </div>
+                </div>
+
+                <div>
+                  <i class="fa-solid fa-phone"></i>
+
+                  <div>
+                    <small> TELEFON </small>
+
+                    <strong> +49 123 455 678 </strong>
+                  </div>
+                </div>
+              </div>
+
+              <a
+                href="https://maps.google.com/?q=Musterstraße+1+Berlin"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-link"
+              >
+                Route planen
+
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
+
+            <div class="location-map">
+              <div class="map-placeholder">
+                <div class="map-grid"></div>
+
+                <div class="map-pin">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <div class="map-label">
+                  <strong> Makaan Immobilien </strong>
+
+                  <span> Musterstraße 1 · Berlin </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- Suchen End -->
+      </section>
 
+      <!-- =========================================================
+         KONTAKT – LOCATION – ENDE
+         ========================================================= -->
 
-        <!-- Kontakt Start -->
-        <div class="container-fluid py-5">
-            <div class="container">
-                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-3">Kontakt</h1>
-                            <p>Wir beraten Sie persönlich und zuverlässig bei allen Fragen rund um Ihre Immobilie.</p>
-                </div>
-                <div class="row g-4">
-                    <div class="col-12">
-                        <div class="row gy-4">
-                            <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
-                                <div class="bg-light rounded p-3">
-                                    <div class="d-flex align-items-center bg-white rounded p-3" style="border: 1px dashed rgba(0, 185, 142, .3)">
-                                        <div class="icon me-3" style="width: 45px; height: 45px;">
-                                            <i class="fa fa-map-marker-alt text-primary"></i>
-                                        </div>
-                                        <span>Musterstraße 123, Berlin, Deutschland</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
-                                <div class="bg-light rounded p-3">
-                                    <div class="d-flex align-items-center bg-white rounded p-3" style="border: 1px dashed rgba(0, 185, 142, .3)">
-                                        <div class="icon me-3" style="width: 45px; height: 45px;">
-                                            <i class="fa fa-envelope-open text-primary"></i>
-                                        </div>
-                                        <span>info@example.com</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.5s">
-                                <div class="bg-light rounded p-3">
-                                    <div class="d-flex align-items-center bg-white rounded p-3" style="border: 1px dashed rgba(0, 185, 142, .3)">
-                                        <div class="icon me-3" style="width: 45px; height: 45px;">
-                                            <i class="fa fa-phone-alt text-primary"></i>
-                                        </div>
-                                        <span>+012 345 6789</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <iframe class="position-relative rounded w-100 h-100"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                            frameborder="0" style="min-height: 400px; border:0;" allowfullscreen="" aria-hidden="false"
-                            tabindex="0"></iframe>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="wow fadeInUp" data-wow-delay="0.5s">
-                            <h4 class="mb-4">Nachrichten direkt empfangen: Unser PHP- und Ajax-Kontaktformular ist nur in der <a href="tel:0123455678">Pro-Version</a> verfügbar.</h4>
-                            <form>
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="name" placeholder="Ihr Name">
-                                            <label for="name">Ihr Name</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="email" class="form-control" id="email" placeholder="Ihre E-Mail-Adresse">
-                                            <label for="email">Ihre E-Mail-Adresse</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="subject" placeholder="Betreff">
-                                            <label for="subject">Betreff</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Ihre Nachricht" id="message" style="height: 150px"></textarea>
-                                            <label for="message">Nachricht</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn btn-primary w-100 py-3" type="submit">Nachricht senden</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <!-- =========================================================
+         KONTAKT – SERVICE – START
+         ========================================================= -->
+
+      <section class="contact-services section-padding">
+        <div class="container">
+          <div class="section-heading contact-services-heading">
+            <span class="section-eyebrow"> WOBEI WIR SIE UNTERSTÜTZEN </span>
+
+            <h2>
+              Der passende
+              <em>Ansprechpartner.</em>
+            </h2>
+
+            <p>
+              Egal, ob Sie bereits konkrete Vorstellungen haben oder sich
+              zunächst orientieren möchten.
+            </p>
+          </div>
+
+          <div class="contact-services-grid">
+            <a
+              href="immobilienbewertung.html"
+              class="contact-service-card featured"
+            >
+              <div class="service-card-top">
+                <span> 01 </span>
+
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+
+              <h3>Immobilie bewerten</h3>
+
+              <p>
+                Sie möchten wissen, welchen Wert Ihre Immobilie aktuell am Markt
+                erzielen kann?
+              </p>
+
+              <span class="service-card-link">
+                Bewertung starten
+
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </a>
+
+            <a href="immobilie-verkaufen.html" class="contact-service-card">
+              <div class="service-card-top">
+                <span> 02 </span>
+
+                <i class="fa-solid fa-house-circle-check"></i>
+              </div>
+
+              <h3>Immobilie verkaufen</h3>
+
+              <p>
+                Von der ersten Einschätzung über die Vermarktung bis zum
+                erfolgreichen Abschluss.
+              </p>
+
+              <span class="service-card-link">
+                Verkauf besprechen
+
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </a>
+
+            <a href="property-list.html" class="contact-service-card">
+              <div class="service-card-top">
+                <span> 03 </span>
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+
+              <h3>Immobilie kaufen</h3>
+
+              <p>
+                Entdecken Sie aktuelle Immobilien und lassen Sie sich persönlich
+                beraten.
+              </p>
+
+              <span class="service-card-link">
+                Immobilien ansehen
+
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </a>
+          </div>
         </div>
-        <!-- Kontakt End -->
+      </section>
 
+      <!-- =========================================================
+         KONTAKT – SERVICE – ENDE
+         ========================================================= -->
 
-        <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-lg-3 col-md-6">
-                        <h5 class="text-white mb-4">Kontakt aufnehmen</h5>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Musterstraße 123, Berlin, Deutschland</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h5 class="text-white mb-4">Schnellzugriff</h5>
-                        <a class="btn btn-link text-white-50" href="">Über uns</a>
-                        <a class="btn btn-link text-white-50" href="">Kontakt</a>
-                        <a class="btn btn-link text-white-50" href="">Unsere Leistungen</a>
-                        <a class="btn btn-link text-white-50" href="">Datenschutzerklärung</a>
-                        <a class="btn btn-link text-white-50" href="">Allgemeine Geschäftsbedingungen</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h5 class="text-white mb-4">Fotogalerie</h5>
-                        <div class="row g-2 pt-2">
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-1.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-2.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-3.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-4.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-5.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-6.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h5 class="text-white mb-4">Newsletter</h5>
-                        <p>Erhalten Sie aktuelle Angebote und Neuigkeiten direkt per E-Mail.</p>
-                        <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Ihre E-Mail-Adresse">
-                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Anmelden</button>
-                        </div>
-                    </div>
-                </div>
+      <!-- =========================================================
+         KONTAKT – FAQ – START
+         ========================================================= -->
+
+      <section class="contact-faq section-padding">
+        <div class="container">
+          <div class="contact-faq-grid">
+            <div class="contact-faq-intro">
+              <span class="section-eyebrow"> FAQ </span>
+
+              <h2>
+                Häufige
+                <em>Fragen.</em>
+              </h2>
+
+              <p>Vielleicht finden Sie hier bereits die passende Antwort.</p>
             </div>
-            <div class="container">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Makaan</a>, Alle Rechte vorbehalten. 
-							
-							<!--/*** The authorâ€™s attribution link must remain intact in the template. ***/-->
-                            <!--/*** If you wish to remove this credit link, please purchase the Pro Version . ***/-->
-                            Erstellt von <a class="border-bottom" href="https://easytechit.de">EasyTech Solutionx</a>
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="">Startseite</a>
-                                <a href="">Cookies</a>
-                                <a href="">Hilfe</a>
-                                <a href="">FAQs</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+            <div class="contact-faq-list">
+              <details open>
+                <summary>
+                  Wie schnell melden Sie sich zurück?
+
+                  <i class="fa-solid fa-plus"></i>
+                </summary>
+
+                <p>
+                  Wir bemühen uns, Anfragen zeitnah zu bearbeiten und uns
+                  schnellstmöglich persönlich bei Ihnen zu melden.
+                </p>
+              </details>
+
+              <details>
+                <summary>
+                  Kann ich einen persönlichen Termin vereinbaren?
+
+                  <i class="fa-solid fa-plus"></i>
+                </summary>
+
+                <p>
+                  Ja. Kontaktieren Sie uns telefonisch oder über das Formular.
+                  Anschließend vereinbaren wir gemeinsam einen passenden Termin.
+                </p>
+              </details>
+
+              <details>
+                <summary>
+                  Kann ich eine Immobilie bewerten lassen?
+
+                  <i class="fa-solid fa-plus"></i>
+                </summary>
+
+                <p>
+                  Ja. Über unsere Immobilienbewertung können Sie zunächst die
+                  relevanten Eckdaten Ihrer Immobilie übermitteln.
+                </p>
+              </details>
+
+              <details>
+                <summary>
+                  Muss ich bereits eine konkrete Immobilie haben?
+
+                  <i class="fa-solid fa-plus"></i>
+                </summary>
+
+                <p>
+                  Nein. Auch wenn Sie sich zunächst orientieren oder allgemeine
+                  Fragen zum Immobilienmarkt haben, können Sie uns kontaktieren.
+                </p>
+              </details>
+
+              <details>
+                <summary>
+                  Kann ich mich auch telefonisch melden?
+
+                  <i class="fa-solid fa-plus"></i>
+                </summary>
+
+                <p>
+                  Selbstverständlich. Für ein direktes Gespräch erreichen Sie
+                  uns während unserer angegebenen Erreichbarkeit.
+                </p>
+              </details>
             </div>
+          </div>
         </div>
-        <!-- Footer End -->
+      </section>
 
+      <!-- =========================================================
+         KONTAKT – FAQ – ENDE
+         ========================================================= -->
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
+      <!-- =========================================================
+         KONTAKT – FINAL CTA – START
+         ========================================================= -->
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+      <section class="contact-final">
+        <div class="container">
+          <div class="contact-final-inner">
+            <span class="section-eyebrow light"> IHR NÄCHSTER SCHRITT </span>
 
-    <!-- Template Javascript -->
+            <h2>
+              Eine Frage ist der
+              <em>erste Schritt.</em>
+            </h2>
+
+            <p>Sprechen Sie mit uns über Ihre Immobilie.</p>
+
+            <div class="contact-final-actions">
+              <a href="#kontaktformular" class="btn btn-white">
+                Nachricht schreiben
+
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a href="tel:+49123455678" class="final-phone">
+                <i class="fa-solid fa-phone"></i>
+
+                +49 123 455 678
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         KONTAKT – FINAL CTA – ENDE
+         ========================================================= -->
+    </main>
+
+    <!-- =========================================================
+       GLOBAL – FOOTER – START
+       ========================================================= -->
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <span> © 2026 Makaan. Erstellt von EasyTech Solutions. </span>
+
+          <span>
+            <a href="index.html"> Startseite </a>
+
+            <a href="property-list.html"> Immobilien </a>
+
+            <a href="datenschutz.html"> Datenschutz </a>
+
+            <a href="impressum.html"> Impressum </a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =========================================================
+       GLOBAL – FOOTER – ENDE
+       ========================================================= -->
+
+    <!-- =========================================================
+       JAVASCRIPT – START
+       ========================================================= -->
+
+    <script src="js/data.js"></script>
     <script src="js/main.js"></script>
-</body>
+    <script src="js/contact.js"></script>
 
+    <!-- =========================================================
+       JAVASCRIPT – ENDE
+       ========================================================= -->
+  </body>
 </html>

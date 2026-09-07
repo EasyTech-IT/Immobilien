@@ -1,1649 +1,874 @@
 <!doctype html>
 <html lang="de">
   <head>
-    <meta charset="utf-8" />
-    <title>Makaan - Immobilienportal</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
-
-    <!-- Google Web Fonts -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Makaan Immobilien – Immobilien finden, verkaufen und professionell begleiten lassen."
+    />
+    <title>MAKAAN — Immobilien, Verkauf & Vermietung</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
       rel="stylesheet"
-    />
-
-    <!-- Icon Font Stylesheet -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/footer.css" />
   </head>
-
   <body>
-    <div class="container-fluid bg-white p-0">
-      <!-- Spinner Start -->
-      <div
-        id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-      >
-        <div
-          class="spinner-border text-primary"
-          style="width: 3rem; height: 3rem"
-          role="status"
-        >
-          <span class="sr-only">Loading...</span>
-        </div>
-      </div>
-      <!-- Spinner End -->
+    <!-- =====================================================
+  GLOBAL – HEADER / NAVIGATION – START
+  ===================================================== -->
+    <header class="site-header" id="siteHeader">
+      <div class="container header-row">
+        <a href="index.html" class="logo" aria-label="Makaan Startseite">
+          <span class="mark">M</span><span class="logo-text">Makaan</span>
+        </a>
 
-      <!-- Navbar Start -->
-      <div class="container-fluid nav-bar bg-transparent">
-        <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
-          <a
-            href="index.html"
-            class="navbar-brand d-flex align-items-center text-center"
-          >
-            <div class="icon p-2 me-2">
-              <img
-                class="img-fluid"
-                src="img/icon-deal.png"
-                alt="Icon"
-                style="width: 30px; height: 30px"
-              />
-            </div>
-            <h1 class="m-0 text-primary">Makaan</h1>
-          </a>
-          <button
-            type="button"
-            class="navbar-toggler"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto">
-              <a href="index.html" class="nav-item nav-link active">Startseite</a>
-              <a href="about.html" class="nav-item nav-link">Über uns</a>
-              <div class="nav-item dropdown">
-                <a
-                  href="#"
-                  class="nav-link dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  >Immobilien</a
-                >
-                <div class="dropdown-menu rounded-0 m-0">
-                  <a href="property-list.html" class="dropdown-item"
-                    >Immobilienliste</a
-                  >
-                  <a href="property-type.html" class="dropdown-item"
-                    >Immobilientyp</a
-                  >
-                  <a href="property-agent.html" class="dropdown-item"
-                    >Immobilienmakler</a
-                  >
-                </div>
-              </div>
-              <div class="nav-item dropdown">
-                <a
-                  href="#"
-                  class="nav-link dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  >Seiten</a
-                >
-                <div class="dropdown-menu rounded-0 m-0">
-                  <a href="testimonial.html" class="dropdown-item"
-                    >Kundenstimmen</a
-                  >
-                  <a href="404.html" class="dropdown-item">404-Fehler</a>
-                </div>
-              </div>
-              <a href="contact.html" class="nav-item nav-link">Kontakt</a>
-            </div>
-            <a
-              href="tel:0123455678"
-              class="btn btn-primary px-3 d-none d-lg-flex"
-              >Jetzt anrufen</a
-            >
-          </div>
+        <nav class="main-nav" id="mainNav" aria-label="Hauptnavigation">
+          <a href="index.html" class="active">Startseite</a>
+          <a href="property-list.html">Immobilien</a>
+          <a href="property-sell.html">Verkaufen</a>
+          <a href="leistungen.html">Leistungen</a>
+          <a href="about.html">Über uns</a>
+          <a href="contact.html">Kontakt</a>
         </nav>
-      </div>
-      <!-- Navbar End -->
 
-      <!-- Header Start -->
-      <div class="container-fluid header bg-white p-0">
-        <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
-          <div class="col-md-6 p-5 mt-lg-5">
-            <h1 class="display-5 animated fadeIn mb-4">
-              Finden Sie Ihr <span class="text-primary">Traumzuhause</span> für
-              Ihre Familie
+        <div class="header-cta">
+          <a href="propertyanalyse.html" class="btn btn-primary btn-sm"
+            ><i class="fa-regular fa-calendar"></i> Kostenlose Analyse</a
+          >
+        </div>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Menü öffnen"
+          aria-expanded="false"
+          type="button"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <!-- GLOBAL – HEADER / NAVIGATION – ENDE -->
+
+    <!-- =====================================================
+  STARTSEITE – HERO SECTION – START
+  ===================================================== -->
+    <main>
+      <section class="hero home-hero">
+        <div class="hero-bg" aria-hidden="true">
+          <img src="img/header.jpg" alt="" />
+          <div class="hero-overlay"></div>
+          <div class="hero-glow hero-glow-one"></div>
+          <div class="hero-glow hero-glow-two"></div>
+        </div>
+
+        <div class="container hero-inner">
+          <div class="hero-content" data-reveal>
+            <div class="hero-eyebrow">
+              <span class="eyebrow-icon"
+                ><i class="fa-solid fa-location-dot"></i
+              ></span>
+              Immobilienberatung mit persönlicher Betreuung
+            </div>
+            <h1>
+              Immobilien, die zu Ihrem
+              <span>Leben und Ihrer Strategie</span> passen.
             </h1>
-            <p class="animated fadeIn mb-4 pb-2">
-              Finden Sie bei uns die passende Immobilie für ein schönes Zuhause.
-              Wir begleiten Sie zuverlässig auf dem Weg zu Ihrer Wunschimmobilie.
+            <p class="hero-description">
+              Ob Kauf, Miete oder Verkauf: Makaan verbindet passende Immobilien
+              mit klarer Beratung, transparenten Abläufen und persönlicher
+              Begleitung.
             </p>
-            <a href="" class="btn btn-primary py-3 px-5 me-3 animated fadeIn"
-              >Jetzt starten</a
+
+            <div class="hero-actions">
+              <a href="property-list.html" class="btn btn-gold hero-primary-btn"
+                ><span>Immobilien finden</span
+                ><i class="fa-solid fa-arrow-right"></i
+              ></a>
+              <a href="propertyanalyse.html" class="hero-secondary-btn">
+                <span class="hero-secondary-icon"
+                  ><i class="fa-solid fa-chart-line"></i
+                ></span>
+                <span
+                  ><strong>Immobilie analysieren</strong
+                  ><small>Kostenlos starten</small></span
+                >
+              </a>
+            </div>
+
+            <div class="hero-proof-row">
+              <span
+                ><i class="fa-solid fa-shield-halved"></i> Persönliche
+                Beratung</span
+              >
+              <span
+                ><i class="fa-solid fa-file-circle-check"></i> Transparenter
+                Ablauf</span
+              >
+              <span><i class="fa-solid fa-comments"></i> Direkter Kontakt</span>
+            </div>
+          </div>
+
+          <div class="hero-floating-card" data-reveal>
+            <div class="hero-card-icon"><i class="fa-solid fa-house"></i></div>
+            <div class="hero-card-content">
+              <span>Ihr nächster Schritt</span
+              ><strong>Passende Immobilie entdecken</strong>
+            </div>
+            <i
+              class="fa-solid fa-arrow-up-right-from-square hero-card-arrow"
+            ></i>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- STARTSEITE – HERO SECTION – ENDE -->
+
+    <!-- =====================================================
+  STARTSEITE – TRUST BAR – START
+  ===================================================== -->
+    <section class="trust-bar" aria-label="Makaan Vorteile">
+      <div class="container trust-bar-grid">
+        <div class="trust-item">
+          <span class="trust-item-icon"
+            ><i class="fa-solid fa-user-tie"></i></span
+          ><span
+            ><strong>Persönlich</strong
+            ><small>Ein Ansprechpartner für Ihr Anliegen</small></span
+          >
+        </div>
+        <div class="trust-item">
+          <span class="trust-item-icon"
+            ><i class="fa-solid fa-magnifying-glass"></i></span
+          ><span
+            ><strong>Gezielt</strong
+            ><small>Immobilien passend zu Ihren Kriterien</small></span
+          >
+        </div>
+        <div class="trust-item">
+          <span class="trust-item-icon"><i class="fa-solid fa-route"></i></span
+          ><span
+            ><strong>Strukturiert</strong
+            ><small>Von der Anfrage bis zum Abschluss</small></span
+          >
+        </div>
+        <div class="trust-item">
+          <span class="trust-item-icon"><i class="fa-solid fa-lock"></i></span
+          ><span
+            ><strong>Transparent</strong
+            ><small>Klare Kommunikation und nächste Schritte</small></span
+          >
+        </div>
+      </div>
+    </section>
+    <!-- STARTSEITE – TRUST BAR – ENDE -->
+
+    <!-- =====================================================
+  STARTSEITE – IMMOBILIEN-SUCHE SECTION – START
+  ===================================================== -->
+    <section class="property-search-section" id="suche">
+      <div class="container">
+        <form class="search-panel" data-hero-search>
+          <div class="search-header">
+            <div class="search-title">
+              <div class="search-title-icon">
+                <i class="fa-solid fa-sliders"></i>
+              </div>
+              <div>
+                <span>Immobilie finden</span><strong>Wonach suchen Sie?</strong>
+              </div>
+            </div>
+            <span class="search-step"
+              ><i class="fa-solid fa-bolt"></i> Schnell &amp; einfach</span
             >
           </div>
-          <div class="col-md-6 animated fadeIn">
-            <div class="owl-carousel header-carousel">
-              <div class="owl-carousel-item">
-                <img class="img-fluid" src="img/carousel-1.jpg" alt="" />
-              </div>
-              <div class="owl-carousel-item">
-                <img class="img-fluid" src="img/carousel-2.jpg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Header End -->
-
-      <!-- Suchen Start -->
-      <div
-        class="container-fluid bg-primary mb-5 wow fadeIn"
-        data-wow-delay="0.1s"
-        style="padding: 35px"
-      >
-        <div class="container">
-          <div class="row g-2">
-            <div class="col-md-10">
-              <div class="row g-2">
-                <div class="col-md-4">
-                  <input
-                    type="text"
-                    class="form-control border-0 py-3"
-                    placeholder="Suchbegriff"
-                  />
-                </div>
-                <div class="col-md-4">
-                  <select class="form-select border-0 py-3">
-                    <option selected>Immobilientyp</option>
-                    <option value="1">Immobilientyp 1</option>
-                    <option value="2">Immobilientyp 2</option>
-                    <option value="3">Immobilientyp 3</option>
-                  </select>
-                </div>
-                <div class="col-md-4">
-                  <select class="form-select border-0 py-3">
-                    <option selected>Standort</option>
-                    <option value="1">Standort 1</option>
-                    <option value="2">Hamburg</option>
-                    <option value="3">München</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <button class="btn btn-dark border-0 w-100 py-3">Suchen</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Suchen End -->
-
-      <!-- Category Start -->
-      <div class="container-fluid py-5">
-        <div class="container">
-          <div
-            class="text-center mx-auto mb-5 wow fadeInUp"
-            data-wow-delay="0.1s"
-            style="max-width: 600px"
-          >
-            <h1 class="mb-3">Immobilientypen</h1>
-            <p>
-              Entdecken Sie attraktive Immobilien und finden Sie Ihr neues Zuhause.
-            </p>
-          </div>
-          <div class="row g-4">
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-              <a
-                class="cat-item d-block bg-light text-center rounded p-3"
-                href=""
+          <div class="search-grid">
+            <div class="field">
+              <label for="s-city"
+                ><i class="fa-solid fa-location-dot"></i> Standort</label
               >
-                <div class="rounded p-4">
-                  <div class="icon mb-3">
-                    <img
-                      class="img-fluid"
-                      src="img/icon-apartment.png"
-                      alt="Icon"
-                    />
-                  </div>
-                  <h6>Wohnung</h6>
-                  <span>123 Immobilien</span>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-              <a
-                class="cat-item d-block bg-light text-center rounded p-3"
-                href=""
-              >
-                <div class="rounded p-4">
-                  <div class="icon mb-3">
-                    <img
-                      class="img-fluid"
-                      src="img/icon-villa.png"
-                      alt="Icon"
-                    />
-                  </div>
-                  <h6>Villa</h6>
-                  <span>123 Immobilien</span>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-              <a
-                class="cat-item d-block bg-light text-center rounded p-3"
-                href=""
-              >
-                <div class="rounded p-4">
-                  <div class="icon mb-3">
-                    <img
-                      class="img-fluid"
-                      src="img/icon-house.png"
-                      alt="Icon"
-                    />
-                  </div>
-                  <h6>Haus</h6>
-                  <span>123 Immobilien</span>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-              <a
-                class="cat-item d-block bg-light text-center rounded p-3"
-                href=""
-              >
-                <div class="rounded p-4">
-                  <div class="icon mb-3">
-                    <img
-                      class="img-fluid"
-                      src="img/icon-housing.png"
-                      alt="Icon"
-                    />
-                  </div>
-                  <h6>Büro</h6>
-                  <span>123 Immobilien</span>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-              <a
-                class="cat-item d-block bg-light text-center rounded p-3"
-                href=""
-              >
-                <div class="rounded p-4">
-                  <div class="icon mb-3">
-                    <img
-                      class="img-fluid"
-                      src="img/icon-building.png"
-                      alt="Icon"
-                    />
-                  </div>
-                  <h6>Gebäude</h6>
-                  <span>123 Immobilien</span>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-              <a
-                class="cat-item d-block bg-light text-center rounded p-3"
-                href=""
-              >
-                <div class="rounded p-4">
-                  <div class="icon mb-3">
-                    <img
-                      class="img-fluid"
-                      src="img/icon-neighborhood.png"
-                      alt="Icon"
-                    />
-                  </div>
-                  <h6>Reihenhaus</h6>
-                  <span>123 Immobilien</span>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-              <a
-                class="cat-item d-block bg-light text-center rounded p-3"
-                href=""
-              >
-                <div class="rounded p-4">
-                  <div class="icon mb-3">
-                    <img
-                      class="img-fluid"
-                      src="img/icon-condominium.png"
-                      alt="Icon"
-                    />
-                  </div>
-                  <h6>Ladenfläche</h6>
-                  <span>123 Immobilien</span>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-              <a
-                class="cat-item d-block bg-light text-center rounded p-3"
-                href=""
-              >
-                <div class="rounded p-4">
-                  <div class="icon mb-3">
-                    <img
-                      class="img-fluid"
-                      src="img/icon-luxury.png"
-                      alt="Icon"
-                    />
-                  </div>
-                  <h6>Garage</h6>
-                  <span>123 Immobilien</span>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Category End -->
-
-      <!-- Über uns Start -->
-      <div class="container-fluid py-5">
-        <div class="container">
-          <div class="row g-5 align-items-center">
-            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-              <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                <img class="img-fluid w-100" src="img/about.jpg" />
-              </div>
-            </div>
-            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-              <h1 class="mb-4">Der beste Ort für Ihre Traumimmobilie</h1>
-              <p class="mb-4">
-                Wir bieten Ihnen eine sorgfältige Auswahl hochwertiger Immobilien und
-                begleiten Sie persönlich bei jedem Schritt.
-              </p>
-              <p>
-                <i class="fa fa-check text-primary me-3"></i>Persönliche Beratung und zuverlässiger Service
-              </p>
-              <p>
-                <i class="fa fa-check text-primary me-3"></i>Große Auswahl an passenden Immobilien
-              </p>
-              <p>
-                <i class="fa fa-check text-primary me-3"></i>Unterstützung bis zum erfolgreichen Abschluss
-              </p>
-              <a class="btn btn-primary py-3 px-5 mt-3" href="">Mehr erfahren</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Über uns End -->
-
-      <!-- Immobilienliste Start -->
-      <div class="container-fluid py-5">
-        <div class="container">
-          <div class="row g-0 gx-5 align-items-end">
-            <div class="col-lg-6">
-              <div
-                class="text-start mx-auto mb-5 wow slideInLeft"
-                data-wow-delay="0.1s"
-              >
-                <h1 class="mb-3">Immobilienangebote</h1>
-                <p>
-                  Finden Sie mit uns die Immobilie, die zu Ihren Wünschen und Ihrem
-                  Leben passt.
-                </p>
-              </div>
-            </div>
-            <div
-              class="col-lg-6 text-start text-lg-end wow slideInRight"
-              data-wow-delay="0.1s"
-            >
-              <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
-                <li class="nav-item me-2">
-                  <a
-                    class="btn btn-outline-primary active"
-                    data-bs-toggle="pill"
-                    href="#tab-1"
-                    >Hervorgehoben</a
-                  >
-                </li>
-                <li class="nav-item me-2">
-                  <a
-                    class="btn btn-outline-primary"
-                    data-bs-toggle="pill"
-                    href="#tab-2"
-                    >Zum Verkauf</a
-                  >
-                </li>
-                <li class="nav-item me-0">
-                  <a
-                    class="btn btn-outline-primary"
-                    data-bs-toggle="pill"
-                    href="#tab-3"
-                    >Zur Miete</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="tab-content">
-            <div id="tab-1" class="tab-pane fade show p-0 active">
-              <div class="row g-4">
-                <div
-                  class="col-lg-4 col-md-6 wow fadeInUp"
-                  data-wow-delay="0.1s"
-                >
-                  <div class="property-item rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                      <a href=""
-                        ><img class="img-fluid" src="img/property-1.jpg" alt=""
-                      /></a>
-                      <div
-                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
-                      >
-                        Zum Verkauf
-                      </div>
-                      <div
-                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
-                      >
-                        Wohnung
-                      </div>
-                    </div>
-                    <div class="p-4 pb-0">
-                      <h5 class="text-primary mb-3">$12,345</h5>
-                      <a class="d-block h5 mb-2" href=""
-                        >Attraktives Stadthaus</a
-                      >
-                      <p>
-                        <i class="fa fa-map-marker-alt text-primary me-2"></i
-                        >Musterstraße 123, Berlin, Deutschland
-                      </p>
-                    </div>
-                    <div class="d-flex border-top">
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-ruler-combined text-primary me-2"></i
-                        >100 m²</small
-                      >
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-bed text-primary me-2"></i>3 Schlafzimmer</small
-                      >
-                      <small class="flex-fill text-center py-2"
-                        ><i class="fa fa-bath text-primary me-2"></i>2
-                        Badezimmer</small
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-lg-4 col-md-6 wow fadeInUp"
-                  data-wow-delay="0.3s"
-                >
-                  <div class="property-item rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                      <a href=""
-                        ><img class="img-fluid" src="img/property-2.jpg" alt=""
-                      /></a>
-                      <div
-                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
-                      >
-                        Zur Miete
-                      </div>
-                      <div
-                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
-                      >
-                        Villa
-                      </div>
-                    </div>
-                    <div class="p-4 pb-0">
-                      <h5 class="text-primary mb-3">$12,345</h5>
-                      <a class="d-block h5 mb-2" href=""
-                        >Attraktives Stadthaus</a
-                      >
-                      <p>
-                        <i class="fa fa-map-marker-alt text-primary me-2"></i
-                        >Musterstraße 123, Berlin, Deutschland
-                      </p>
-                    </div>
-                    <div class="d-flex border-top">
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-ruler-combined text-primary me-2"></i
-                        >100 m²</small
-                      >
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-bed text-primary me-2"></i>3 Schlafzimmer</small
-                      >
-                      <small class="flex-fill text-center py-2"
-                        ><i class="fa fa-bath text-primary me-2"></i>2
-                        Badezimmer</small>
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-lg-4 col-md-6 wow fadeInUp"
-                  data-wow-delay="0.5s"
-                >
-                  <div class="property-item rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                      <a href=""
-                        ><img class="img-fluid" src="img/property-3.jpg" alt=""
-                      /></a>
-                      <div
-                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
-                      >
-                        Zum Verkauf
-                      </div>
-                      <div
-                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
-                      >
-                        Büro
-                      </div>
-                    </div>
-                    <div class="p-4 pb-0">
-                      <h5 class="text-primary mb-3">$12,345</h5>
-                      <a class="d-block h5 mb-2" href=""
-                        >Attraktives Stadthaus</a
-                      >
-                      <p>
-                        <i class="fa fa-map-marker-alt text-primary me-2"></i
-                        >Musterstraße 123, Berlin, Deutschland
-                      </p>
-                    </div>
-                    <div class="d-flex border-top">
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-ruler-combined text-primary me-2"></i
-                        >100 m²</small
-                      >
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-bed text-primary me-2"></i>3 Schlafzimmer</small
-                      >
-                      <small class="flex-fill text-center py-2"
-                        ><i class="fa fa-bath text-primary me-2"></i>2
-                        Badezimmer</small>
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-lg-4 col-md-6 wow fadeInUp"
-                  data-wow-delay="0.1s"
-                >
-                  <div class="property-item rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                      <a href=""
-                        ><img class="img-fluid" src="img/property-4.jpg" alt=""
-                      /></a>
-                      <div
-                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
-                      >
-                        Zur Miete
-                      </div>
-                      <div
-                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
-                      >
-                        Gebäude
-                      </div>
-                    </div>
-                    <div class="p-4 pb-0">
-                      <h5 class="text-primary mb-3">$12,345</h5>
-                      <a class="d-block h5 mb-2" href=""
-                        >Attraktives Stadthaus</a
-                      >
-                      <p>
-                        <i class="fa fa-map-marker-alt text-primary me-2"></i
-                        >Musterstraße 123, Berlin, Deutschland
-                      </p>
-                    </div>
-                    <div class="d-flex border-top">
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-ruler-combined text-primary me-2"></i
-                        >100 m²</small
-                      >
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-bed text-primary me-2"></i>3 Schlafzimmer</small
-                      >
-                      <small class="flex-fill text-center py-2"
-                        ><i class="fa fa-bath text-primary me-2"></i>2
-                        Badezimmer</small>
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-lg-4 col-md-6 wow fadeInUp"
-                  data-wow-delay="0.3s"
-                >
-                  <div class="property-item rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                      <a href=""
-                        ><img class="img-fluid" src="img/property-5.jpg" alt=""
-                      /></a>
-                      <div
-                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
-                      >
-                        Zum Verkauf
-                      </div>
-                      <div
-                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
-                      >
-                        Startseite
-                      </div>
-                    </div>
-                    <div class="p-4 pb-0">
-                      <h5 class="text-primary mb-3">$12,345</h5>
-                      <a class="d-block h5 mb-2" href=""
-                        >Attraktives Stadthaus</a
-                      >
-                      <p>
-                        <i class="fa fa-map-marker-alt text-primary me-2"></i
-                        >Musterstraße 123, Berlin, Deutschland
-                      </p>
-                    </div>
-                    <div class="d-flex border-top">
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-ruler-combined text-primary me-2"></i
-                        >100 m²</small
-                      >
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-bed text-primary me-2"></i>3 Schlafzimmer</small
-                      >
-                      <small class="flex-fill text-center py-2"
-                        ><i class="fa fa-bath text-primary me-2"></i>2
-                        Badezimmer</small>
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-lg-4 col-md-6 wow fadeInUp"
-                  data-wow-delay="0.5s"
-                >
-                  <div class="property-item rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                      <a href=""
-                        ><img class="img-fluid" src="img/property-6.jpg" alt=""
-                      /></a>
-                      <div
-                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
-                      >
-                        Zur Miete
-                      </div>
-                      <div
-                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
-                      >
-                        Shop
-                      </div>
-                    </div>
-                    <div class="p-4 pb-0">
-                      <h5 class="text-primary mb-3">$12,345</h5>
-                      <a class="d-block h5 mb-2" href=""
-                        >Attraktives Stadthaus</a
-                      >
-                      <p>
-                        <i class="fa fa-map-marker-alt text-primary me-2"></i
-                        >Musterstraße 123, Berlin, Deutschland
-                      </p>
-                    </div>
-                    <div class="d-flex border-top">
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-ruler-combined text-primary me-2"></i
-                        >100 m²</small
-                      >
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-bed text-primary me-2"></i>3 Schlafzimmer</small
-                      >
-                      <small class="flex-fill text-center py-2"
-                        ><i class="fa fa-bath text-primary me-2"></i>2
-                        Badezimmer</small>
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-12 text-center wow fadeInUp"
-                  data-wow-delay="0.1s"
-                >
-                  <a class="btn btn-primary py-3 px-5" href=""
-                    >Weitere Immobilien</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div id="tab-2" class="tab-pane fade show p-0">
-              <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                  <div class="property-item rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                      <a href=""
-                        ><img class="img-fluid" src="img/property-1.jpg" alt=""
-                      /></a>
-                      <div
-                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
-                      >
-                        Zum Verkauf
-                      </div>
-                      <div
-                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
-                      >
-                        Wohnung
-                      </div>
-                    </div>
-                    <div class="p-4 pb-0">
-                      <h5 class="text-primary mb-3">$12,345</h5>
-                      <a class="d-block h5 mb-2" href=""
-                        >Attraktives Stadthaus</a
-                      >
-                      <p>
-                        <i class="fa fa-map-marker-alt text-primary me-2"></i
-                        >Musterstraße 123, Berlin, Deutschland
-                      </p>
-                    </div>
-                    <div class="d-flex border-top">
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-ruler-combined text-primary me-2"></i
-                        >100 m²</small
-                      >
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-bed text-primary me-2"></i>3 Schlafzimmer</small
-                      >
-                      <small class="flex-fill text-center py-2"
-                        ><i class="fa fa-bath text-primary me-2"></i>2
-                        Badezimmer</small>
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="property-item rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                      <a href=""
-                        ><img class="img-fluid" src="img/property-2.jpg" alt=""
-                      /></a>
-                      <div
-                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
-                      >
-                        Zur Miete
-                      </div>
-                      <div
-                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
-                      >
-                        Villa
-                      </div>
-                    </div>
-                    <div class="p-4 pb-0">
-                      <h5 class="text-primary mb-3">$12,345</h5>
-                      <a class="d-block h5 mb-2" href=""
-                        >Attraktives Stadthaus</a
-                      >
-                      <p>
-                        <i class="fa fa-map-marker-alt text-primary me-2"></i
-                        >Musterstraße 123, Berlin, Deutschland
-                      </p>
-                    </div>
-                    <div class="d-flex border-top">
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-ruler-combined text-primary me-2"></i
-                        >100 m²</small
-                      >
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-bed text-primary me-2"></i>3 Schlafzimmer</small
-                      >
-                      <small class="flex-fill text-center py-2"
-                        ><i class="fa fa-bath text-primary me-2"></i>2
-                        Badezimmer</small>
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="property-item rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                      <a href=""
-                        ><img class="img-fluid" src="img/property-3.jpg" alt=""
-                      /></a>
-                      <div
-                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
-                      >
-                        Zum Verkauf
-                      </div>
-                      <div
-                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
-                      >
-                        Büro
-                      </div>
-                    </div>
-                    <div class="p-4 pb-0">
-                      <h5 class="text-primary mb-3">$12,345</h5>
-                      <a class="d-block h5 mb-2" href=""
-                        >Attraktives Stadthaus</a
-                      >
-                      <p>
-                        <i class="fa fa-map-marker-alt text-primary me-2"></i
-                        >Musterstraße 123, Berlin, Deutschland
-                      </p>
-                    </div>
-                    <div class="d-flex border-top">
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-ruler-combined text-primary me-2"></i
-                        >100 m²</small
-                      >
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-bed text-primary me-2"></i>3 Schlafzimmer</small
-                      >
-                      <small class="flex-fill text-center py-2"
-                        ><i class="fa fa-bath text-primary me-2"></i>2
-                        Badezimmer</small>
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="property-item rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                      <a href=""
-                        ><img class="img-fluid" src="img/property-4.jpg" alt=""
-                      /></a>
-                      <div
-                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
-                      >
-                        Zur Miete
-                      </div>
-                      <div
-                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
-                      >
-                        Gebäude
-                      </div>
-                    </div>
-                    <div class="p-4 pb-0">
-                      <h5 class="text-primary mb-3">$12,345</h5>
-                      <a class="d-block h5 mb-2" href=""
-                        >Attraktives Stadthaus</a
-                      >
-                      <p>
-                        <i class="fa fa-map-marker-alt text-primary me-2"></i
-                        >Musterstraße 123, Berlin, Deutschland
-                      </p>
-                    </div>
-                    <div class="d-flex border-top">
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-ruler-combined text-primary me-2"></i
-                        >100 m²</small
-                      >
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-bed text-primary me-2"></i>3 Schlafzimmer</small
-                      >
-                      <small class="flex-fill text-center py-2"
-                        ><i class="fa fa-bath text-primary me-2"></i>2
-                        Badezimmer</small>
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="property-item rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                      <a href=""
-                        ><img class="img-fluid" src="img/property-5.jpg" alt=""
-                      /></a>
-                      <div
-                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
-                      >
-                        Zum Verkauf
-                      </div>
-                      <div
-                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
-                      >
-                        Startseite
-                      </div>
-                    </div>
-                    <div class="p-4 pb-0">
-                      <h5 class="text-primary mb-3">$12,345</h5>
-                      <a class="d-block h5 mb-2" href=""
-                        >Attraktives Stadthaus</a
-                      >
-                      <p>
-                        <i class="fa fa-map-marker-alt text-primary me-2"></i
-                        >Musterstraße 123, Berlin, Deutschland
-                      </p>
-                    </div>
-                    <div class="d-flex border-top">
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-ruler-combined text-primary me-2"></i
-                        >100 m²</small
-                      >
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-bed text-primary me-2"></i>3 Schlafzimmer</small
-                      >
-                      <small class="flex-fill text-center py-2"
-                        ><i class="fa fa-bath text-primary me-2"></i>2
-                        Badezimmer</small>
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="property-item rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                      <a href=""
-                        ><img class="img-fluid" src="img/property-6.jpg" alt=""
-                      /></a>
-                      <div
-                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
-                      >
-                        Zur Miete
-                      </div>
-                      <div
-                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
-                      >
-                        Shop
-                      </div>
-                    </div>
-                    <div class="p-4 pb-0">
-                      <h5 class="text-primary mb-3">$12,345</h5>
-                      <a class="d-block h5 mb-2" href=""
-                        >Attraktives Stadthaus</a
-                      >
-                      <p>
-                        <i class="fa fa-map-marker-alt text-primary me-2"></i
-                        >Musterstraße 123, Berlin, Deutschland
-                      </p>
-                    </div>
-                    <div class="d-flex border-top">
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-ruler-combined text-primary me-2"></i
-                        >100 m²</small
-                      >
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-bed text-primary me-2"></i>3 Schlafzimmer</small
-                      >
-                      <small class="flex-fill text-center py-2"
-                        ><i class="fa fa-bath text-primary me-2"></i>2
-                        Badezimmer</small>
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 text-center">
-                  <a class="btn btn-primary py-3 px-5" href=""
-                    >Weitere Immobilien</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div id="tab-3" class="tab-pane fade show p-0">
-              <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                  <div class="property-item rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                      <a href=""
-                        ><img class="img-fluid" src="img/property-1.jpg" alt=""
-                      /></a>
-                      <div
-                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
-                      >
-                        Zum Verkauf
-                      </div>
-                      <div
-                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
-                      >
-                        Wohnung
-                      </div>
-                    </div>
-                    <div class="p-4 pb-0">
-                      <h5 class="text-primary mb-3">$12,345</h5>
-                      <a class="d-block h5 mb-2" href=""
-                        >Attraktives Stadthaus</a
-                      >
-                      <p>
-                        <i class="fa fa-map-marker-alt text-primary me-2"></i
-                        >Musterstraße 123, Berlin, Deutschland
-                      </p>
-                    </div>
-                    <div class="d-flex border-top">
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-ruler-combined text-primary me-2"></i
-                        >100 m²</small
-                      >
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-bed text-primary me-2"></i>3 Schlafzimmer</small
-                      >
-                      <small class="flex-fill text-center py-2"
-                        ><i class="fa fa-bath text-primary me-2"></i>2
-                        Badezimmer</small>
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="property-item rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                      <a href=""
-                        ><img class="img-fluid" src="img/property-2.jpg" alt=""
-                      /></a>
-                      <div
-                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
-                      >
-                        Zur Miete
-                      </div>
-                      <div
-                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
-                      >
-                        Villa
-                      </div>
-                    </div>
-                    <div class="p-4 pb-0">
-                      <h5 class="text-primary mb-3">$12,345</h5>
-                      <a class="d-block h5 mb-2" href=""
-                        >Attraktives Stadthaus</a
-                      >
-                      <p>
-                        <i class="fa fa-map-marker-alt text-primary me-2"></i
-                        >Musterstraße 123, Berlin, Deutschland
-                      </p>
-                    </div>
-                    <div class="d-flex border-top">
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-ruler-combined text-primary me-2"></i
-                        >100 m²</small
-                      >
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-bed text-primary me-2"></i>3 Schlafzimmer</small
-                      >
-                      <small class="flex-fill text-center py-2"
-                        ><i class="fa fa-bath text-primary me-2"></i>2
-                        Badezimmer</small>
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="property-item rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                      <a href=""
-                        ><img class="img-fluid" src="img/property-3.jpg" alt=""
-                      /></a>
-                      <div
-                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
-                      >
-                        Zum Verkauf
-                      </div>
-                      <div
-                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
-                      >
-                        Büro
-                      </div>
-                    </div>
-                    <div class="p-4 pb-0">
-                      <h5 class="text-primary mb-3">$12,345</h5>
-                      <a class="d-block h5 mb-2" href=""
-                        >Attraktives Stadthaus</a
-                      >
-                      <p>
-                        <i class="fa fa-map-marker-alt text-primary me-2"></i
-                        >Musterstraße 123, Berlin, Deutschland
-                      </p>
-                    </div>
-                    <div class="d-flex border-top">
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-ruler-combined text-primary me-2"></i
-                        >100 m²</small
-                      >
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-bed text-primary me-2"></i>3 Schlafzimmer</small
-                      >
-                      <small class="flex-fill text-center py-2"
-                        ><i class="fa fa-bath text-primary me-2"></i>2
-                        Badezimmer</small>
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="property-item rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                      <a href=""
-                        ><img class="img-fluid" src="img/property-4.jpg" alt=""
-                      /></a>
-                      <div
-                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
-                      >
-                        Zur Miete
-                      </div>
-                      <div
-                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
-                      >
-                        Gebäude
-                      </div>
-                    </div>
-                    <div class="p-4 pb-0">
-                      <h5 class="text-primary mb-3">$12,345</h5>
-                      <a class="d-block h5 mb-2" href=""
-                        >Attraktives Stadthaus</a
-                      >
-                      <p>
-                        <i class="fa fa-map-marker-alt text-primary me-2"></i
-                        >Musterstraße 123, Berlin, Deutschland
-                      </p>
-                    </div>
-                    <div class="d-flex border-top">
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-ruler-combined text-primary me-2"></i
-                        >100 m²</small
-                      >
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-bed text-primary me-2"></i>3 Schlafzimmer</small
-                      >
-                      <small class="flex-fill text-center py-2"
-                        ><i class="fa fa-bath text-primary me-2"></i>2
-                        Badezimmer</small>
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="property-item rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                      <a href=""
-                        ><img class="img-fluid" src="img/property-5.jpg" alt=""
-                      /></a>
-                      <div
-                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
-                      >
-                        Zum Verkauf
-                      </div>
-                      <div
-                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
-                      >
-                        Startseite
-                      </div>
-                    </div>
-                    <div class="p-4 pb-0">
-                      <h5 class="text-primary mb-3">$12,345</h5>
-                      <a class="d-block h5 mb-2" href=""
-                        >Attraktives Stadthaus</a
-                      >
-                      <p>
-                        <i class="fa fa-map-marker-alt text-primary me-2"></i
-                        >Musterstraße 123, Berlin, Deutschland
-                      </p>
-                    </div>
-                    <div class="d-flex border-top">
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-ruler-combined text-primary me-2"></i
-                        >100 m²</small
-                      >
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-bed text-primary me-2"></i>3 Schlafzimmer</small
-                      >
-                      <small class="flex-fill text-center py-2"
-                        ><i class="fa fa-bath text-primary me-2"></i>2
-                        Badezimmer</small>
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="property-item rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                      <a href=""
-                        ><img class="img-fluid" src="img/property-6.jpg" alt=""
-                      /></a>
-                      <div
-                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
-                      >
-                        Zur Miete
-                      </div>
-                      <div
-                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
-                      >
-                        Shop
-                      </div>
-                    </div>
-                    <div class="p-4 pb-0">
-                      <h5 class="text-primary mb-3">$12,345</h5>
-                      <a class="d-block h5 mb-2" href=""
-                        >Attraktives Stadthaus</a
-                      >
-                      <p>
-                        <i class="fa fa-map-marker-alt text-primary me-2"></i
-                        >Musterstraße 123, Berlin, Deutschland
-                      </p>
-                    </div>
-                    <div class="d-flex border-top">
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-ruler-combined text-primary me-2"></i
-                        >100 m²</small
-                      >
-                      <small class="flex-fill text-center border-end py-2"
-                        ><i class="fa fa-bed text-primary me-2"></i>3 Schlafzimmer</small
-                      >
-                      <small class="flex-fill text-center py-2"
-                        ><i class="fa fa-bath text-primary me-2"></i>2
-                        Badezimmer</small>
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 text-center">
-                  <a class="btn btn-primary py-3 px-5" href=""
-                    >Weitere Immobilien</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Immobilienliste End -->
-
-      <!-- Call to Action Start -->
-      <div class="container-fluid py-5">
-        <div class="container">
-          <div class="bg-light rounded p-3">
-            <div
-              class="bg-white rounded p-4"
-              style="border: 1px dashed rgba(0, 185, 142, 0.3)"
-            >
-              <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                  <img
-                    class="img-fluid rounded w-100"
-                    src="img/call-to-action.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                  <div class="mb-4">
-                    <h1 class="mb-3">Kontakt zu unserem zertifizierten Makler</h1>
-                    <p>
-                      Wir beraten Sie persönlich und zuverlässig bei der Suche nach
-                      Ihrer passenden Immobilie.
-                    </p>
-                  </div>
-                  <a href="" class="btn btn-primary py-3 px-4 me-2"
-                    ><i class="fa fa-phone-alt me-2"></i>Anrufen</a
-                  >
-                  <a href="" class="btn btn-dark py-3 px-4"
-                    ><i class="fa fa-calendar-alt me-2"></i>Termin vereinbaren</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Call to Action End -->
-
-      <!-- Team Start -->
-      <div class="container-fluid py-5">
-        <div class="container">
-          <div
-            class="text-center mx-auto mb-5 wow fadeInUp"
-            data-wow-delay="0.1s"
-            style="max-width: 600px"
-          >
-            <h1 class="mb-3">Immobilienmakler</h1>
-            <p>
-              Unser erfahrenes Maklerteam unterstützt Sie persönlich und
-              zuverlässig bei der Suche nach Ihrer passenden Immobilie.
-            </p>
-          </div>
-          <div class="row g-4">
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-              <div class="team-item rounded overflow-hidden">
-                <div class="position-relative">
-                  <img class="img-fluid" src="img/team-1.jpg" alt="" />
-                  <div
-                    class="position-absolute start-50 top-100 translate-middle d-flex align-items-center"
-                  >
-                    <a class="btn btn-square mx-1" href=""
-                      ><i class="fab fa-facebook-f"></i
-                    ></a>
-                    <a class="btn btn-square mx-1" href=""
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                    <a class="btn btn-square mx-1" href=""
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-                  </div>
-                </div>
-                <div class="text-center p-4 mt-3">
-                  <h5 class="fw-bold mb-0">Vollständiger Name</h5>
-                  <small>Position</small>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-              <div class="team-item rounded overflow-hidden">
-                <div class="position-relative">
-                  <img class="img-fluid" src="img/team-2.jpg" alt="" />
-                  <div
-                    class="position-absolute start-50 top-100 translate-middle d-flex align-items-center"
-                  >
-                    <a class="btn btn-square mx-1" href=""
-                      ><i class="fab fa-facebook-f"></i
-                    ></a>
-                    <a class="btn btn-square mx-1" href=""
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                    <a class="btn btn-square mx-1" href=""
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-                  </div>
-                </div>
-                <div class="text-center p-4 mt-3">
-                  <h5 class="fw-bold mb-0">Vollständiger Name</h5>
-                  <small>Position</small>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-              <div class="team-item rounded overflow-hidden">
-                <div class="position-relative">
-                  <img class="img-fluid" src="img/team-3.jpg" alt="" />
-                  <div
-                    class="position-absolute start-50 top-100 translate-middle d-flex align-items-center"
-                  >
-                    <a class="btn btn-square mx-1" href=""
-                      ><i class="fab fa-facebook-f"></i
-                    ></a>
-                    <a class="btn btn-square mx-1" href=""
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                    <a class="btn btn-square mx-1" href=""
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-                  </div>
-                </div>
-                <div class="text-center p-4 mt-3">
-                  <h5 class="fw-bold mb-0">Vollständiger Name</h5>
-                  <small>Position</small>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-              <div class="team-item rounded overflow-hidden">
-                <div class="position-relative">
-                  <img class="img-fluid" src="img/team-4.jpg" alt="" />
-                  <div
-                    class="position-absolute start-50 top-100 translate-middle d-flex align-items-center"
-                  >
-                    <a class="btn btn-square mx-1" href=""
-                      ><i class="fab fa-facebook-f"></i
-                    ></a>
-                    <a class="btn btn-square mx-1" href=""
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                    <a class="btn btn-square mx-1" href=""
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-                  </div>
-                </div>
-                <div class="text-center p-4 mt-3">
-                  <h5 class="fw-bold mb-0">Vollständiger Name</h5>
-                  <small>Position</small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Team End -->
-
-      <!-- Kundenstimmen Start -->
-      <div class="container-fluid py-5">
-        <div class="container">
-          <div
-            class="text-center mx-auto mb-5 wow fadeInUp"
-            data-wow-delay="0.1s"
-            style="max-width: 600px"
-          >
-            <h1 class="mb-3">Das sagen unsere Kunden</h1>
-            <p>
-              Erfahrungen unserer Kunden zeigen, wie wir Sie zuverlässig auf dem
-              Weg zu Ihrer Wunschimmobilie begleiten.
-            </p>
-          </div>
-          <div
-            class="owl-carousel testimonial-carousel wow fadeInUp"
-            data-wow-delay="0.1s"
-          >
-            <div class="testimonial-item bg-light rounded p-3">
-              <div class="bg-white border rounded p-4">
-                <p>
-                  Die Beratung war freundlich, kompetent und zuverlässig. Wir haben
-                  schnell unser neues Zuhause gefunden.
-                </p>
-                <div class="d-flex align-items-center">
-                  <img
-                    class="img-fluid flex-shrink-0 rounded"
-                    src="img/testimonial-1.jpg"
-                    style="width: 45px; height: 45px"
-                  />
-                  <div class="ps-3">
-                    <h6 class="fw-bold mb-1">Kundenname</h6>
-                    <small>Beruf</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial-item bg-light rounded p-3">
-              <div class="bg-white border rounded p-4">
-                <p>
-                  Die Beratung war freundlich, kompetent und zuverlässig. Wir haben
-                  schnell unser neues Zuhause gefunden.
-                </p>
-                <div class="d-flex align-items-center">
-                  <img
-                    class="img-fluid flex-shrink-0 rounded"
-                    src="img/testimonial-2.jpg"
-                    style="width: 45px; height: 45px"
-                  />
-                  <div class="ps-3">
-                    <h6 class="fw-bold mb-1">Kundenname</h6>
-                    <small>Beruf</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial-item bg-light rounded p-3">
-              <div class="bg-white border rounded p-4">
-                <p>
-                  Die Beratung war freundlich, kompetent und zuverlässig. Wir haben
-                  schnell unser neues Zuhause gefunden.
-                </p>
-                <div class="d-flex align-items-center">
-                  <img
-                    class="img-fluid flex-shrink-0 rounded"
-                    src="img/testimonial-3.jpg"
-                    style="width: 45px; height: 45px"
-                  />
-                  <div class="ps-3">
-                    <h6 class="fw-bold mb-1">Kundenname</h6>
-                    <small>Beruf</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Kundenstimmen End -->
-
-      <!-- Footer Start -->
-      <div
-        class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn"
-        data-wow-delay="0.1s"
-      >
-        <div class="container py-5">
-          <div class="row g-5">
-            <div class="col-lg-3 col-md-6">
-              <h5 class="text-white mb-4">Kontakt aufnehmen</h5>
-              <p class="mb-2">
-                <i class="fa fa-map-marker-alt me-3"></i>123 Street, New York,
-                USA
-              </p>
-              <p class="mb-2">
-                <i class="fa fa-phone-alt me-3"></i>+012 345 67890
-              </p>
-              <p class="mb-2">
-                <i class="fa fa-envelope me-3"></i>info@example.com
-              </p>
-              <div class="d-flex pt-2">
-                <a class="btn btn-outline-light btn-social" href=""
-                  ><i class="fab fa-twitter"></i
-                ></a>
-                <a class="btn btn-outline-light btn-social" href=""
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a class="btn btn-outline-light btn-social" href=""
-                  ><i class="fab fa-youtube"></i
-                ></a>
-                <a class="btn btn-outline-light btn-social" href=""
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <h5 class="text-white mb-4">Schnellzugriff</h5>
-              <a class="btn btn-link text-white-50" href="">Über uns</a>
-              <a class="btn btn-link text-white-50" href="">Kontakt</a>
-              <a class="btn btn-link text-white-50" href="">Unsere Leistungen</a>
-              <a class="btn btn-link text-white-50" href="">Datenschutzerklärung</a>
-              <a class="btn btn-link text-white-50" href=""
-                >Allgemeine Geschäftsbedingungen</a
-              >
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <h5 class="text-white mb-4">Fotogalerie</h5>
-              <div class="row g-2 pt-2">
-                <div class="col-4">
-                  <img
-                    class="img-fluid rounded bg-light p-1"
-                    src="img/property-1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="col-4">
-                  <img
-                    class="img-fluid rounded bg-light p-1"
-                    src="img/property-2.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="col-4">
-                  <img
-                    class="img-fluid rounded bg-light p-1"
-                    src="img/property-3.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="col-4">
-                  <img
-                    class="img-fluid rounded bg-light p-1"
-                    src="img/property-4.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="col-4">
-                  <img
-                    class="img-fluid rounded bg-light p-1"
-                    src="img/property-5.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="col-4">
-                  <img
-                    class="img-fluid rounded bg-light p-1"
-                    src="img/property-6.jpg"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <h5 class="text-white mb-4">Newsletter</h5>
-              <p>Erhalten Sie aktuelle Angebote und Neuigkeiten direkt per E-Mail.</p>
-              <div class="position-relative mx-auto" style="max-width: 400px">
-                <input
-                  class="form-control bg-transparent w-100 py-3 ps-4 pe-5"
+              <div class="field-control">
+                <i class="fa-solid fa-location-dot field-icon"></i
+                ><input
+                  id="s-city"
+                  name="city"
                   type="text"
-                  placeholder="Ihre E-Mail-Adresse"
+                  placeholder="Stadt oder Region"
+                  autocomplete="address-level2"
                 />
-                <button
-                  type="button"
-                  class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
-                >
-                  Anmelden
-                </button>
               </div>
             </div>
+            <div class="field">
+              <label for="s-type"
+                ><i class="fa-solid fa-building"></i> Immobilientyp</label
+              >
+              <div class="field-control">
+                <i class="fa-solid fa-building field-icon"></i
+                ><select id="s-type" name="type">
+                  <option value="">Alle Immobilientypen</option>
+                  <option>Wohnung</option>
+                  <option>Haus</option>
+                  <option>Villa</option>
+                  <option>Büro</option>
+                  <option>Eigentumswohnung</option>
+                  <option>Reihenhaus</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="s-status"
+                ><i class="fa-solid fa-tag"></i> Angebot</label
+              >
+              <div class="field-control">
+                <i class="fa-solid fa-key field-icon"></i
+                ><select id="s-status" name="status">
+                  <option value="">Kauf &amp; Miete</option>
+                  <option value="sale">Zum Verkauf</option>
+                  <option value="rent">Zur Miete</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="search-submit">
+              <span class="search-submit-icon"
+                ><i class="fa-solid fa-magnifying-glass"></i></span
+              ><span>Suchen</span
+              ><i class="fa-solid fa-arrow-right search-submit-arrow"></i>
+            </button>
           </div>
-        </div>
-        <div class="container">
-          <div class="copyright">
-            <div class="row">
-              <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                &copy; <a class="border-bottom" href="#">Makaan</a>, All
-                Right Reserved.
+          <div class="search-footer">
+            <div class="search-trust">
+              <span class="trust-icon"
+                ><i class="fa-solid fa-shield-halved"></i></span
+              ><span>Übersichtliche Angebote und direkte Anfrage</span>
+            </div>
+            <span class="search-helper"
+              >Weitere Filter auf der Immobilienseite</span
+            >
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- STARTSEITE – IMMOBILIEN-SUCHE SECTION – ENDE -->
 
-                <!--/*** The authorâ€™s attribution link must remain intact in the template. ***/-->
-                <!--/*** If you wish to remove this credit link, please purchase the Pro Version . ***/-->
-                Erstellt von
-                <a class="border-bottom" href="https://easytechit.de"
-                  >EasyTech Solutionx</a
-                >
-              </div>
-              <div class="col-md-6 text-center text-md-end">
-                <div class="footer-menu">
-                  <a href="">Startseite</a>
-                  <a href="">Cookies</a>
-                  <a href="">Hilfe</a>
-                  <a href="">FAQs</a>
-                </div>
-              </div>
+    <!-- =====================================================
+  STARTSEITE – AKTUELLE IMMOBILIEN SECTION – START
+  ===================================================== -->
+    <section class="section section--stone home-section" data-featured>
+      <div class="container">
+        <div class="section-head-row" data-reveal>
+          <div class="section-head">
+            <span class="eyebrow">Ausgewählte Angebote</span>
+            <h2>Immobilien, die aktuell interessant sind.</h2>
+            <p>
+              Entdecken Sie ausgewählte Objekte und öffnen Sie die Detailseite
+              für weitere Informationen.
+            </p>
+          </div>
+          <a href="property-list.html" class="text-link"
+            >Alle Immobilien <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Immobilien filtern">
+          <button class="tab-btn active" data-tab="featured" type="button">
+            Hervorgehoben
+          </button>
+          <button class="tab-btn" data-tab="sale" type="button">
+            Zum Verkauf
+          </button>
+          <button class="tab-btn" data-tab="rent" type="button">
+            Zur Miete
+          </button>
+        </div>
+        <div class="listing-grid"></div>
+      </div>
+    </section>
+    <!-- STARTSEITE – AKTUELLE IMMOBILIEN SECTION – ENDE -->
+
+    <!-- =====================================================
+  STARTSEITE – VERKAUF / BEDÜRFNIS SECTION – START
+  ===================================================== -->
+    <section class="section seller-section" id="verkaufen">
+      <div class="container seller-layout">
+        <div class="seller-copy" data-reveal>
+          <span class="eyebrow">Sie möchten verkaufen?</span>
+          <h2>Eine Immobilie zu verkaufen ist mehr als ein Inserat.</h2>
+          <p>
+            Preisfindung, Unterlagen, Vermarktung, Besichtigungen und
+            Verhandlungen müssen zusammenpassen. Makaan strukturiert den Prozess
+            und hält Sie über die entscheidenden Schritte auf dem Laufenden.
+          </p>
+          <div class="seller-points">
+            <div>
+              <span><i class="fa-solid fa-bullseye"></i></span
+              ><strong>Richtige Positionierung</strong
+              ><small
+                >Die Immobilie passend zum Markt und zur Zielgruppe
+                präsentieren.</small
+              >
+            </div>
+            <div>
+              <span><i class="fa-solid fa-folder-open"></i></span
+              ><strong>Saubere Vorbereitung</strong
+              ><small
+                >Unterlagen und Informationen strukturiert
+                zusammenführen.</small
+              >
+            </div>
+            <div>
+              <span><i class="fa-solid fa-handshake"></i></span
+              ><strong>Begleitung bis zum Abschluss</strong
+              ><small
+                >Kommunikation und Verhandlung persönlich begleiten.</small
+              >
+            </div>
+          </div>
+          <a href="#bewertung" class="btn btn-primary"
+            ><span>Verkauf vorbereiten</span
+            ><i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+        <div class="seller-visual" data-reveal>
+          <img
+            src="img/about.jpg"
+            alt="Persönliche Immobilienberatung"
+            loading="lazy"
+          />
+          <div class="seller-overlay-card">
+            <span class="seller-overlay-icon"
+              ><i class="fa-solid fa-chart-line"></i
+            ></span>
+            <div>
+              <strong>Klare Entscheidungsgrundlage</strong
+              ><small>Bewertung · Strategie · Vermarktung</small>
             </div>
           </div>
         </div>
       </div>
-      <!-- Footer End -->
+    </section>
+    <!-- STARTSEITE – VERKAUF / BEDÜRFNIS SECTION – ENDE -->
 
-      <!-- Back to Top -->
-      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
-        ><i class="bi bi-arrow-up"></i
-      ></a>
-    </div>
+    <!-- =====================================================
+  STARTSEITE – LÖSUNG / LEISTUNGEN SECTION – START
+  ===================================================== -->
+    <section class="section section--stone" id="leistungen">
+      <div class="container">
+        <div class="section-head center" data-reveal>
+          <span class="eyebrow">Unsere Leistungen</span>
+          <h2>Ein Ansprechpartner für die wichtigen Schritte.</h2>
+          <p>
+            Die Website soll nicht nur Immobilien zeigen, sondern Orientierung
+            geben – für Käufer, Mieter und Eigentümer.
+          </p>
+        </div>
+        <div class="service-grid">
+          <a href="property-list.html" class="service-card" data-reveal
+            ><span class="service-icon"
+              ><i class="fa-solid fa-house-chimney"></i
+            ></span>
+            <div>
+              <span class="service-kicker">Für Suchende</span>
+              <h3>Immobilien finden</h3>
+              <p>Gezielt nach Standort, Typ und Angebot suchen.</p>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square service-arrow"></i
+          ></a>
+          <a href="#bewertung" class="service-card" data-reveal
+            ><span class="service-icon"
+              ><i class="fa-solid fa-chart-line"></i
+            ></span>
+            <div>
+              <span class="service-kicker">Für Eigentümer</span>
+              <h3>Immobilienbewertung</h3>
+              <p>
+                Eine strukturierte Grundlage für Ihre Verkaufsentscheidung
+                schaffen.
+              </p>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square service-arrow"></i
+          ></a>
+          <a href="contact.html" class="service-card" data-reveal
+            ><span class="service-icon"
+              ><i class="fa-solid fa-comments"></i
+            ></span>
+            <div>
+              <span class="service-kicker">Persönlich</span>
+              <h3>Beratung &amp; Vermittlung</h3>
+              <p>
+                Fragen klären, Möglichkeiten besprechen und nächste Schritte
+                planen.
+              </p>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square service-arrow"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+    <!-- STARTSEITE – LÖSUNG / LEISTUNGEN SECTION – ENDE -->
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <!-- =====================================================
+  STARTSEITE – BEWERTUNG SECTION – START
+  ===================================================== -->
+    <section class="section valuation-section" id="bewertung">
+      <div class="container valuation-layout">
+        <div class="valuation-copy" data-reveal>
+          <span class="eyebrow">Immobilienbewertung</span>
+          <h2>Was ist Ihre Immobilie wert?</h2>
+          <p>
+            Starten Sie unverbindlich. Mit wenigen Angaben erhalten wir eine
+            erste Grundlage für das persönliche Gespräch.
+          </p>
+          <div class="valuation-benefits">
+            <span
+              ><i class="fa-solid fa-check"></i> Unverbindliche Anfrage</span
+            >
+            <span
+              ><i class="fa-solid fa-check"></i> Persönliche Einschätzung</span
+            >
+            <span
+              ><i class="fa-solid fa-check"></i> Klare nächste Schritte</span
+            >
+          </div>
+        </div>
+        <form class="valuation-card" data-valuation-form data-reveal>
+          <div class="valuation-card-head">
+            <span class="valuation-card-icon"
+              ><i class="fa-solid fa-house"></i
+            ></span>
+            <div>
+              <span>Erster Schritt</span><strong>Immobilie einordnen</strong>
+            </div>
+          </div>
+          <div class="valuation-form-grid">
+            <label
+              ><span>Immobilientyp</span
+              ><select name="valuationType" required>
+                <option value="">Bitte wählen</option>
+                <option>Wohnung</option>
+                <option>Haus</option>
+                <option>Mehrfamilienhaus</option>
+                <option>Grundstück</option>
+                <option>Gewerbeimmobilie</option>
+              </select></label
+            >
+            <label
+              ><span>PLZ / Ort</span
+              ><input
+                name="valuationLocation"
+                type="text"
+                placeholder="z. B. 10115 Berlin"
+                required
+            /></label>
+          </div>
+          <button class="btn btn-gold btn-block" type="submit">
+            Bewertung anfragen <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <small class="valuation-note"
+            ><i class="fa-solid fa-lock"></i> Ihre Angaben werden nur für die
+            Anfrage verwendet.</small
+          >
+        </form>
+      </div>
+    </section>
+    <!-- STARTSEITE – BEWERTUNG SECTION – ENDE -->
 
-    <!-- Template Javascript -->
+    <!-- =====================================================
+  STARTSEITE – PROZESS SECTION – START
+  ===================================================== -->
+    <section class="section process-section section--stone">
+      <div class="container">
+        <div class="section-head center" data-reveal>
+          <span class="eyebrow">Der Ablauf</span>
+          <h2>Von der ersten Anfrage bis zur Entscheidung.</h2>
+          <p>
+            Ein klarer Prozess reduziert Rückfragen und schafft Orientierung.
+          </p>
+        </div>
+        <div class="process-grid">
+          <article class="process-step" data-reveal>
+            <span class="process-number">01</span
+            ><span class="process-icon"
+              ><i class="fa-solid fa-comments"></i
+            ></span>
+            <h3>Kennenlernen</h3>
+            <p>Wir verstehen Ihre Ziele, Wünsche und Rahmenbedingungen.</p>
+          </article>
+          <article class="process-step" data-reveal>
+            <span class="process-number">02</span
+            ><span class="process-icon"
+              ><i class="fa-solid fa-list-check"></i
+            ></span>
+            <h3>Strategie</h3>
+            <p>
+              Wir ordnen Informationen und definieren die nächsten sinnvollen
+              Schritte.
+            </p>
+          </article>
+          <article class="process-step" data-reveal>
+            <span class="process-number">03</span
+            ><span class="process-icon"
+              ><i class="fa-solid fa-magnifying-glass-chart"></i
+            ></span>
+            <h3>Vermittlung</h3>
+            <p>
+              Passende Objekte, Interessenten oder Maßnahmen werden
+              zusammengeführt.
+            </p>
+          </article>
+          <article class="process-step" data-reveal>
+            <span class="process-number">04</span
+            ><span class="process-icon"
+              ><i class="fa-solid fa-file-signature"></i
+            ></span>
+            <h3>Abschluss</h3>
+            <p>
+              Wir begleiten die Kommunikation bis zum vereinbarten Abschluss.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- STARTSEITE – PROZESS SECTION – ENDE -->
+
+    <!-- =====================================================
+  STARTSEITE – WARUM MAKAAN SECTION – START
+  ===================================================== -->
+    <section class="section why-section">
+      <div class="container why-layout">
+        <div class="why-visual" data-reveal>
+          <img src="img/about.jpg" alt="Makaan Beratung" loading="lazy" />
+          <div class="why-visual-mark">
+            <i class="fa-solid fa-building"></i>
+          </div>
+        </div>
+        <div class="why-copy" data-reveal>
+          <span class="eyebrow">Warum Makaan</span>
+          <h2>Weniger Umwege. Mehr Klarheit.</h2>
+          <p>
+            Gute Immobilienberatung bedeutet nicht, alles komplizierter zu
+            machen. Sie bedeutet, die relevanten Informationen zur richtigen
+            Zeit verständlich aufzubereiten.
+          </p>
+          <div class="why-list">
+            <div>
+              <span><i class="fa-solid fa-user-check"></i></span>
+              <div>
+                <strong>Persönliche Betreuung</strong>
+                <p>Direkte Kommunikation statt anonymer Prozesse.</p>
+              </div>
+            </div>
+            <div>
+              <span><i class="fa-solid fa-filter-circle-dollar"></i></span>
+              <div>
+                <strong>Gezielte Auswahl</strong>
+                <p>
+                  Fokus auf die Kriterien, die für Ihre Entscheidung wirklich
+                  relevant sind.
+                </p>
+              </div>
+            </div>
+            <div>
+              <span><i class="fa-solid fa-shield-halved"></i></span>
+              <div>
+                <strong>Struktur &amp; Transparenz</strong>
+                <p>
+                  Klare Informationen und nachvollziehbare nächste Schritte.
+                </p>
+              </div>
+            </div>
+          </div>
+          <a href="about.html" class="text-link"
+            >Mehr über Makaan <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+    <!-- STARTSEITE – WARUM MAKAAN SECTION – ENDE -->
+
+    <!-- =====================================================
+  STARTSEITE – TEAM SECTION – START
+  ===================================================== -->
+    <section class="section section--stone team-section">
+      <div class="container">
+        <div class="section-head-row" data-reveal>
+          <div class="section-head">
+            <span class="eyebrow">Persönliche Ansprechpartner</span>
+            <h2>Menschen statt anonymer Vermittlung.</h2>
+            <p>
+              Lernen Sie die Ansprechpartner kennen, die Ihre Anfrage begleiten.
+            </p>
+          </div>
+          <a href="about.html" class="text-link"
+            >Unser Team <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+        <div class="team-grid">
+          <div class="team-card" data-reveal>
+            <img
+              src="img/team-1.jpg"
+              alt="Sofia Brandt"
+              loading="lazy"
+            /><strong>Sofia Brandt</strong><span>Immobilienmaklerin</span>
+          </div>
+          <div class="team-card" data-reveal>
+            <img
+              src="img/team-2.jpg"
+              alt="Jonas Weller"
+              loading="lazy"
+            /><strong>Jonas Weller</strong><span>Senior Makler</span>
+          </div>
+          <div class="team-card" data-reveal>
+            <img
+              src="img/team-3.jpg"
+              alt="Lea Hoffmann"
+              loading="lazy"
+            /><strong>Lea Hoffmann</strong><span>Objektbetreuung</span>
+          </div>
+          <div class="team-card" data-reveal>
+            <img src="img/team-4.jpg" alt="Tom Richter" loading="lazy" /><strong
+              >Tom Richter</strong
+            ><span>Finanzierungsberater</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- STARTSEITE – TEAM SECTION – ENDE -->
+
+    <!-- =====================================================
+  STARTSEITE – TESTIMONIALS / BEWEISE SECTION – START
+  ===================================================== -->
+    <section class="section testimonials-section">
+      <div class="container">
+        <div class="section-head center" data-reveal>
+          <span class="eyebrow">Vertrauen</span>
+          <h2>Was unsere Kunden sagen.</h2>
+          <p>
+            Erfahrungen aus der Zusammenarbeit geben Orientierung und zeigen,
+            worauf es im Prozess ankommt.
+          </p>
+        </div>
+        <div class="testi-grid">
+          <article class="testi-card" data-reveal>
+            <div class="stars" aria-label="5 von 5 Sternen">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+            <p>
+              „Die Beratung war freundlich, kompetent und zuverlässig. Wir haben
+              schnell unser neues Zuhause gefunden.“
+            </p>
+            <div class="testi-who">
+              <img src="img/testimonial-1.jpg" alt="" loading="lazy" />
+              <div>
+                <strong>Katrin Meyer</strong><span>Käuferin, Berlin</span>
+              </div>
+            </div>
+          </article>
+          <article class="testi-card" data-reveal>
+            <div class="stars" aria-label="5 von 5 Sternen">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+            <p>
+              „Von der ersten Besichtigung bis zum Notartermin lief alles
+              reibungslos. Sehr empfehlenswert.“
+            </p>
+            <div class="testi-who">
+              <img src="img/testimonial-2.jpg" alt="" loading="lazy" />
+              <div>
+                <strong>David Nowak</strong><span>Käufer, München</span>
+              </div>
+            </div>
+          </article>
+          <article class="testi-card" data-reveal>
+            <div class="stars" aria-label="5 von 5 Sternen">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+            <p>
+              „Wir haben innerhalb von zwei Wochen die passende Mietwohnung
+              gefunden. Vielen Dank für den Service!“
+            </p>
+            <div class="testi-who">
+              <img src="img/testimonial-3.jpg" alt="" loading="lazy" />
+              <div>
+                <strong>Familie Yilmaz</strong><span>Mieter, Köln</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="review-note">
+          <i class="fa-solid fa-circle-check"></i
+          ><span
+            >Testimonials sollten auf der veröffentlichten Website nur mit
+            echten Kunden und verifizierbaren Bewertungen verwendet
+            werden.</span
+          >
+        </div>
+      </div>
+    </section>
+    <!-- STARTSEITE – TESTIMONIALS / BEWEISE SECTION – ENDE -->
+
+    <!-- =====================================================
+  STARTSEITE – RATGEBER SECTION – START
+  ===================================================== -->
+    <section class="section section--stone guide-section">
+      <div class="container">
+        <div class="section-head-row" data-reveal>
+          <div class="section-head">
+            <span class="eyebrow">Ratgeber</span>
+            <h2>Wichtige Fragen rund um Immobilien.</h2>
+            <p>
+              Kurze, verständliche Inhalte helfen bei Entscheidungen vor dem
+              nächsten Schritt.
+            </p>
+          </div>
+          <a href="about.html" class="text-link"
+            >Alle Beiträge <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+        <div class="guide-grid">
+          <a href="contact.html" class="guide-card" data-reveal
+            ><span class="guide-icon"
+              ><i class="fa-solid fa-calculator"></i></span
+            ><span class="guide-meta">Verkaufen</span>
+            <h3>Was beeinflusst den Immobilienwert?</h3>
+            <p>Lage, Zustand, Größe und Marktsituation richtig einordnen.</p>
+            <span class="guide-link"
+              >Weiterlesen <i class="fa-solid fa-arrow-right"></i></span
+          ></a>
+          <a href="property-list.html" class="guide-card" data-reveal
+            ><span class="guide-icon"
+              ><i class="fa-solid fa-magnifying-glass"></i></span
+            ><span class="guide-meta">Kaufen</span>
+            <h3>Wie finde ich die passende Immobilie?</h3>
+            <p>Suchkriterien festlegen und Angebote effizient vergleichen.</p>
+            <span class="guide-link"
+              >Weiterlesen <i class="fa-solid fa-arrow-right"></i></span
+          ></a>
+          <a href="contact.html" class="guide-card" data-reveal
+            ><span class="guide-icon"
+              ><i class="fa-solid fa-file-circle-check"></i></span
+            ><span class="guide-meta">Vorbereitung</span>
+            <h3>Welche Unterlagen sind wichtig?</h3>
+            <p>Die wichtigsten Informationen für eine strukturierte Anfrage.</p>
+            <span class="guide-link"
+              >Weiterlesen <i class="fa-solid fa-arrow-right"></i></span
+          ></a>
+        </div>
+      </div>
+    </section>
+    <!-- STARTSEITE – RATGEBER SECTION – ENDE -->
+
+    <!-- =====================================================
+  STARTSEITE – FINAL CTA SECTION – START
+  ===================================================== -->
+    <section class="section final-cta-section">
+      <div class="container">
+        <div class="cta-banner final-cta">
+          <img src="img/call-to-action.jpg" alt="" loading="lazy" />
+          <div class="final-cta-content" data-reveal>
+            <span class="eyebrow light">Persönlich starten</span>
+            <h2>Sie haben eine Immobilie oder suchen ein neues Zuhause?</h2>
+            <p>
+              Besprechen Sie Ihr Anliegen direkt mit Makaan. Wir klären
+              gemeinsam, was der nächste sinnvolle Schritt ist.
+            </p>
+          </div>
+          <div class="cta-actions" data-reveal>
+            <a href="contact.html" class="btn btn-gold"
+              ><i class="fa-regular fa-calendar"></i> Beratung anfragen</a
+            ><a href="tel:0123455678" class="btn btn-outline cta-light-btn"
+              ><i class="fa-solid fa-phone"></i> Jetzt anrufen</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- STARTSEITE – FINAL CTA SECTION – ENDE -->
+
+    <!-- =====================================================
+  GLOBAL – FOOTER – START
+  ===================================================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <span class="footer-logo">Makaan</span>
+            <p>
+              Immobilien finden, verkaufen und professionell begleiten lassen.
+            </p>
+            <div class="footer-socials">
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in"></i></a
+              ><a href="#" aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="property-list.html">Immobilien</a></li>
+              <li><a href="#verkaufen">Verkaufen</a></li>
+              <li><a href="#bewertung">Bewertung</a></li>
+              <li><a href="about.html">Über uns</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Kontakt</h4>
+            <ul>
+              <li>Musterstraße 1, 10115 Berlin</li>
+              <li><a href="tel:0123455678">+49 123 455 678</a></li>
+              <li>
+                <a href="mailto:info@makaan-immobilien.de"
+                  >info@makaan-immobilien.de</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4>Newsletter</h4>
+            <p>Aktuelle Angebote und Immobilienthemen direkt per E-Mail.</p>
+            <form class="newsletter-row" data-newsletter-form>
+              <input
+                type="email"
+                required
+                placeholder="Ihre E-Mail-Adresse"
+                aria-label="Ihre E-Mail-Adresse"
+              /><button
+                type="submit"
+                class="btn btn-gold btn-sm"
+                aria-label="Newsletter abonnieren"
+              >
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Makaan. Erstellt von EasyTech Solutions.</span
+          ><span
+            ><a href="#">Datenschutz</a><a href="#">AGB</a
+            ><a href="admin/login.html">Admin-Login</a></span
+          >
+        </div>
+      </div>
+    </footer>
+    <!-- GLOBAL – FOOTER – ENDE -->
+
+    <script src="js/data.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
-
-

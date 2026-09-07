@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin — Makaan</title>
+    <!-- ADMIN – REDIRECT SECTION – START -->
+    <script>
+      window.location.replace(
+        sessionStorage.getItem("makaan_admin_auth") === "true"
+          ? "dashboard.html"
+          : "login.html",
+      );
+    </script>
+    <!-- ADMIN – REDIRECT SECTION – ENDE -->
+  </head>
+  <body></body>
+</html>
